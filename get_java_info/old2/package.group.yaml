@@ -1,0 +1,1002 @@
+front:
+  base:
+  - framework.core.spring.bean
+  - framework.core.spring.bean.ext
+  - framework.core.spring.bean.scan
+  - framework.forneus
+  - framework.forneus.cli
+  - framework.forneus.databind
+  - framework.forneus.databind.fvm
+  - framework.forneus.databind.fvm.expression
+  - framework.forneus.databind.fvm.operation
+  - framework.forneus.databind.parser
+  - framework.forneus.databind.performance
+  - framework.forneus.db.dao.impl
+  - framework.forneus.db.dao.spec
+  - framework.forneus.db.dto
+  - framework.forneus.db.service.impl
+  - framework.forneus.db.service.spec
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.condition
+  - framework.forneus.generator.handler.documentation
+  - framework.forneus.generator.handler.framework
+  - framework.forneus.generator.handler.inherit
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.primitive.accordion
+  - framework.forneus.generator.handler.primitive.button
+  - framework.forneus.generator.handler.primitive.file
+  - framework.forneus.generator.handler.primitive.graphic
+  - framework.forneus.generator.handler.primitive.input
+  - framework.forneus.generator.handler.primitive.label
+  - framework.forneus.generator.handler.primitive.list
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.approvalflow.approval
+  - framework.forneus.generator.handler.ui.cardgrid
+  - framework.forneus.generator.handler.ui.contact
+  - framework.forneus.generator.handler.ui.feedback
+  - framework.forneus.generator.handler.ui.handlermodel
+  - framework.forneus.generator.handler.ui.header
+  - framework.forneus.generator.handler.ui.hueDrive
+  - framework.forneus.generator.handler.ui.instareport
+  - framework.forneus.generator.handler.ui.instareport.data
+  - framework.forneus.generator.handler.ui.instareport.elements
+  - framework.forneus.generator.handler.ui.layout
+  - framework.forneus.generator.handler.ui.login
+  - framework.forneus.generator.handler.ui.mail
+  - framework.forneus.generator.handler.ui.menu
+  - framework.forneus.generator.handler.ui.mobile
+  - framework.forneus.generator.handler.ui.mobile.expense
+  - framework.forneus.generator.handler.ui.reporteditor
+  - framework.forneus.generator.handler.ui.sima
+  - framework.forneus.generator.handler.ui.spreadsheet
+  - framework.forneus.generator.handler.ui.talk
+  - framework.forneus.generator.handler.ui.task
+  - framework.forneus.generator.handler.ui.timeline
+  - framework.forneus.generator.handler.ui.timeline.content
+  - framework.forneus.generator.handler.ui.timeline.mobile
+  - framework.forneus.generator.handler.ui.widget
+  - framework.forneus.generator.handler.ui.zhuge
+  - framework.forneus.generator.handler.ui.zhuge.editor
+  - framework.forneus.generator.handler.ui.zhuge.plugin
+  - framework.forneus.generator.handler.ui.zhuge.renderer
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.forneus.generator.handler.vo.approvalflow
+  - framework.forneus.generator.handler.vo.talk
+  - framework.forneus.generator.handler.vo.task
+  - framework.forneus.generator.handler.vo.treemodel
+  - framework.forneus.optimizer
+  - framework.forneus.optimizer.closure
+  - framework.forneus.optimizer.less
+  - framework.forneus.optimizer.strategy
+  - framework.forneus.stax
+  - framework.forneus.url
+  - framework.forneus.util
+  - framework.inputfw.module.template.forneusidprovider
+  - framework.inputfw.module.template.forneusidprovider.annotations
+  - framework.web.spring.annotation
+  - framework.web.spring.exception
+  - framework.web.spring.mvc
+  - framework.web.spring.security
+biz:
+  kvs:
+  - access.cassandra
+  - access.cassandra.cache
+  - access.cassandra.context
+  - access.cassandra.exception
+  - access.cassandra.iterator
+  - access.cassandra.serialization
+  - access.cassandra.setting
+  - access.cassandra.util.concurrent
+  - access.cassandra.uuid
+  - cassandra.migration
+  - cassandra.migration.util
+  - framework.cassandra.filter.authority
+  - framework.cassandra.filter.core
+  - framework.cassandra.filter.rule
+  - framework.cassandra.staticsetting
+  - framework.cassandra.staticsetting.dao
+  - framework.cassandra.staticsetting.dto
+  - framework.cassandra.staticsetting.service
+  - framework.elasticsearch
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.core.routing
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.security.batch
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.analyzer
+  - framework.elasticsearch.base.type.experimental
+  - framework.elasticsearch.base.type.experimental.analyzer
+  - framework.elasticsearch.base.type.experimental.layout
+  - framework.elasticsearch.base.type.experimental.layout.input
+  - framework.elasticsearch.base.type.experimental.query
+  - framework.elasticsearch.base.type.layout
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.base.type.settings.def
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.autocomplete.group
+  - framework.elasticsearch.basic.autocomplete.parser
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.docsearch.experimental
+  - framework.elasticsearch.basic.docsearch.group
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.basic.docsearch.relevant
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.basic.index.internal
+  - framework.elasticsearch.basic.server
+  - framework.elasticsearch.basic.type.validator
+  - framework.elasticsearch.historical.docsearch
+  - framework.elasticsearch.historical.docsearch.experimental
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.mapper.facet
+  - framework.elasticsearch.register
+  - framework.elasticsearch.register.unifier
+  - framework.elasticsearch.request.aggregation
+  - framework.elasticsearch.request.facet
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.util
+  - hue.optimize.components.register.cassandra
+  - hue.spreadsheet.elasticsearch
+other:
+- (none)
+- access
+- access.dependency.analyzer
+- access.dependency.analyzer.asm
+- access.hadoop
+- access.maven.plugin
+- access.sync
+- access.sync.batch
+- approvalflow
+- approvalflow.adaptor.application
+- approvalflow.adaptor.event
+- approvalflow.adaptor.role
+- approvalflow.approval.util
+- approvalflow.background.message
+- approvalflow.controller.application
+- approvalflow.controller.approval
+- approvalflow.controller.flowstep
+- approvalflow.controller.submission
+- approvalflow.dao.application
+- approvalflow.dao.approval
+- approvalflow.dao.event
+- approvalflow.dao.filtercondition
+- approvalflow.dao.grouping
+- approvalflow.dao.metadatabinding
+- approvalflow.dao.model
+- approvalflow.dao.process
+- approvalflow.dao.role
+- approvalflow.dao.search
+- approvalflow.dao.submission
+- approvalflow.dto.alertfilter
+- approvalflow.dto.application
+- approvalflow.dto.approval
+- approvalflow.dto.event
+- approvalflow.dto.grouping
+- approvalflow.dto.hyperlink
+- approvalflow.dto.metadatabinding
+- approvalflow.dto.model
+- approvalflow.dto.process
+- approvalflow.dto.role
+- approvalflow.dto.search
+- approvalflow.dto.step
+- approvalflow.dto.submmission
+- approvalflow.filter
+- approvalflow.filter.condition
+- approvalflow.filter.type
+- approvalflow.filter.urgent
+- approvalflow.formatter
+- approvalflow.formatter.annotations
+- approvalflow.formatter.standard
+- approvalflow.machinelearning.dto
+- approvalflow.machinelearning.model.hmm
+- approvalflow.sample.event
+- approvalflow.service.application
+- approvalflow.service.approval
+- approvalflow.service.assignment
+- approvalflow.service.event
+- approvalflow.service.filtercondition
+- approvalflow.service.grouping
+- approvalflow.service.hyperlink
+- approvalflow.service.model
+- approvalflow.service.process
+- approvalflow.service.role
+- approvalflow.service.search
+- approvalflow.service.step
+- approvalflow.service.submission
+- approvalflow.service.talk
+- approvalflow.template
+- approvalflow.util
+- approvalflow.util.alertfilter
+- approvalflow.util.application
+- approvalflow.util.converter
+- approvalflow.util.log
+- approvalflow.util.machinelearning.dao
+- approvalflow.util.machinelearning.service
+- approvalflow.util.step
+- approvalflow.util.temporary.datetime
+- batch.adapter
+- batch.controller
+- batch.job.personalization.history
+- batch.job.personalization.history.dto
+- dto.annotation
+- dto.annotation.processor
+- dto.annotation.processor.util
+- dto.jar
+- dto.key
+- dto.operation
+- ess
+- ess.migration
+- framework.autoindex
+- framework.autoindex.annotation
+- framework.autoindex.edp.job
+- framework.autoindex.expression
+- framework.autoindex.maven.plugin
+- framework.autoindex.maven.plugin.analyzer
+- framework.autoindex.maven.plugin.analyzer.asm
+- framework.autoindex.model
+- framework.autoindex.offline
+- framework.autoindex.util
+- framework.autonumbering
+- framework.cache
+- framework.cache.composite
+- framework.cache.ehcache
+- framework.cache.key
+- framework.cache.processing.notification
+- framework.cache.processing.service
+- framework.cache.proxy
+- framework.cache.redis
+- framework.cache.util
+- framework.calculation
+- framework.calculation.core.common
+- framework.calculation.core.logic
+- framework.calculation.core.logic.exception
+- framework.calculation.core.logic.model
+- framework.calculation.core.logic.model.operand
+- framework.calculation.core.logic.model.operand.constant
+- framework.calculation.core.logic.model.operand.variable
+- framework.calculation.core.logic.model.operator
+- framework.calculation.core.logic.model.operator.aggregate
+- framework.calculation.core.logic.model.operator.arithmetic
+- framework.calculation.core.logic.model.operator.groupby
+- framework.calculation.core.logic.model.operator.logical
+- framework.calculation.core.logic.model.operator.maker
+- framework.calculation.core.logic.model.operator.math
+- framework.calculation.core.logic.model.operator.relational
+- framework.core.calendar
+- framework.core.calendar.dao
+- framework.core.calendar.dto
+- framework.core.client.ac
+- framework.core.client.suggestion
+- framework.core.crypt
+- framework.core.datetime
+- framework.core.i18n
+- framework.core.jndi
+- framework.core.json
+- framework.core.log.config
+- framework.core.menu
+- framework.core.menu.core.dto
+- framework.core.menu.core.dto.counter
+- framework.core.menu.core.enums
+- framework.core.menu.core.utils
+- framework.core.menu.core.vo
+- framework.core.menu.dao
+- framework.core.menu.dao.impl
+- framework.core.menu.staticmenu
+- framework.core.menu.staticmenu.hierarchy
+- framework.core.menu.staticmenu.iconshierarchy
+- framework.core.menu.staticmenu.menuid
+- framework.core.model.cursor
+- framework.core.model.dto
+- framework.core.model.layer
+- framework.core.model.layer.annotation
+- framework.core.model.validation
+- framework.core.moniter
+- framework.core.service
+- framework.core.service.exception
+- framework.core.timezonepicker
+- framework.core.timezonepicker.dao
+- framework.core.timezonepicker.dto
+- framework.core.user
+- framework.core.util
+- framework.core.util.csv
+- framework.defaultvalue
+- framework.expression
+- framework.inputfw
+- framework.inputfw.calc
+- framework.inputfw.calc.config
+- framework.inputfw.calc.model
+- framework.inputfw.calc.persist
+- framework.inputfw.controller
+- framework.inputfw.dao
+- framework.inputfw.dto
+- framework.inputfw.entity
+- framework.inputfw.item
+- framework.inputfw.model
+- framework.inputfw.model.application
+- framework.inputfw.model.autonumbering
+- framework.inputfw.model.master
+- framework.inputfw.model.message
+- framework.inputfw.model.timeline
+- framework.inputfw.module
+- framework.inputfw.module.application
+- framework.inputfw.module.autocomplete
+- framework.inputfw.module.autonumbering
+- framework.inputfw.module.autosave
+- framework.inputfw.module.cache
+- framework.inputfw.module.calculation
+- framework.inputfw.module.master
+- framework.inputfw.module.message
+- framework.inputfw.module.message.annotations
+- framework.inputfw.module.report
+- framework.inputfw.module.report.datasource
+- framework.inputfw.module.report.datasource.annotations
+- framework.inputfw.module.share
+- framework.inputfw.module.share.entity
+- framework.inputfw.module.submitted
+- framework.inputfw.module.submitted.dao
+- framework.inputfw.module.submitted.service
+- framework.inputfw.module.template
+- framework.inputfw.module.validation
+- framework.inputfw.module.view
+- framework.inputfw.module.view.application
+- framework.inputfw.service
+- framework.inputfw.view
+- framework.inputfw.view.application
+- framework.inputfw.view.search
+- framework.item.autocomplete
+- framework.item.division
+- framework.item.item
+- framework.item.item.annotation
+- framework.item.mastersearch
+- framework.item.model
+- framework.item.model.entity
+- framework.item.validation
+- framework.item.validation.list
+- framework.item.validation.type
+- framework.jdbc
+- framework.magic.dict
+- framework.magicimport.constants
+- framework.magicimport.dao
+- framework.magicimport.encoding
+- framework.magicimport.entity.fileanalysis
+- framework.magicimport.entity.process
+- framework.magicimport.entity.response
+- framework.magicimport.entity.suggest
+- framework.magicimport.enums
+- framework.magicimport.exception
+- framework.magicimport.fileAnalysis
+- framework.magicimport.service
+- framework.magicimport.service.util
+- framework.magicpaste.api
+- framework.magicpaste.api.analyzer
+- framework.magicpaste.api.coreengine.base.analysis
+- framework.magicpaste.api.coreengine.base.charfilter
+- framework.magicpaste.api.coreengine.base.combinator
+- framework.magicpaste.api.coreengine.base.common
+- framework.magicpaste.api.coreengine.base.learn.calc
+- framework.magicpaste.api.coreengine.base.learn.dao
+- framework.magicpaste.api.coreengine.base.learn.entity
+- framework.magicpaste.api.coreengine.base.learn.service
+- framework.magicpaste.api.coreengine.base.mapper
+- framework.magicpaste.api.coreengine.base.parameter
+- framework.magicpaste.api.coreengine.base.physicaltokenizer
+- framework.magicpaste.api.coreengine.base.position
+- framework.magicpaste.api.coreengine.base.scorer
+- framework.magicpaste.api.coreengine.base.source
+- framework.magicpaste.api.coreengine.base.stat
+- framework.magicpaste.api.coreengine.base.token
+- framework.magicpaste.api.coreengine.base.tokenizer
+- framework.magicpaste.api.coreengine.basic
+- framework.magicpaste.api.coreengine.basic.common
+- framework.magicpaste.api.coreengine.basic.form
+- framework.magicpaste.api.coreengine.basic.learn.calc
+- framework.magicpaste.api.coreengine.basic.mapper
+- framework.magicpaste.api.coreengine.basic.rule
+- framework.magicpaste.api.coreengine.batch
+- framework.magicpaste.api.coreengine.common
+- framework.magicpaste.api.coreengine.input
+- framework.magicpaste.api.coreengine.metadata
+- framework.magicpaste.api.coreengine.service
+- framework.magicpaste.api.coreengine.util
+- framework.magicpaste.api.engineProxy
+- framework.magicpaste.api.layoutengine
+- framework.magicpaste.api.layoutengine.dao
+- framework.magicpaste.api.layoutengine.engines
+- framework.magicpaste.api.layoutengine.entity
+- framework.magicpaste.api.layoutengine.extractor
+- framework.magicpaste.api.layoutengine.matcher
+- framework.magicpaste.api.layoutengine.util
+- framework.magicpaste.api.reweighter
+- framework.magicpaste.api.separator
+- framework.magicpaste.api.util
+- framework.magicpaste.api.weighter
+- framework.magicpaste.decorator
+- framework.magicpaste.englishDict
+- framework.magicpaste.entity
+- framework.magicpaste.entity.relation
+- framework.magicpaste.exception
+- framework.mail
+- framework.malphas
+- framework.mq
+- framework.nemesis
+- framework.nemesis.compare
+- framework.nemesis.dao
+- framework.nemesis.dto
+- framework.nemesis.marker
+- framework.nemesis.record
+- framework.nemesis.result
+- framework.notification.channel
+- framework.notification.config
+- framework.notification.coordinator
+- framework.notification.coordinator.impl
+- framework.notification.coordinator.impl.kafka
+- framework.notification.coordinator.impl.redis
+- framework.notification.listener
+- framework.notification.listener.redis
+- framework.notification.message
+- framework.notification.message.adapter
+- framework.notification.service
+- framework.notification.service.impl.kafka
+- framework.notification.service.impl.redis
+- framework.print
+- framework.product
+- framework.remote.client
+- framework.remote.client.rest
+- framework.remote.client.rest.argument
+- framework.remote.client.rest.authentication
+- framework.remote.client.rest.handler
+- framework.remote.client.rest.template
+- framework.report
+- framework.report.annotation
+- framework.report.dao.impl
+- framework.report.dao.impl.magiclayout
+- framework.report.dao.multipage.impl
+- framework.report.dao.multipage.spec
+- framework.report.dao.spec
+- framework.report.dao.spec.magiclayout
+- framework.report.denormalize
+- framework.report.dto
+- framework.report.dto.conversion
+- framework.report.dto.magiclayout
+- framework.report.dto.multipage
+- framework.report.enums.magiclayout
+- framework.report.logic.conversion
+- framework.report.logic.magiclayout
+- framework.report.logic.magiclayout.analyzer
+- framework.report.logic.magiclayout.mapping
+- framework.report.logic.magiclayout.modelconvertors
+- framework.report.service.impl
+- framework.report.service.impl.decorationtools
+- framework.report.service.impl.magiclayout
+- framework.report.service.impl.magiclayout.fileconversion
+- framework.report.service.multipage.impl
+- framework.report.service.multipage.spec
+- framework.report.service.spec
+- framework.report.service.spec.magiclayout
+- framework.report.service.spec.magiclayout.fileconversion
+- framework.report.utils
+- framework.report.vo
+- framework.reportconvertor
+- framework.reportconvertor.constants
+- framework.reportconvertor.dao
+- framework.reportconvertor.dto
+- framework.reportconvertor.elements
+- framework.reportconvertor.elements.crossgrid
+- framework.reportconvertor.elements.grid
+- framework.reportconvertor.elements.gridlayout
+- framework.reportconvertor.logic
+- framework.security.annotation
+- framework.security.authentication
+- framework.security.authority
+- framework.security.cache
+- framework.security.core
+- framework.security.core.account.dao
+- framework.security.core.session
+- framework.security.core.user
+- framework.security.meta.filter
+- framework.security.meta.item
+- framework.security.setting
+- framework.security.staticreader
+- framework.security.util
+- framework.security.web
+- framework.security.web.authentication
+- framework.security.web.authentication.filter
+- framework.security.web.authentication.interceptor
+- framework.security.web.authorization.interceptor
+- framework.security.web.controller
+- framework.security.web.dospro.interceptor
+- framework.security.web.log.interceptor
+- framework.security.web.session
+- framework.security.web.session.interceptor
+- framework.security.web.session.listener
+- framework.security.web.utils
+- framework.selenium
+- framework.selenium.common.account
+- framework.selenium.common.interactions
+- framework.selenium.operator
+- framework.selenium.page
+- framework.selenium.page.common.item
+- framework.selenium.runner
+- framework.selenium.testng.listener
+- framework.selenium.testng.listener.retry
+- framework.serializer
+- framework.serializer.util
+- framework.service
+- framework.service.annotation
+- framework.staticsetting
+- framework.staticsetting.annotation
+- framework.staticsetting.predefinedkeys
+- framework.style
+- framework.subsystem
+- framework.talk.common
+- framework.talk.constant
+- framework.talk.controller
+- framework.talk.dao
+- framework.talk.observer
+- framework.talk.observer.handlers
+- framework.talk.observer.util
+- framework.talk.service
+- framework.talk.util
+- framework.taskexecutor
+- framework.taskexecutor.annotation
+- framework.taskexecutor.aop
+- framework.taskexecutor.exception
+- framework.taskexecutor.setting
+- framework.taskexecutor.task
+- framework.taskexecutor.util
+- framework.textresource
+- framework.type
+- framework.web.component.grid
+- framework.web.controller
+- framework.web.controller.content
+- framework.web.controller.feedback
+- framework.web.feedback.dao
+- framework.web.feedback.domain
+- framework.web.feedback.dto
+- framework.web.feedback.predicate
+- framework.web.feedback.service
+- framework.web.feedback.util
+- framework.web.log.accesslog
+- framework.web.log.accesslog.dao
+- framework.web.log.accesslog.dto
+- framework.web.menu
+- framework.web.service
+- framework.web.servlet
+- framework.web.servlet.cookie
+- framework.web.servlet.listener
+- framework.web.session
+- framework.web.speedmonitor
+- framework.web.view
+- framework.websocket
+- framework.websocket.setting
+- hue
+- hue.ac.biz.expense.ekisupa
+- hue.ac.biz.expense.externalservice.dao
+- hue.ac.biz.expense.externalservice.domain
+- hue.ac.biz.expense.externalservice.service
+- hue.ac.biz.expense.numbering.data
+- hue.ac.biz.expense.numbering.rule.dao
+- hue.ac.biz.expense.numbering.rule.dto
+- hue.ac.biz.expense.payment.dao
+- hue.ac.biz.expense.payment.dto
+- hue.ac.biz.expense.service
+- hue.ac.biz.expense.shorttransapp
+- hue.ac.biz.expense.shorttransapp.dao
+- hue.ac.biz.expense.shorttransapp.ekisupa
+- hue.ac.biz.expense.shorttransapp.event
+- hue.ac.biz.expense.shorttransapp.service
+- hue.ac.biz.expense.shorttransapp.validator
+- hue.ac.biz.expense.taxiexpense.service
+- hue.ac.dto.expense
+- hue.adapter
+- hue.advancepayment.dto
+- hue.advancepayment.event
+- hue.advancepayment.service
+- hue.advancepayment.validator
+- hue.advancepayment21.dto
+- hue.advancepayment21.service
+- hue.advancepayment21.validator
+- hue.allowance.caluclator
+- hue.allowance.caluclator.impl
+- hue.allowance.condition
+- hue.allowance.condition.impl
+- hue.allowance.converter
+- hue.allowance.converter.impl
+- hue.allowance.dao
+- hue.allowance.dao.impl
+- hue.allowance.dto
+- hue.approvalflow.dto.filtercondition
+- hue.autonumbering.dao
+- hue.autonumbering.dto
+- hue.autonumbering.dto.rule
+- hue.autonumbering.dto.rule.elements
+- hue.autonumbering.dto.rule.options
+- hue.autonumbering.dto.sequence
+- hue.autonumbering.generator
+- hue.autonumbering.generator.elementcompiler
+- hue.autonumbering.service
+- hue.autonumbering.specialcheckdigit
+- hue.autonumberingsample
+- hue.autonumberingsample.dto
+- hue.autonumberingsample.event
+- hue.autonumberingsample.service
+- hue.background
+- hue.bizdata
+- hue.bizdata.dto
+- hue.bizdata.entity
+- hue.businesstripapplication.dto
+- hue.businesstripapplication.event
+- hue.businesstripapplication.service
+- hue.businesstripapplication.service.dao
+- hue.controller
+- hue.controller.ac.expense.ekisupa
+- hue.controller.ac.expense.shorttransapp
+- hue.controller.ac.expense.taxiexpense
+- hue.controller.autocomplete
+- hue.controller.autonumberingsample.validator
+- hue.controller.base
+- hue.controller.businesstripapplication
+- hue.controller.canvasgrid
+- hue.controller.customerregistration
+- hue.controller.demo
+- hue.controller.developerguide
+- hue.controller.dictionary
+- hue.controller.dummymagicimport
+- hue.controller.employee
+- hue.controller.employeelist
+- hue.controller.employeelist.util
+- hue.controller.ess
+- hue.controller.exception
+- hue.controller.feedback
+- hue.controller.filemanager
+- hue.controller.firststepguide
+- hue.controller.globalnavi
+- hue.controller.helloworld
+- hue.controller.home
+- hue.controller.i18nsample
+- hue.controller.instareport
+- hue.controller.layout
+- hue.controller.layoutsample
+- hue.controller.magicimport
+- hue.controller.magicimportgridcreator
+- hue.controller.magiclayout
+- hue.controller.magicpaste
+- hue.controller.mail
+- hue.controller.masterdata
+- hue.controller.masterdata.model
+- hue.controller.mobile
+- hue.controller.mobile.expense
+- hue.controller.paymentrequest
+- hue.controller.personalization
+- hue.controller.pictureuploader
+- hue.controller.purchase
+- hue.controller.report
+- hue.controller.reporteditor
+- hue.controller.samples
+- hue.controller.share
+- hue.controller.showcase
+- hue.controller.spa
+- hue.controller.spasample
+- hue.controller.spreadsheet
+- hue.controller.step1
+- hue.controller.step2
+- hue.controller.step3
+- hue.controller.step4
+- hue.controller.task
+- hue.controller.task.handler
+- hue.controller.template
+- hue.controller.timeline
+- hue.controller.timeline.api.vo
+- hue.controller.timeline.enums
+- hue.controller.tool
+- hue.controller.treedemo
+- hue.controller.userguide
+- hue.controller.wapfileuploader
+- hue.core.dao.organization
+- hue.core.dao.personnel
+- hue.core.dto
+- hue.core.dto.organization
+- hue.core.dto.personnel
+- hue.core.dto.style
+- hue.core.dto.user
+- hue.core.service.organization
+- hue.core.service.personnel
+- hue.core.util
+- hue.customerregistration.dto
+- hue.customerregistration.event
+- hue.customerregistration.service
+- hue.dao.employee
+- hue.dao.magicpaste
+- hue.db.ate
+- hue.dfs.config
+- hue.dfs.impl
+- hue.dfs.mock
+- hue.dfs.setting
+- hue.dfs.spec
+- hue.dfs.utils
+- hue.dictionary
+- hue.dictionary.db.dao
+- hue.dictionary.db.dto
+- hue.domain
+- hue.domain.employee
+- hue.domain.firststepguide
+- hue.domain.magicpaste
+- hue.domain.userguide
+- hue.dto
+- hue.ekisupaservice.dto
+- hue.ekisupaservice.service
+- hue.ekisupaservice.validator
+- hue.employeelist
+- hue.employeelist.dao
+- hue.employeelist.dao.impl
+- hue.employeelist.dto
+- hue.employeelist.entity
+- hue.employeelist.report
+- hue.employeelist.service
+- hue.employeelist.utils
+- hue.executor
+- hue.expense
+- hue.expense.numbering.data
+- hue.expense.numbering.rule.dao
+- hue.expense.numbering.rule.dto
+- hue.expense.payment.dao
+- hue.expense.payment.dto
+- hue.expense.receiptUpload.dto
+- hue.expense.service
+- hue.externalservice.dao
+- hue.externalservice.domain
+- hue.externalservice.service
+- hue.feedback.export.domain
+- hue.feedback.export.service
+- hue.filter.dto
+- hue.firststepguide.dao
+- hue.firststepguide.dto
+- hue.firststepguide.exception
+- hue.firststepguide.layouts
+- hue.firststepguide.service
+- hue.firststepguide.templates
+- hue.firststepguide.utils
+- hue.firststepguide.vo
+- hue.handler
+- hue.handler.ess
+- hue.handler.layout
+- hue.handler.showcase
+- hue.historicalmaster.dao
+- hue.historicalmaster.dto
+- hue.historicalmaster.search.i18n
+- hue.historicalmaster.search.model
+- hue.historicalmaster.search.service
+- hue.historicalmaster.service
+- hue.historicalmaster.util
+- hue.home.controller
+- hue.home.controller.enums
+- hue.home.controller.menu.enums
+- hue.home.converter
+- hue.home.service.menu
+- hue.home.service.menu.search
+- hue.huedrive.autoindex
+- hue.huedrive.dao
+- hue.huedrive.dto
+- hue.huedrive.entity
+- hue.huedrive.enumeration
+- hue.huedrive.enums
+- hue.huedrive.exception
+- hue.huedrive.preview
+- hue.huedrive.service
+- hue.huedrive.thumbnail
+- hue.huedrive.util
+- hue.huedrive.vo
+- hue.i18n
+- hue.instareport.dao.impl
+- hue.instareport.dto
+- hue.listener
+- hue.magicimport.dto
+- hue.magicimport.dto.entity
+- hue.magicimport.dto.enums
+- hue.magicimportemployeelist
+- hue.magicimportemployeelist.dao
+- hue.magicimportemployeelist.dao.impl
+- hue.magicimportemployeelist.dto
+- hue.magicpaste.dao
+- hue.magicpaste.domain
+- hue.magicpaste.service
+- hue.mail.core
+- hue.mail.dao.impl
+- hue.mail.dao.spec
+- hue.mail.dto
+- hue.mail.dto.counter
+- hue.mail.dto.keys
+- hue.mail.dto.meta
+- hue.mail.entity
+- hue.mail.entity.message
+- hue.mail.service.impl
+- hue.mail.service.spec
+- hue.mail.util
+- hue.mail.vo
+- hue.metadata
+- hue.metadata.dao
+- hue.metadata.dao.impl
+- hue.metadata.dto
+- hue.metadata.dto.key
+- hue.mobile
+- hue.mobile.apis
+- hue.mobile.apis.pushnotification
+- hue.mobile.apis.pushnotification.apns
+- hue.mobile.apis.pushnotification.apns.internal
+- hue.mobile.apis.pushnotification.exceptions
+- hue.optimize
+- hue.optimize.components
+- hue.optimize.components.register
+- hue.optimize.filtersecmeta
+- hue.optimize.writer
+- hue.paymentrequest.dto
+- hue.paymentrequest.event
+- hue.paymentrequest.validator
+- hue.personalization.controller
+- hue.personalization.dao
+- hue.personalization.magicinput.controller
+- hue.personalization.magicinput.entity
+- hue.personalization.magicinput.service
+- hue.personalization.provider
+- hue.personalization.request
+- hue.personalization.service
+- hue.personalization.type
+- hue.personalization.util
+- hue.purchase.dto
+- hue.purchase.service
+- hue.purchaseold
+- hue.reporteditor.dto
+- hue.search
+- hue.security.dto
+- hue.service
+- hue.service.employee
+- hue.service.employee.dao
+- hue.service.employee.daotemp
+- hue.service.employee.db
+- hue.service.employee.dto
+- hue.service.employee.util
+- hue.service.magicpaste
+- hue.service.magicpaste.converter
+- hue.service.magicpaste.offsetCalculator
+- hue.service.magicpaste.util
+- hue.service.mastersearch
+- hue.service.mastersearch.setting
+- hue.service.mastersearch.vo
+- hue.spasample.dto
+- hue.spasample.service
+- hue.spreadsheet
+- hue.spreadsheet.API
+- hue.spreadsheet.business.mock
+- hue.spreadsheet.cache
+- hue.spreadsheet.config
+- hue.spreadsheet.configuration
+- hue.spreadsheet.db.dao
+- hue.spreadsheet.db.dao.impl
+- hue.spreadsheet.dto
+- hue.spreadsheet.dto.cell
+- hue.spreadsheet.dto.chart
+- hue.spreadsheet.dto.document
+- hue.spreadsheet.dto.filter
+- hue.spreadsheet.dto.history
+- hue.spreadsheet.dto.image
+- hue.spreadsheet.dto.log
+- hue.spreadsheet.dto.mock
+- hue.spreadsheet.dto.pivot
+- hue.spreadsheet.dto.protectrange
+- hue.spreadsheet.dto.user
+- hue.spreadsheet.entity
+- hue.spreadsheet.enumeration
+- hue.spreadsheet.exception
+- hue.spreadsheet.formula.calculator
+- hue.spreadsheet.formula.core.basic
+- hue.spreadsheet.formula.core.operand
+- hue.spreadsheet.formula.core.operator
+- hue.spreadsheet.formula.entity
+- hue.spreadsheet.formula.exception
+- hue.spreadsheet.formula.expresssion
+- hue.spreadsheet.formula.util
+- hue.spreadsheet.provider
+- hue.spreadsheet.range.contract
+- hue.spreadsheet.range.core
+- hue.spreadsheet.range.example
+- hue.spreadsheet.range.example.mock
+- hue.spreadsheet.range.operation
+- hue.spreadsheet.range.operation.impl
+- hue.spreadsheet.range.util
+- hue.spreadsheet.service
+- hue.spreadsheet.service.impl
+- hue.spreadsheet.utils
+- hue.spreadsheet.vo
+- hue.staticwriter
+- hue.talk.dto
+- hue.task.dao
+- hue.task.domain
+- hue.task.service
+- hue.timeline.adapter
+- hue.timeline.cache
+- hue.timeline.client
+- hue.timeline.connector
+- hue.timeline.connector.exception
+- hue.timeline.connector.gitlab
+- hue.timeline.connector.parser
+- hue.timeline.constant
+- hue.timeline.converter
+- hue.timeline.converter.impl
+- hue.timeline.counter
+- hue.timeline.dao
+- hue.timeline.dao.impl
+- hue.timeline.demo.entity
+- hue.timeline.dto
+- hue.timeline.entity
+- hue.timeline.entity.key
+- hue.timeline.entity.m20150312163642
+- hue.timeline.entity.m20150325104025.step1
+- hue.timeline.entity.m20150325104025.step2
+- hue.timeline.entity.m20150329170000
+- hue.timeline.entity.m20150410174047
+- hue.timeline.entity.m20150410174047.after.UserFeedProfile
+- hue.timeline.entity.m20150410174047.before.UserFeedProfile
+- hue.timeline.entity.m20150430104115
+- hue.timeline.entity.m20150430113613
+- hue.timeline.entity.m20150616215856.after
+- hue.timeline.entity.m20150616215856.before
+- hue.timeline.entity.m20150623093857
+- hue.timeline.entity.m20150625103147
+- hue.timeline.exceptions
+- hue.timeline.feed
+- hue.timeline.feedcontent.dto
+- hue.timeline.feeddata.entity
+- hue.timeline.filter
+- hue.timeline.listener.impl
+- hue.timeline.migration
+- hue.timeline.secretary
+- hue.timeline.service
+- hue.timeline.service.converter
+- hue.timeline.service.impl
+- hue.timeline.service.operation
+- hue.timeline.utils
+- hue.timeline.utils.dateunit
+- hue.timeline.vo
+- hue.timeline.vo.content
+- hue.timeline.vo.mobile
+- hue.timeline.vo.secretary
+- hue.timeline.websocket
+- hue.timeline.websocket.exception
+- hue.translation.dto
+- hue.translation.service
+- hue.translation.setting
+- hue.travelallowancesample.event
+- hue.travelexpense.dao
+- hue.travelexpense.dto
+- hue.travelexpense.event
+- hue.travelexpense.service
+- hue.travelexpensezhuge.dao
+- hue.travelexpensezhuge.dto
+- hue.travelexpensezhuge.service
+- hue.userguide.dao
+- hue.userguide.dto
+- hue.userguide.exception
+- hue.userguide.service
+- hue.userguide.util
+- hue.userguide.vo
+- hue.websocket.entity
+- hue.websocket.spreadsheet
+- hue.websocket.utils
+- migrations
+- timeline
+- timeline.commentattachment
+- timeline.editcomment
+- timeline.feeddata
+- timeline.feeddata.operation
+- timeline.feeddata.operation.before
+- timeline.fixfollow
+- timeline.imageurl
+- timeline.publiclevel
+- timeline.timelineshareinnerfeeddata
+- timeline.useroperation
+- timeline.useroperation.before

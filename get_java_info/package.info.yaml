@@ -1,0 +1,7951 @@
+hue.controller.filemanager:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.huedrive.service
+  - hue.spreadsheet.service
+
+  class:
+  - framework.core.datetime
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - hue.huedrive.dto
+  - hue.huedrive.entity
+  - hue.huedrive.util
+  - hue.huedrive.vo
+  - hue.spreadsheet.utils
+
+hue.huedrive.autoindex:
+  interface:
+  - framework.autoindex
+
+  class:
+  - hue.core.dto
+
+hue.huedrive.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.elasticsearch.basic.autocomplete
+
+  class:
+  - hue.huedrive.dto
+  - framework.elasticsearch.basic.autocomplete
+  - dto.key
+
+hue.huedrive.dto:
+  class:
+  - hue.huedrive.entity
+
+hue.huedrive.entity:
+  class:
+  - hue.huedrive.dto
+  - hue.huedrive.util
+  - framework.security.core.session
+
+hue.huedrive.enumeration:
+  class:
+  - framework.forneus.generator.handler.util
+
+hue.huedrive.exception:
+hue.huedrive.preview:
+  class:
+  - hue
+  - hue.huedrive.util
+
+hue.huedrive.service:
+  interface:
+  - framework.core.model.layer
+  - hue
+  - hue.huedrive.dao
+  - hue.spreadsheet.service
+
+  class:
+  - hue.huedrive.entity
+  - hue.huedrive.dto
+  - framework.security.core.session
+  - hue
+  - hue.huedrive.preview
+  - hue.huedrive.thumbnail
+  - hue.huedrive.util
+  - framework.core.datetime
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.mapper
+
+hue.huedrive.thumbnail:
+  class:
+  - hue
+  - hue.huedrive.util
+
+hue.huedrive.util:
+  class:
+  - hue.huedrive.entity
+  - hue.huedrive.vo
+  - framework.security.core.session
+  - hue.huedrive.dto
+  - hue
+
+hue.huedrive.vo:
+  class:
+  - framework.forneus.generator.handler.util
+  - hue.huedrive.entity
+  - hue.huedrive.util
+  - framework.core.datetime
+  - framework.security.core.session
+  - hue.huedrive.dto
+
+approvalflow.adaptor.application:
+  class:
+  - approvalflow.dto.application
+
+approvalflow.adaptor.event:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dto.application
+  - approvalflow.dto.event
+
+  class:
+  - framework.service
+  - approvalflow.dto.event
+
+approvalflow.adaptor.role:
+  interface:
+  - approvalflow.dto.application
+  - framework.core.model.layer
+  - framework.service
+
+  class:
+  - approvalflow.dto.role
+  - framework.service
+
+approvalflow.background.message:
+approvalflow.dao.application:
+  interface:
+  - framework.core.model.layer
+  - access
+  - approvalflow.dto.application
+  - framework.elasticsearch.basic.index
+
+  class:
+  - approvalflow.dto.application
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+  - framework.core.datetime
+  - approvalflow.dto.approval
+  - approvalflow.template
+  - framework.security.core.session
+  - framework.security.core.user
+
+approvalflow.dao.approval:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.approval
+  - approvalflow.dto.role
+  - framework.security.core.user
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dao.event:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.event
+  - approvalflow.dto.process
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dao.filtercondition:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.filter
+  - hue.approvalflow.dto.filtercondition
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dao.grouping:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - access
+
+  class:
+  - approvalflow.dto.grouping
+  - access.cassandra
+  - approvalflow.template
+  - approvalflow.util
+  - dto.key
+  - dto.operation
+
+approvalflow.dao.metadatabinding:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.service
+  - approvalflow.dto.metadatabinding
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dao.model:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.model
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+  - approvalflow.dto.event
+  - approvalflow.dto.role
+
+approvalflow.dao.process:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.process
+  - access.cassandra
+  - approvalflow.util
+  - approvalflow.dto.model
+  - dto.key
+  - approvalflow.dto.role
+  - approvalflow.dto.application
+
+approvalflow.dao.role:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.role
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dao.search:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.search
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dao.submission:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.submmission
+  - access.cassandra
+  - approvalflow.util
+  - dto.key
+
+approvalflow.dto.alertfilter:
+approvalflow.dto.application:
+  interface:
+  - framework.security.core.user
+
+  class:
+  - approvalflow.adaptor.application
+  - approvalflow.dto.process
+  - framework.core.datetime
+  - framework.security.core.user
+  - framework.service
+
+approvalflow.dto.approval:
+  interface:
+  - access
+  - approvalflow.dto.application
+  - framework.security.core.user
+  - framework.item.item
+
+  class:
+  - approvalflow.dto.application
+  - framework.core.datetime
+  - framework.security.core.user
+  - framework.service
+  - approvalflow.filter
+  - framework.core.i18n
+
+approvalflow.dto.event:
+  interface:
+  - access
+
+  class:
+  - approvalflow.dto.process
+
+approvalflow.dto.grouping:
+approvalflow.dto.hyperlink:
+approvalflow.dto.metadatabinding:
+  interface:
+  - access
+
+  class:
+  - framework.item.item
+  - framework.service
+  - approvalflow.dto.model
+
+approvalflow.dto.model:
+  interface:
+  - access
+
+  class:
+  - framework.security.core.session
+  - approvalflow.dto.event
+  - approvalflow.dto.role
+
+approvalflow.dto.process:
+  interface:
+  - access
+
+  class:
+  - approvalflow.dto.model
+  - approvalflow.dto.role
+  - approvalflow.dto.application
+  - framework.security.core.user
+
+approvalflow.dto.role:
+  interface:
+  - access
+  - approvalflow.dto.application
+
+  class:
+  - framework.service
+  - approvalflow.dto.application
+
+approvalflow.dto.search:
+approvalflow.dto.step:
+approvalflow.dto.submmission:
+  interface:
+  - access
+  - approvalflow.dto.application
+  - framework.item.item
+
+approvalflow.filter:
+  class:
+  - approvalflow.dto.application
+  - approvalflow.util.application
+  - hue.talk.dto
+
+approvalflow.formatter.annotations:
+approvalflow.formatter.standard:
+  interface:
+  - approvalflow.formatter
+  - framework.item.item
+
+  class:
+  - framework.core.datetime
+
+approvalflow.formatter:
+  interface:
+  - framework.core.model.layer
+  - framework.item.item
+
+approvalflow.machinelearning.dto:
+approvalflow.machinelearning.model.hmm:
+approvalflow.sample.event:
+  interface:
+  - approvalflow.adaptor.event
+  - approvalflow.dto.application
+  - approvalflow.dto.event
+  - framework.service
+
+  class:
+  - approvalflow.dto.event
+  - framework.service
+
+approvalflow.service.application:
+  interface:
+  - approvalflow.dto.application
+  - framework.core.model.layer
+  - framework.security.core.user
+  - approvalflow.dao.application
+  - approvalflow.dao.metadatabinding
+  - approvalflow.formatter
+  - framework.item.item
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.process
+  - approvalflow.dto.approval
+  - approvalflow.dto.submmission
+  - approvalflow.dto.metadatabinding
+  - approvalflow.util.application
+  - framework.item.item
+
+approvalflow.service.approval:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - framework.taskexecutor
+  - approvalflow.dao.application
+  - approvalflow.service.process
+  - framework.talk.service
+  - framework.textresource
+  - approvalflow.dao.approval
+  - framework.talk.dao
+  - approvalflow.dao.process
+  - approvalflow.dao.role
+  - approvalflow.service.application
+  - framework.service
+  - hue.timeline.service
+  - approvalflow.dao.metadatabinding
+  - approvalflow.dao.search
+
+  class:
+  - approvalflow.dto.application
+  - hue.talk.dto
+  - framework.core.i18n
+  - framework.security.core.session
+  - approvalflow
+  - framework.textresource
+  - approvalflow.dto.approval
+  - framework.security.core.user
+  - framework.service
+  - framework.core.datetime
+  - approvalflow.dto.process
+  - approvalflow.dto.role
+  - approvalflow.dto.metadatabinding
+  - framework.item.item
+  - approvalflow.dto.search
+
+approvalflow.service.assignment:
+  interface:
+  - approvalflow.dao.application
+  - approvalflow.dao.metadatabinding
+  - approvalflow.dao.model
+  - approvalflow.dao.process
+  - approvalflow.dao.role
+  - approvalflow.service.role
+  - framework.core.model.layer
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.metadatabinding
+  - approvalflow.dto.model
+  - approvalflow.dto.process
+  - approvalflow.dto.role
+
+approvalflow.service.event:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dto.application
+  - approvalflow.dao.event
+  - approvalflow.dao.model
+  - approvalflow.dao.process
+  - approvalflow.dto.event
+  - approvalflow.service.model
+  - approvalflow.adaptor.event
+  - framework.service
+
+  class:
+  - approvalflow.dto.event
+  - approvalflow.dto.model
+  - approvalflow.dto.process
+  - framework.service
+
+approvalflow.service.filtercondition:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dao.filtercondition
+  - approvalflow.filter
+
+  class:
+  - approvalflow.dto.application
+  - hue.approvalflow.dto.filtercondition
+  - hue.talk.dto
+  - approvalflow.filter
+  - approvalflow.service.grouping
+
+approvalflow.service.grouping:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - approvalflow.dao.application
+  - approvalflow.dao.approval
+  - approvalflow.dao.grouping
+  - approvalflow.service.filtercondition
+  - framework.service
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.approval
+  - approvalflow.dto.grouping
+  - hue.talk.dto
+  - approvalflow.template
+  - framework.core.i18n
+  - framework.security.core.session
+  - framework.security.core.user
+
+approvalflow.service.hyperlink:
+  interface:
+  - framework.core.model.layer
+  - framework.textresource
+
+  class:
+  - approvalflow
+  - framework.textresource
+
+approvalflow.service.model:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dao.model
+
+  class:
+  - approvalflow.dto.model
+
+approvalflow.service.process:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - approvalflow.dao.application
+  - approvalflow.dao.metadatabinding
+  - approvalflow.dao.model
+  - approvalflow.dao.process
+  - approvalflow.dao.role
+  - approvalflow.dto.application
+  - approvalflow.service.application
+  - approvalflow.service.approval
+  - approvalflow.service.assignment
+  - approvalflow.service.event
+  - approvalflow.service.filtercondition
+  - approvalflow.service.grouping
+  - approvalflow.service.model
+  - approvalflow.service.role
+  - approvalflow.service.search
+  - approvalflow.service.submission
+  - framework.talk.dao
+  - hue.timeline.service
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.process
+  - approvalflow.dao.process
+  - approvalflow.dto.event
+  - approvalflow.dto.metadatabinding
+  - approvalflow.dto.model
+  - approvalflow.dto.role
+  - framework.security.core.user
+  - hue.talk.dto
+
+approvalflow.service.role:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.adaptor.role
+  - framework.service
+  - approvalflow.dao.role
+  - approvalflow.dto.application
+
+  class:
+  - framework.service
+  - approvalflow.dto.role
+
+approvalflow.service.search:
+  interface:
+  - approvalflow.dto.application
+  - framework.core.model.layer
+  - approvalflow.dao.application
+  - approvalflow.dao.search
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+  - framework.item.item.annotation
+  - framework.service
+
+  class:
+  - approvalflow.adaptor.application
+  - approvalflow.dto.application
+  - approvalflow.dto.search
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.mapper
+  - framework.service
+  - framework.item.item
+  - framework.elasticsearch.request.filter
+
+approvalflow.service.step:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.service.submission
+  - approvalflow.util.machinelearning.service
+  - framework.security.core.session
+
+  class:
+  - approvalflow.adaptor.application
+  - approvalflow
+
+approvalflow.service.submission:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dao.application
+  - approvalflow.dao.submission
+  - approvalflow.service.application
+  - framework.service
+  - approvalflow.dto.application
+  - approvalflow.service.approval
+  - approvalflow.service.process
+  - approvalflow.service.talk
+  - framework.mq
+  - framework.security.core.user
+  - hue.timeline.service
+
+  class:
+  - approvalflow.dto.application
+  - approvalflow.dto.submmission
+  - approvalflow.dto.approval
+  - framework.security.core.session
+  - approvalflow.adaptor.application
+  - approvalflow.dto.metadatabinding
+  - approvalflow
+  - approvalflow.dto.model
+  - approvalflow.dto.process
+  - framework.security.core.user
+
+approvalflow.service.talk:
+  interface:
+  - approvalflow.dto.application
+  - framework.core.model.layer
+  - framework.security.core.user
+  - approvalflow.service.assignment
+  - framework.talk.service
+
+  class:
+  - approvalflow.dto.application
+  - framework.core.i18n
+  - framework.security.core.session
+  - hue.talk.dto
+
+approvalflow.template:
+  class:
+  - approvalflow.dto.grouping
+  - approvalflow.filter
+  - approvalflow.service.grouping
+  - hue.approvalflow.dto.filtercondition
+  - approvalflow.dto.approval
+  - framework.core.i18n
+  - framework.security.core.user
+
+approvalflow.util.application:
+  class:
+  - approvalflow.adaptor.application
+
+approvalflow.util.converter:
+approvalflow.util:
+  class:
+  - framework.security.core.session
+  - framework.security.core.user
+
+approvalflow.util.log:
+approvalflow.util.machinelearning.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - approvalflow.machinelearning.dto
+  - access.cassandra
+  - dto.key
+
+approvalflow.util.machinelearning.service:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.util.machinelearning.dao
+
+  class:
+  - approvalflow.machinelearning.dto
+  - approvalflow
+
+approvalflow.util.temporary.datetime:
+hue.approvalflow.dto.filtercondition:
+  class:
+  - approvalflow.filter
+
+approvalflow.approval.util:
+  interface:
+  - framework.forneus
+
+  class:
+  - framework.service
+  - approvalflow.dto.application
+  - framework.forneus
+
+approvalflow:
+  interface:
+  - framework.core.spring.bean.scan
+
+approvalflow.controller.application:
+  interface:
+  - approvalflow.service.application
+  - approvalflow.service.approval
+  - framework.core.model.layer
+  - framework.security.core.user
+  - framework.service
+
+  class:
+  - approvalflow.approval.util
+  - approvalflow.dto.application
+  - approvalflow.util.application
+  - framework.core.datetime
+  - framework.forneus
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.service
+  - framework.web.spring.mvc
+  - hue.core.dto
+
+approvalflow.controller.approval:
+  interface:
+  - approvalflow.dto.application
+  - approvalflow.service.application
+  - approvalflow.service.approval
+  - approvalflow.service.filtercondition
+  - approvalflow.service.grouping
+  - approvalflow.service.hyperlink
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.security.core.user
+  - framework.service
+  - framework.talk.service
+
+  class:
+  - approvalflow.dto.metadatabinding
+  - approvalflow.approval.util
+  - approvalflow.dto.application
+  - approvalflow.dto.approval
+  - approvalflow.dto.grouping
+  - approvalflow
+  - approvalflow.filter
+  - approvalflow.service.grouping
+  - approvalflow.util.alertfilter
+  - approvalflow.util.application
+  - framework.core.datetime
+  - framework.forneus
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.forneus.generator.handler.vo.approvalflow
+  - framework.item.item
+  - framework.security.core.session
+  - framework.security.core.user
+  - framework.service
+  - framework.talk.util
+  - framework.web.spring.mvc
+  - hue.approvalflow.dto.filtercondition
+  - hue.core.dto
+  - hue.talk.dto
+
+approvalflow.controller.flowstep:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+
+  class:
+  - framework.forneus.generator.handler.vo.approvalflow
+  - framework.security.core.user
+
+approvalflow.controller.submission:
+  interface:
+  - approvalflow.service.application
+  - approvalflow.service.approval
+  - approvalflow.service.submission
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.security.core.user
+  - framework.service
+
+  class:
+  - approvalflow.approval.util
+  - approvalflow.dto.application
+  - approvalflow.dto.submmission
+  - approvalflow.util.application
+  - framework.core.datetime
+  - framework.forneus
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.service
+  - framework.web.spring.mvc
+  - hue.core.dto
+
+approvalflow.util.alertfilter:
+  class:
+  - approvalflow
+  - framework.forneus.generator.handler.vo
+
+approvalflow.util.step:
+  interface:
+  - framework.security.core.user
+
+  class:
+  - approvalflow
+  - framework.forneus.generator.handler.vo.approvalflow
+
+hue.dfs.spec:
+hue.dfs.config:
+  interface:
+  - hue
+
+  class:
+  - hue.dfs.impl
+
+hue.dfs.impl:
+  interface:
+  - hue
+
+  class:
+  - hue
+
+hue.dfs.mock:
+  interface:
+  - hue
+
+hue.dfs.setting:
+hue.dfs.utils:
+framework.autoindex.annotation:
+framework.autoindex.edp.job:
+  interface:
+  - framework.mq
+  - access
+  - framework.autoindex
+  - framework.serializer
+
+  class:
+  - framework.autoindex
+  - framework.mq
+  - access.cassandra
+  - framework.serializer
+
+framework.autoindex.maven.plugin.analyzer.asm:
+  class:
+  - framework.autoindex.maven.plugin.analyzer
+
+framework.autoindex.maven.plugin.analyzer:
+  class:
+  - framework.autoindex.maven.plugin.analyzer.asm
+
+framework.autoindex.maven.plugin:
+  interface:
+  - framework.autoindex.maven.plugin.analyzer
+
+  class:
+  - framework.autoindex.maven.plugin.analyzer
+
+(none):
+framework.autoindex.offline:
+  interface:
+  - framework.autoindex
+  - access
+  - framework.mq
+
+  class:
+  - access.cassandra
+  - framework.autoindex
+  - framework.mq
+
+framework.autoindex:
+  interface:
+  - framework.autoindex.util
+  - access
+  - framework.mq
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security.batch
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.basic.server
+  - framework.core.model.layer
+  - access.cassandra.util.concurrent
+
+  class:
+  - framework.autoindex.util
+  - framework.serializer
+  - framework.autoindex.expression
+  - access.cassandra
+  - dto.operation
+  - framework.mq
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.basic.index
+  - dto.key
+
+framework.autoindex.expression:
+framework.autoindex.model:
+framework.autoindex.util:
+  interface:
+  - framework.autoindex
+
+  class:
+  - framework.autoindex
+  - framework.serializer
+  - framework.serializer.util
+
+framework.cache.processing.notification:
+  interface:
+  - framework.cache
+  - framework.notification.listener
+
+  class:
+  - framework.cache.redis
+
+framework.cache.processing.service:
+  class:
+  - framework.cache.processing.notification
+  - framework.notification.coordinator.impl
+
+framework.forneus.generator.handler.condition:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.databind.fvm.expression
+  - framework.forneus.generator.handler
+
+framework.forneus.generator.handler.documentation:
+framework.forneus.generator.handler.framework:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator.handler
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.ui.header
+
+framework.forneus.generator.handler.primitive.accordion:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler
+
+framework.forneus.generator.handler.primitive:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.primitive.label
+
+framework.forneus.generator.handler.primitive.button:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.primitive.file:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.primitive.graphic:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler
+
+framework.forneus.generator.handler.primitive.input:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.primitive.label
+  - framework.core.datetime
+
+framework.forneus.generator.handler.primitive.label:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.util
+  - framework.core.datetime
+  - framework.forneus.databind.fvm.expression
+
+framework.forneus.generator.handler.primitive.list:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.primitive.label
+
+framework.forneus.generator.handler.ui:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+  - framework.forneus
+  - framework.textresource
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.primitive.graphic
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.ui.spreadsheet
+  - framework.textresource
+  - framework.forneus.generator.handler.ui.cardgrid
+  - framework.forneus.generator.handler.ui.instareport
+  - framework.forneus.generator.handler.primitive.button
+  - framework.forneus.generator.handler.ui.timeline
+  - framework.core.datetime
+  - framework.forneus.generator.handler.primitive.label
+
+framework.forneus.generator.handler.ui.approvalflow.approval:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.ui.contact
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.primitive.button
+  - framework.forneus.generator.handler.ui
+
+framework.forneus.generator.handler.ui.cardgrid:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler
+
+framework.forneus.generator.handler.ui.contact:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.ui.timeline
+
+framework.forneus.generator.handler.ui.feedback:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.textresource
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.primitive.button
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.ui
+  - framework.textresource
+
+framework.forneus.generator.handler.ui.handlermodel:
+framework.forneus.generator.handler.ui.header:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.databind.fvm.expression
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.timeline
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.ui.hueDrive:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.instareport:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.instareport.data
+
+framework.forneus.generator.handler.ui.instareport.data:
+  class:
+  - framework.forneus.generator.handler.vo
+
+framework.forneus.generator.handler.ui.instareport.elements:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.ui.instareport
+
+framework.forneus.generator.handler.ui.layout:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.ui.login:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.mail:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.menu:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.primitive
+
+framework.forneus.generator.handler.ui.mobile.expense:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.mobile:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.ui.reporteditor:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.ui
+
+framework.forneus.generator.handler.ui.sima:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.spreadsheet:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.core.i18n
+
+framework.forneus.generator.handler.ui.talk:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.task:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.timeline
+
+framework.forneus.generator.handler.ui.timeline.content:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.ui.timeline
+
+framework.forneus.generator.handler.ui.timeline.mobile:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.ui.timeline:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.ui.contact
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.timeline.content
+  - framework.forneus.databind.fvm.expression
+  - framework.forneus.generator.handler.primitive.button
+
+framework.forneus.generator.handler.ui.widget:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler
+
+framework.forneus.generator.handler.ui.zhuge:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus.generator.handler
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.ui.zhuge.plugin
+
+framework.forneus.generator.handler.ui.zhuge.editor:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.ui.zhuge.renderer
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.ui.zhuge.plugin:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator.handler.ui.zhuge.renderer:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.generator.handler.util
+  - framework.core.datetime
+  - framework.core.i18n
+  - framework.forneus.generator.handler.primitive.graphic
+
+framework.forneus.generator.handler.util:
+  class:
+  - framework.core.i18n
+
+framework.forneus.generator.handler.vo:
+  class:
+  - framework.core.datetime
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.primitive
+  - framework.core.i18n
+  - framework.forneus.generator.handler
+  - framework.forneus.generator.handler.primitive.accordion
+  - framework.forneus.generator.handler.primitive.graphic
+  - framework.forneus.generator.handler.primitive.list
+  - framework.forneus.generator.handler.primitive.label
+
+framework.forneus.generator.handler.vo.approvalflow:
+  class:
+  - framework.forneus.generator.handler.util
+
+framework.forneus.generator.handler.vo.talk:
+framework.forneus.generator.handler.vo.task:
+framework.forneus.generator.handler.vo.treemodel:
+  interface:
+  - framework.core.model.layer
+
+framework.cache:
+  interface:
+  - framework.cache.util
+
+framework.cache.composite:
+  interface:
+  - framework.cache
+
+framework.cache.ehcache:
+  class:
+  - framework.cache
+
+framework.cache.proxy:
+  interface:
+  - framework.core.model.layer
+  - framework.cache
+
+  class:
+  - framework.core.moniter
+  - framework.cache
+  - framework.cache.composite
+  - framework.cache.ehcache
+  - framework.cache.redis
+
+framework.cache.redis:
+  interface:
+  - framework.cache
+  - framework.cache.util
+
+  class:
+  - framework.cache
+
+framework.cache.util:
+  interface:
+  - framework.cache
+  - framework.cache.redis
+
+  class:
+  - framework.cache.redis
+
+framework.calculation:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.service
+  - hue.core.dto
+
+framework.calculation.core.common:
+framework.calculation.core.logic:
+  interface:
+  - framework.calculation.core.logic.model
+  - framework.calculation.core.logic.model.operator.aggregate
+
+  class:
+  - framework.calculation.core.logic.model.operand.constant
+  - framework.calculation.core.logic.model.operator.relational
+  - framework.calculation.core.logic.model.operator
+  - framework.calculation.core.logic.model.operand.variable
+
+framework.calculation.core.logic.exception:
+framework.calculation.core.logic.model:
+  class:
+  - framework.calculation.core.logic.model.operator
+  - framework.calculation.core.logic
+
+framework.calculation.core.logic.model.operand:
+  class:
+  - framework.calculation.core.logic.model
+  - framework.calculation.core.logic
+
+framework.calculation.core.logic.model.operand.constant:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand
+
+framework.calculation.core.logic.model.operand.variable:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand.constant
+  - framework.calculation.core.logic.model.operand
+  - framework.calculation.core.logic.model.operator
+
+framework.calculation.core.logic.model.operator:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic.model
+  - framework.calculation.core.logic
+
+framework.calculation.core.logic.model.operator.aggregate:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic.model.operand
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operator
+
+framework.calculation.core.logic.model.operator.arithmetic:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand.constant
+  - framework.calculation.core.logic.model.operator
+
+framework.calculation.core.logic.model.operator.groupby:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand.constant
+  - framework.calculation.core.logic.model.operator
+  - framework.core.json
+
+framework.calculation.core.logic.model.operator.logical:
+  class:
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand.constant
+  - framework.calculation.core.logic.model.operator
+
+framework.calculation.core.logic.model.operator.maker:
+  interface:
+  - framework.calculation.core.logic.model
+
+framework.calculation.core.logic.model.operator.math:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operator
+
+framework.calculation.core.logic.model.operator.relational:
+  interface:
+  - framework.calculation.core.logic.model.operator.aggregate
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand
+  - framework.calculation.core.logic.model.operand.constant
+  - framework.calculation.core.logic.model.operator
+
+framework.core.calendar:
+  interface:
+  - framework.core.model.layer
+  - framework.core.calendar.dao
+
+  class:
+  - framework.core.calendar.dto
+
+framework.core.calendar.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.core.calendar.dto
+
+framework.core.calendar.dto:
+  class:
+  - dto.key
+  - framework.core.datetime
+
+framework.core.datetime:
+  class:
+  - framework.core.i18n
+
+framework.core.i18n:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.core.dto
+  - framework.core.datetime
+
+framework.core.json:
+  class:
+  - framework.core.datetime
+  - framework.core.i18n
+
+framework.core.model.validation:
+  interface:
+  - framework.core.model.layer
+  - framework.textresource
+
+  class:
+  - framework.textresource
+  - framework.service
+
+framework.core.moniter:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.core.dto
+
+framework.core.service.exception:
+framework.core.timezonepicker.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.core.timezonepicker.dto
+  - dto.key
+
+framework.core.timezonepicker.dto:
+framework.core.timezonepicker:
+  interface:
+  - framework.core.model.layer
+  - framework.core.timezonepicker.dao
+
+  class:
+  - framework.core.timezonepicker.dto
+
+framework.core.util:
+framework.core.util.csv:
+framework.item.autocomplete:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.item.model.entity
+  - dto.key
+
+framework.item.division:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.textresource
+
+  class:
+  - access.cassandra
+  - dto.key
+  - framework.item.item
+  - framework.core.json
+  - framework.textresource
+  - framework.core.i18n
+
+framework.item.item.annotation:
+  interface:
+  - framework.core.model.validation
+
+framework.item.item:
+  interface:
+  - framework.item.division
+  - framework.item.model
+  - framework.core.model.layer
+  - access
+  - framework.item.validation
+  - framework.service
+  - framework.textresource
+  - framework.item.item.annotation
+
+  class:
+  - hue.core.dto
+  - framework.item.mastersearch
+  - framework.service
+  - framework.item.division
+  - framework.item.model
+  - framework.item.validation
+  - framework.textresource
+
+framework.item.mastersearch:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.item.item
+
+  class:
+  - hue.core.dto
+  - dto.key
+  - framework.item.item
+
+framework.item.model:
+  interface:
+  - framework.core.model.layer
+  - hue.core.dto
+  - framework.item.item
+  - framework.item.validation
+  - framework.service
+  - framework.core.model.validation
+
+  class:
+  - framework.item.item
+  - framework.item.mastersearch
+  - framework.service
+  - hue.core.dto
+
+framework.item.model.entity:
+  interface:
+  - hue.core.dto
+  - framework.item.model
+
+  class:
+  - dto.key
+  - framework.textresource
+
+framework.item.validation:
+  interface:
+  - framework.core.model.layer
+  - access
+  - hue.core.dto
+  - framework.core.model.validation
+  - framework.item.validation.type
+  - framework.item.item
+  - framework.item.model
+  - framework.item.mastersearch
+  - hue.historicalmaster.service
+  - framework.security.authority
+
+  class:
+  - framework.item.model.entity
+  - hue.core.dto
+  - framework.item.item
+  - framework.service
+  - dto.key
+  - framework.core.model.validation
+  - framework.textresource
+  - framework.item.validation.type
+  - framework.core.spring.bean
+  - framework.item.mastersearch
+  - framework.security.core.session
+
+framework.jdbc:
+  interface:
+  - access
+  - framework.core.model.layer
+
+  class:
+  - dto.key
+
+framework.mail:
+framework.report:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.report.service.spec
+
+  class:
+  - hue.core.dto
+  - access.cassandra
+  - framework.forneus.db.dto
+  - framework.report.dto
+  - framework.report.utils
+
+framework.service.annotation:
+framework.service:
+  interface:
+  - framework.core.model.layer
+  - framework.staticsetting
+  - access
+
+  class:
+  - hue.core.dto
+  - framework.item.item
+  - dto.key
+  - access.cassandra
+
+framework.staticsetting.annotation:
+  interface:
+  - framework.staticsetting
+
+framework.staticsetting:
+  interface:
+  - framework.core.model.layer
+  - framework.staticsetting.annotation
+
+  class:
+  - hue
+  - hue.service
+
+framework.staticsetting.predefinedkeys:
+  interface:
+  - framework.staticsetting
+
+framework.style:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.core.dto.style
+
+framework.taskexecutor.annotation:
+framework.taskexecutor.aop:
+  interface:
+  - framework.taskexecutor
+
+  class:
+  - framework.taskexecutor
+
+framework.taskexecutor:
+  class:
+  - framework.taskexecutor.setting
+  - framework.taskexecutor.util
+
+framework.taskexecutor.exception:
+framework.taskexecutor.setting:
+  class:
+  - framework.taskexecutor.util
+
+framework.taskexecutor.task:
+framework.taskexecutor.util:
+  class:
+  - framework.taskexecutor.setting
+
+framework.textresource:
+  interface:
+  - framework.core.model.layer
+  - framework.cache.proxy
+  - access
+
+  class:
+  - framework.service
+  - framework.cache.proxy
+  - hue.core.dto
+  - access.cassandra
+  - dto.key
+  - framework.core.i18n
+
+framework.type:
+hue.core.dto:
+  interface:
+  - framework.autoindex
+
+  class:
+  - framework.item.item
+  - framework.textresource
+  - framework.item.mastersearch
+  - framework.report
+  - framework.core.i18n
+  - framework.service
+
+hue.core.dto.style:
+framework.malphas:
+framework.mq:
+  interface:
+  - framework.core.model.layer
+  - framework.serializer
+  - access
+
+  class:
+  - framework.serializer
+  - dto.operation
+  - access.cassandra
+
+framework.notification.channel:
+framework.notification.config:
+  class:
+  - framework.cache.redis
+
+framework.notification.coordinator.impl:
+  interface:
+  - framework.notification.listener
+
+  class:
+  - framework.notification.coordinator.impl.kafka
+  - framework.notification.coordinator.impl.redis
+
+framework.notification.coordinator.impl.kafka:
+  interface:
+  - framework.mq
+  - framework.notification.listener
+  - framework.notification.coordinator.impl
+
+  class:
+  - framework.serializer
+  - framework.notification.coordinator.impl
+  - framework.notification.listener
+
+framework.notification.coordinator.impl.redis:
+  interface:
+  - framework.notification.coordinator.impl
+  - framework.notification.listener
+
+  class:
+  - framework.notification.coordinator.impl
+  - framework.notification.listener.redis
+
+framework.notification.coordinator:
+framework.notification.listener:
+  interface:
+  - framework.websocket
+
+framework.notification.listener.redis:
+  interface:
+  - framework.notification.listener
+
+  class:
+  - framework.cache.redis
+  - framework.notification.message.adapter
+  - framework.notification.coordinator.impl
+  - framework.notification.service
+
+framework.notification.message.adapter:
+  class:
+  - framework.cache.redis
+
+framework.notification.message:
+framework.notification.service.impl.kafka:
+  interface:
+  - framework.notification.listener
+  - framework.notification.service
+
+  class:
+  - framework.notification.service
+
+framework.notification.service.impl.redis:
+  interface:
+  - framework.notification.listener.redis
+  - framework.notification.service
+
+  class:
+  - framework.notification.listener.redis
+  - framework.notification.service
+
+framework.notification.service:
+  interface:
+  - framework.notification.coordinator.impl
+  - framework.notification.listener
+  - framework.websocket
+
+  class:
+  - framework.notification.coordinator.impl
+  - framework.notification.listener.redis
+
+hue.core.dao.organization:
+  interface:
+  - framework.core.model.layer
+  - hue.core.dto.organization
+  - access
+  - hue.core.dao.personnel
+
+  class:
+  - hue.core.dto.organization
+  - access.cassandra
+  - dto.key
+
+hue.core.dao.personnel:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.core.dto.personnel
+  - access.cassandra
+  - hue.core.dto.organization
+  - dto.key
+
+hue.core.dto.organization:
+  class:
+  - hue.core.dto.personnel
+
+hue.core.dto.personnel:
+  class:
+  - hue.core.dto.organization
+
+hue.core.service.organization:
+  interface:
+  - framework.core.model.layer
+  - hue.core.dto.organization
+
+  class:
+  - hue.core.dto.organization
+
+hue.core.service.personnel:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.core.dto.personnel
+
+hue.core.util:
+framework.elasticsearch.base.core:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.base.core.routing
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+
+  class:
+  - framework.elasticsearch.base.type
+  - framework.core.datetime
+  - framework.elasticsearch.base.i18n
+
+framework.elasticsearch.base.core.routing:
+  class:
+  - framework.elasticsearch
+  - framework.elasticsearch.base.core
+
+framework.elasticsearch.base.i18n:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.elasticsearch.base.type
+  - framework.core.i18n
+  - framework.security.core.session
+
+framework.elasticsearch.base.security.batch:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.core.routing
+  - framework.cassandra.filter.authority
+  - framework.security.meta.filter
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.server
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.security
+  - framework.cassandra.filter.authority
+  - framework.security.meta.filter
+  - framework.elasticsearch.basic.index
+
+framework.elasticsearch.base.security:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.base.type.service
+  - framework.security.authority
+  - framework.security.meta.item
+  - framework.service
+  - framework.cassandra.filter.authority
+  - framework.security.meta.filter
+
+  class:
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.service
+  - framework.item.item
+  - framework.security.core.session
+  - framework.service
+  - framework.elasticsearch.request.filter
+  - framework.security.meta.filter
+  - framework.security.meta.item
+
+framework.elasticsearch.base.type.analyzer:
+framework.elasticsearch.base.type:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type.service
+  - framework.security.authority
+  - framework.service
+
+  class:
+  - framework.elasticsearch.base.i18n
+  - framework.service
+  - framework.item.item
+  - hue.core.dto
+  - framework.elasticsearch.base.type.service
+
+framework.elasticsearch.base.type.experimental.analyzer:
+framework.elasticsearch.base.type.experimental:
+  interface:
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type.experimental.layout
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch
+  - framework.elasticsearch.base.type
+
+framework.elasticsearch.base.type.experimental.layout:
+  interface:
+  - framework.elasticsearch.base.type.experimental
+
+  class:
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type.experimental
+  - framework.elasticsearch.base.type.layout
+  - framework.elasticsearch.base.type.experimental.layout.input
+  - framework.elasticsearch.base.type.settings.def
+  - framework.elasticsearch.base.type
+
+framework.elasticsearch.base.type.experimental.layout.input:
+  interface:
+  - framework.elasticsearch.base.type.experimental.layout
+
+  class:
+  - framework.elasticsearch.base.type.settings.def
+
+framework.elasticsearch.base.type.experimental.query:
+  interface:
+  - framework.elasticsearch.base.type.experimental
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.type.experimental
+  - framework.elasticsearch.request.query
+
+framework.elasticsearch.base.type.layout:
+  interface:
+  - framework.elasticsearch.request.query
+  - framework.core.model.layer
+  - framework.elasticsearch.base.type.experimental.layout
+  - framework.security.meta.item
+  - framework.service
+
+  class:
+  - framework.elasticsearch.base.type
+  - framework.service
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.base.type.settings.def
+  - framework.elasticsearch
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type.experimental.layout
+  - framework.item.item
+  - framework.security.meta.item
+
+framework.elasticsearch.base.type.service:
+  interface:
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type.layout
+  - framework.core.model.layer
+
+  class:
+  - framework.elasticsearch.base.type
+  - framework.service
+  - framework.elasticsearch.base.type.layout
+
+framework.elasticsearch.base.type.settings.def:
+  interface:
+  - framework.elasticsearch.base.type.experimental.layout
+
+  class:
+  - framework.elasticsearch.base.type.experimental.layout
+  - framework.elasticsearch
+
+framework.elasticsearch.basic.autocomplete:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic.autocomplete.parser
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+
+  class:
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.autocomplete.parser
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch.experimental
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+
+framework.elasticsearch.basic.autocomplete.group:
+  interface:
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.autocomplete.parser
+  - framework.elasticsearch.basic.docsearch.experimental
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+
+framework.elasticsearch.basic.autocomplete.parser:
+framework.elasticsearch.basic.docsearch:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.core.model.layer
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.mapper
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.request.aggregation
+  - framework.elasticsearch.request.facet
+
+framework.elasticsearch.basic.docsearch.experimental:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.request.aggregation
+  - framework.elasticsearch.request.facet
+
+framework.elasticsearch.basic.docsearch.group:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.request.aggregation
+  - framework.elasticsearch.request.facet
+
+framework.elasticsearch.basic.docsearch.parser:
+  class:
+  - framework.elasticsearch.request.filter
+
+framework.elasticsearch.basic.docsearch.relevant:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.request.query
+
+framework.elasticsearch.basic:
+framework.elasticsearch.basic.index:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.basic.index.internal
+  - framework.mq
+  - framework.elasticsearch.basic.server
+  - framework.elasticsearch.base.type.service
+
+  class:
+  - framework.elasticsearch.base.core
+  - access.cassandra
+  - framework.elasticsearch.base.type
+  - framework.core.i18n
+  - framework.elasticsearch.base.i18n
+
+framework.elasticsearch.basic.index.internal:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.basic.server
+
+  class:
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.request.filter
+  - framework.core.i18n
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+
+framework.elasticsearch.basic.server:
+  interface:
+  - framework.core.model.layer
+
+framework.elasticsearch.basic.type.validator:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.base.core.routing
+  - framework.elasticsearch.base.type.service
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.type
+
+framework.elasticsearch:
+  interface:
+  - framework.core.moniter
+  - framework.elasticsearch.basic.server
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.layout
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.basic.index.internal
+  - framework.elasticsearch.basic.type.validator
+  - framework.elasticsearch.historical.docsearch
+  - framework.service
+  - framework.elasticsearch.base.core.routing
+  - framework.security.meta.item
+
+  class:
+  - framework.core.moniter
+  - framework.elasticsearch.basic.server
+  - framework.cassandra.filter.authority
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.layout
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+  - framework.elasticsearch.basic.index.internal
+  - framework.elasticsearch.basic.type.validator
+  - framework.elasticsearch.historical.docsearch
+  - framework.item.item
+  - framework.mq
+  - framework.security.authority
+  - framework.security.meta.filter
+  - framework.security.meta.item
+  - framework.service
+  - framework.textresource
+  - framework.elasticsearch.base.core.routing
+
+framework.elasticsearch.historical.docsearch.experimental:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.request.query
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.docsearch.experimental
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.historical.docsearch
+  - framework.elasticsearch.request.query
+
+framework.elasticsearch.historical.docsearch:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.core.model.layer
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.mapper
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.request.query
+  - framework.elasticsearch.request.facet
+  - framework.elasticsearch.request.filter
+
+framework.elasticsearch.mapper:
+  interface:
+  - framework.elasticsearch.base.core
+
+  class:
+  - framework.elasticsearch.base.core
+
+framework.elasticsearch.mapper.facet:
+framework.elasticsearch.request.aggregation:
+  class:
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.request.filter
+
+framework.elasticsearch.request.facet:
+  class:
+  - framework.elasticsearch.request.aggregation
+  - framework.elasticsearch.request.filter
+
+framework.elasticsearch.request.filter:
+  class:
+  - framework.elasticsearch.base.type
+
+framework.elasticsearch.request.query:
+  class:
+  - framework.elasticsearch.base.i18n
+  - framework.elasticsearch.base.type.settings.def
+  - framework.elasticsearch
+
+framework.elasticsearch.util:
+framework.serializer:
+  class:
+  - framework.serializer.util
+
+framework.serializer.util:
+  interface:
+  - framework.serializer
+
+framework.core.model.layer.annotation:
+framework.core.model.layer:
+framework.core.spring.bean:
+  interface:
+  - framework.core.model.layer
+
+framework.core.spring.bean.ext:
+framework.core.spring.bean.scan:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.core.spring.bean
+
+framework.web.component.grid:
+  interface:
+  - framework.item.model
+  - framework.core.model.layer
+  - access
+
+  class:
+  - dto.key
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.item.item
+  - framework.security.core.session
+
+framework.web.controller:
+  interface:
+  - framework.core.model.layer
+  - framework.core.moniter
+  - framework.core.calendar
+  - framework.web.service
+  - framework.staticsetting
+  - framework.textresource
+  - framework.core.timezonepicker
+
+  class:
+  - framework.core.moniter
+  - framework.core.calendar.dto
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.core.json
+  - framework.web.spring.mvc
+  - framework.web.servlet.listener
+  - framework.web.service
+  - framework.textresource
+  - framework.core.timezonepicker.dto
+
+framework.web.controller.content:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.web.servlet.listener
+
+framework.web.controller.feedback:
+  interface:
+  - framework.core.model.layer
+  - framework.web.feedback.service
+
+framework.web.feedback.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.web.feedback.dto
+  - access.cassandra
+  - dto.key
+
+framework.web.feedback.domain:
+framework.web.feedback.dto:
+  class:
+  - hue.core.dto
+
+framework.web.feedback.predicate:
+  class:
+  - framework.web.feedback.dto
+  - framework.web.feedback.util
+
+framework.web.feedback.service:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - framework.service
+  - framework.web.feedback.dao
+
+  class:
+  - framework.security.core.session
+  - framework.service
+  - framework.web.feedback.dto
+  - framework.web.feedback.util
+  - framework.web.servlet.listener
+  - hue.core.dto
+
+framework.web.feedback.util:
+  interface:
+  - framework.service
+
+  class:
+  - framework.service
+  - hue.core.dto
+
+framework.web.log.accesslog.dao:
+  interface:
+  - framework.core.model.layer
+  - framework.taskexecutor
+  - access
+
+  class:
+  - framework.web.log.accesslog.dto
+  - dto.key
+
+framework.web.log.accesslog.dto:
+  class:
+  - framework.web.log.accesslog.dao
+
+framework.web.log.accesslog:
+framework.web.menu:
+  interface:
+  - framework.core.model.layer
+  - framework.taskexecutor
+  - framework.core.menu
+  - framework.core.menu.dao
+
+  class:
+  - framework.core.menu.core.dto
+
+framework.web.service:
+  interface:
+  - framework.forneus
+  - framework.core.model.layer
+  - framework.core.i18n
+  - framework.forneus.databind
+  - framework.forneus.databind.fvm
+  - framework.forneus.db.service.spec
+  - framework.service
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.item.autocomplete
+  - framework.item.division
+  - framework.item.item
+  - framework.item.model
+  - framework.textresource
+  - framework.web.component.grid
+  - hue.core.dto
+
+  class:
+  - framework.forneus
+  - framework.forneus.databind
+  - framework.forneus.db.dto
+  - framework.forneus.generator
+  - framework.service
+  - framework.core.i18n
+  - framework.core.json
+  - framework.item.item
+  - framework.item.model.entity
+  - framework.textresource
+  - framework.web.component.grid
+  - hue.core.dto
+
+framework.web.servlet:
+  class:
+  - framework.core.datetime
+  - framework.core.spring.bean
+  - framework.web.servlet.listener
+
+framework.web.servlet.cookie:
+  interface:
+  - framework.core.model.layer
+
+framework.web.servlet.listener:
+  class:
+  - framework.forneus
+  - framework.security.core.session
+  - framework.web.servlet
+
+framework.web.session:
+framework.web.speedmonitor:
+  interface:
+  - framework.core.model.layer
+
+framework.web.spring.annotation:
+framework.web.spring.exception:
+framework.web.spring.mvc:
+  interface:
+  - framework.core.model.layer
+  - framework.core.spring.bean.scan
+  - framework.security.authority
+  - framework.forneus
+  - framework.forneus.databind
+  - framework.security.core.session
+  - framework.web.controller
+  - framework.web.service
+
+  class:
+  - framework.core.i18n
+  - framework.core.json
+  - framework.core.spring.bean
+  - framework.forneus.databind
+  - framework.web.spring.security
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.forneus.databind.fvm
+  - framework.forneus.generator.handler
+  - framework.report
+  - framework.forneus
+  - framework.report.utils
+  - framework.service
+  - framework.web.servlet
+
+framework.web.spring.security:
+  class:
+  - framework.security.core.session
+
+framework.web.view:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus.generator
+
+hue.bizdata:
+hue.bizdata.dto:
+hue.bizdata.entity:
+hue.controller.firststepguide:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - hue.firststepguide.service
+
+  class:
+  - framework.security.core.session
+  - hue.domain.firststepguide
+  - hue.firststepguide.vo
+
+hue.controller.pictureuploader:
+  interface:
+  - framework.core.model.layer
+
+hue.controller.userguide:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - hue.userguide.service
+
+  class:
+  - framework.security.core.session
+  - hue
+  - hue.userguide.dto
+
+hue.controller.wapfileuploader:
+  interface:
+  - framework.core.model.layer
+  - hue.controller.pictureuploader
+
+  class:
+  - framework.web.servlet.listener
+
+hue.domain.firststepguide:
+  class:
+  - hue.firststepguide.vo
+
+hue.domain.userguide:
+hue.firststepguide.dao:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - access
+
+  class:
+  - hue.firststepguide.dto
+  - dto.key
+
+hue.firststepguide.dto:
+  class:
+  - dto.key
+
+hue.firststepguide.exception:
+hue.firststepguide.layouts:
+  class:
+  - hue.firststepguide.dto
+  - hue
+
+hue.firststepguide.service:
+  interface:
+  - framework.core.model.layer
+  - hue.firststepguide.dao
+  - framework.security.core.user
+  - framework.cache.util
+
+  class:
+  - hue.firststepguide.vo
+  - hue.firststepguide.exception
+  - hue.firststepguide.dto
+
+hue.firststepguide.templates:
+  class:
+  - hue.firststepguide.dto
+  - hue
+
+hue.firststepguide.utils:
+hue.firststepguide.vo:
+  class:
+  - hue.firststepguide.dto
+  - framework.core.datetime
+
+hue.userguide.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.userguide.dto
+  - dto.key
+
+hue.userguide.dto:
+  interface:
+  - framework.security.core.user
+
+  class:
+  - dto.key
+  - framework.core.datetime
+
+hue.userguide.exception:
+hue.userguide.service:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - hue.userguide.dao
+
+  class:
+  - hue
+  - hue.userguide.dto
+  - hue.userguide.exception
+  - framework.core.datetime
+
+hue.userguide.util:
+hue.userguide.vo:
+framework.core.menu.core.dto.counter:
+framework.core.menu.core.dto:
+  class:
+  - framework.core.menu.core.vo
+  - framework.core.i18n
+
+framework.core.menu.core.enums:
+framework.core.menu.core.utils:
+framework.core.menu.core.vo:
+  class:
+  - framework.core.i18n
+  - framework.core.menu.core.dto
+
+framework.core.menu.dao.impl:
+  interface:
+  - access
+  - framework.core.menu.dao
+  - framework.core.menu.staticmenu.hierarchy
+  - framework.staticsetting
+  - framework.core.menu.staticmenu.iconshierarchy
+
+  class:
+  - dto.key
+  - framework.core.menu.core.dto
+  - framework.core.menu.core.dto.counter
+  - access.cassandra
+  - framework.core.menu.staticmenu.hierarchy
+  - framework.security.core.user
+  - framework.core.menu.staticmenu.iconshierarchy
+
+framework.core.menu.dao:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.core.menu.core.dto
+  - framework.core.menu.staticmenu.hierarchy
+  - framework.security.core.user
+  - framework.core.menu.staticmenu.iconshierarchy
+
+framework.core.menu:
+  interface:
+  - framework.core.model.layer
+  - framework.core.menu.dao
+  - framework.security.core.user
+
+  class:
+  - framework.core.menu.core.dto
+  - framework.core.menu.core.vo
+  - framework.core.i18n
+  - framework.core.json
+  - framework.core.menu.core.utils
+  - framework.core.menu.staticmenu.iconshierarchy
+  - framework.service
+  - framework.core.menu.dao.impl
+  - framework.core.menu.staticmenu.hierarchy
+  - framework.security.core.user
+  - framework.core.datetime
+
+framework.core.menu.staticmenu.hierarchy:
+  interface:
+  - framework.core.model.layer
+  - framework.staticsetting
+  - framework.core.menu.staticmenu
+
+  class:
+  - framework.core.menu.core.dto
+
+framework.core.menu.staticmenu.iconshierarchy:
+  interface:
+  - framework.core.model.layer
+  - framework.staticsetting
+  - framework.core.menu.staticmenu
+  - framework.core.menu.staticmenu.menuid
+  - framework.staticsetting.annotation
+
+framework.core.menu.staticmenu.menuid:
+  interface:
+  - framework.core.model.layer
+  - framework.staticsetting
+  - framework.core.menu.staticmenu
+
+  class:
+  - framework.core.menu.core.dto
+
+framework.core.menu.staticmenu:
+  interface:
+  - framework.core.model.layer
+  - framework.core.menu.dao
+  - framework.core.menu.staticmenu.menuid
+  - framework.staticsetting
+
+  class:
+  - framework.core.menu.core.dto
+  - framework.core.menu.staticmenu.iconshierarchy
+  - framework.core.menu.staticmenu.menuid
+  - framework.core.i18n
+  - framework.core.json
+
+framework.security.annotation:
+framework.security.authentication:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.account.dao
+  - framework.security.core.session
+
+  class:
+  - framework.security.core.session
+  - framework.service
+  - hue.core.dto
+  - access.cassandra
+
+framework.security.authority:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.session
+  - framework.item.item
+  - framework.security.core.user
+  - framework.service
+  - framework.staticsetting
+  - framework.core.menu
+
+  class:
+  - framework.item.item
+  - framework.item.mastersearch
+  - framework.service
+  - framework.security.core.session
+  - framework.security.core.user
+  - framework.staticsetting
+  - framework.textresource
+  - hue.core.dto
+
+framework.security.cache:
+  interface:
+  - framework.core.model.layer
+  - framework.cache
+
+  class:
+  - framework.security.core.session
+
+framework.security.core.account.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.core.dto
+  - access.cassandra
+
+framework.security.core:
+framework.security.core.session:
+  interface:
+  - framework.security.core.user
+  - framework.cache
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.service
+  - framework.core.i18n
+  - framework.cache
+  - framework.cache.redis
+  - access.cassandra
+  - hue.core.dto
+  - framework.security.core.user
+
+framework.security.core.user:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.account.dao
+  - framework.core.menu.dao
+  - access
+  - framework.staticsetting
+
+  class:
+  - hue.core.dto.user
+  - framework.security.core.account.dao
+  - framework.core.menu.core.dto
+  - hue.core.dto
+  - access.cassandra
+  - dto.key
+
+framework.security.meta.filter:
+  interface:
+  - framework.core.model.layer
+  - framework.security.staticreader
+  - access
+
+  class:
+  - framework.security.staticreader
+
+framework.security.meta.item:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - dto.key
+
+framework.security.setting:
+framework.security.staticreader:
+  interface:
+  - framework.core.model.layer
+
+framework.security.util:
+hue.security.dto:
+hue.core.dto.user:
+  class:
+  - framework.security.core.user
+
+framework.security.web.authentication.filter:
+  interface:
+  - framework.core.model.layer
+  - framework.security.authentication
+  - framework.security.core.session
+
+  class:
+  - framework.forneus
+  - framework.security.core.session
+  - framework.security.web
+  - framework.web.spring.mvc
+
+framework.security.web.authentication.interceptor:
+  interface:
+  - framework.web.spring.mvc
+
+  class:
+  - framework.security.core.session
+
+framework.security.web.authentication:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.security.authentication
+  - framework.security.core.session
+  - framework.textresource
+
+  class:
+  - framework.forneus
+  - framework.notification.service
+  - framework.security.core.session
+  - framework.security.web.session
+  - framework.security.web
+  - framework.service
+  - framework.web.spring.mvc
+  - framework.forneus.generator.handler.vo
+  - framework.textresource
+  - hue.core.dto
+
+framework.security.web.authorization.interceptor:
+  interface:
+  - framework.web.spring.mvc
+  - framework.security.authority
+  - framework.security.core.session
+  - framework.service
+  - framework.web.servlet.cookie
+
+framework.security.web.controller:
+  interface:
+  - framework.core.model.layer
+  - framework.security.cache
+  - framework.security.core.session
+
+  class:
+  - hue.bizdata
+  - framework.security.core.session
+
+framework.security.web.dospro.interceptor:
+  interface:
+  - framework.web.spring.mvc
+  - framework.core.model.layer
+  - framework.security.core.session
+  - framework.web.servlet.cookie
+
+  class:
+  - framework.web.spring.security
+  - framework.security.core.session
+
+framework.security.web.log.interceptor:
+  interface:
+  - framework.web.spring.mvc
+  - framework.security.core.session
+  - framework.web.log.accesslog.dao
+  - framework.web.menu
+
+  class:
+  - framework.security.core.session
+  - framework.web.log.accesslog.dto
+  - framework.web.spring.mvc
+
+framework.security.web:
+  interface:
+  - framework.web.servlet
+
+  class:
+  - framework.security.web.authentication.filter
+  - framework.security.web.session.listener
+  - framework.web.servlet
+
+framework.security.web.session:
+  interface:
+  - framework.security.core.session
+  - framework.core.i18n
+  - framework.security.core.user
+  - framework.notification.listener
+  - framework.websocket
+  - framework.web.spring.mvc
+  - framework.core.model.layer
+  - framework.service
+  - framework.web.menu
+
+  class:
+  - framework.security.core.session
+  - framework.web.servlet.listener
+  - framework.web.spring.security
+  - framework.core.i18n
+  - framework.service
+  - hue.core.dto
+  - framework.notification.service
+  - framework.forneus.generator.handler.vo
+  - framework.websocket
+
+framework.security.web.session.interceptor:
+  interface:
+  - framework.web.spring.mvc
+  - framework.security.core.session
+
+  class:
+  - framework.security.core.session
+
+framework.security.web.session.listener:
+  interface:
+  - framework.security.core.user
+
+  class:
+  - framework.security.core.session
+  - framework.service
+  - framework.web.servlet.listener
+  - framework.security.core.user
+  - framework.web.servlet
+
+framework.security.web.utils:
+framework.talk.constant:
+  class:
+  - framework.core.i18n
+  - framework.security.core.session
+
+framework.talk.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.service
+  - hue.talk.dto
+  - access.cassandra
+  - dto.key
+  - dto.operation
+
+framework.talk.service:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - framework.talk.dao
+  - hue.timeline.service
+
+  class:
+  - framework.service
+  - hue.talk.dto
+  - hue.timeline.dto
+
+hue.talk.dto:
+  class:
+  - framework.core.i18n
+
+framework.talk.common:
+framework.talk.controller:
+  interface:
+  - framework.core.model.layer
+  - framework.service
+  - framework.talk.service
+  - hue.timeline.service
+
+  class:
+  - framework.core.i18n
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.talk.util
+  - hue.talk.dto
+
+framework.talk.observer.handlers:
+  interface:
+  - framework.talk.observer
+  - framework.core.model.layer
+  - framework.talk.service
+  - hue.timeline.service
+
+  class:
+  - framework.talk.observer
+  - hue.talk.dto
+  - framework.talk.observer.util
+  - framework.security.core.user
+  - hue.timeline.dto
+
+framework.talk.observer:
+  interface:
+  - framework.talk.observer.handlers
+  - framework.websocket
+  - framework.core.model.layer
+
+  class:
+  - framework.talk.observer.util
+  - framework.security.core.user
+  - hue.talk.dto
+  - framework.security.core.session
+
+framework.talk.observer.util:
+  class:
+  - framework.security.core.user
+  - framework.talk.observer
+
+framework.talk.util:
+  class:
+  - framework.forneus.generator.handler.vo
+  - hue.talk.dto
+
+framework.forneus.cli:
+  interface:
+  - framework.forneus.databind
+  - framework.forneus.generator
+  - framework.forneus
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.optimizer
+  - framework.forneus
+
+framework.forneus.optimizer.closure:
+  interface:
+  - framework.forneus
+
+  class:
+  - framework.forneus.optimizer
+
+framework.forneus.optimizer:
+  interface:
+  - framework.forneus
+  - framework.forneus.databind
+  - framework.forneus.databind.fvm
+  - framework.forneus.optimizer.closure
+  - framework.forneus.optimizer.strategy
+  - framework.textresource
+
+  class:
+  - framework.forneus.databind.fvm
+  - framework.forneus.optimizer.closure
+  - framework.forneus.optimizer.less
+  - framework.forneus.optimizer.strategy
+  - framework.core.i18n
+  - framework.textresource
+
+framework.forneus.optimizer.less:
+  class:
+  - framework.forneus.optimizer
+
+framework.forneus.optimizer.strategy:
+  interface:
+  - framework.forneus
+  - framework.forneus.databind
+  - framework.forneus.optimizer.less
+
+  class:
+  - framework.forneus.optimizer
+  - framework.forneus.optimizer.less
+
+framework.forneus.databind:
+  interface:
+  - framework.forneus.databind.fvm
+  - framework.forneus.generator
+
+  class:
+  - framework.forneus
+  - framework.forneus.databind.fvm
+  - framework.forneus.databind.fvm.operation
+  - framework.forneus.generator
+
+framework.forneus.databind.fvm.expression:
+  class:
+  - framework.forneus.databind
+  - framework.core.datetime
+  - framework.core.i18n
+  - framework.core.json
+
+framework.forneus.databind.fvm:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus.databind.fvm.operation
+  - framework.forneus.databind
+  - framework.forneus.generator
+  - framework.forneus
+  - framework.forneus.db.service.spec
+
+  class:
+  - framework.forneus.generator
+  - framework.forneus.databind
+  - framework.forneus.databind.fvm.expression
+  - framework.forneus.databind.fvm.operation
+  - framework.forneus
+  - framework.forneus.db.dto
+  - framework.expression
+
+framework.forneus.databind.fvm.operation:
+  interface:
+  - framework.forneus.databind.fvm
+
+  class:
+  - framework.forneus.databind
+  - framework.forneus.databind.fvm
+
+framework.forneus.databind.parser:
+framework.forneus.db.dao.impl:
+  interface:
+  - access
+  - framework.forneus.db.dao.spec
+
+  class:
+  - framework.forneus.db.dto
+  - access.cassandra
+
+framework.forneus.db.dao.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.forneus.db.dto
+
+framework.forneus.db.dto:
+framework.forneus.db.service.impl:
+  interface:
+  - framework.forneus.db.dao.spec
+  - framework.forneus.db.service.spec
+
+  class:
+  - framework.forneus.db.dto
+
+framework.forneus.db.service.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.forneus.db.dto
+
+framework.forneus:
+  interface:
+  - access
+  - framework.forneus.databind
+  - framework.forneus.db.dao.spec
+  - framework.forneus.db.service.spec
+  - framework.forneus.generator
+
+  class:
+  - access
+  - framework.forneus.databind
+  - framework.forneus.databind.fvm
+  - framework.forneus.db.dao.impl
+  - framework.forneus.db.service.impl
+  - framework.forneus.db.dto
+  - framework.forneus.generator
+
+framework.forneus.generator.annotation:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.generator:
+  interface:
+  - framework.forneus
+  - framework.forneus.generator.annotation
+  - framework.forneus.optimizer
+  - framework.forneus.stax
+
+  class:
+  - framework.forneus.generator.handler
+  - framework.forneus
+  - framework.forneus.generator.handler.condition
+  - framework.forneus.generator.handler.framework
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.layout
+  - framework.forneus.generator.handler.ui.widget
+  - framework.forneus.generator.handler.ui.zhuge
+  - framework.forneus.optimizer
+  - framework.forneus.generator.handler.inherit
+  - framework.forneus.stax
+  - framework.forneus.databind.fvm
+
+framework.forneus.generator.handler:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus
+
+framework.forneus.generator.handler.inherit:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+  class:
+  - framework.forneus.generator
+
+framework.forneus.stax:
+  interface:
+  - framework.forneus
+
+framework.forneus.url:
+  interface:
+  - framework.forneus
+
+framework.forneus.util:
+framework.expression:
+hue.mobile.apis.pushnotification.service.impl:
+  interface:
+  - access
+  - framework.textresource
+  - hue.mobile.apis.pushnotification.service
+
+  class:
+  - access.cassandra
+  - hue.mobile.dto
+
+hue.mobile.apis.pushnotification.service:
+  class:
+  - access.cassandra
+
+hue.mobile.dto:
+hue.historicalmaster.dao:
+  interface:
+  - framework.core.model.layer
+  - hue.historicalmaster.dto
+  - access
+
+  class:
+  - access.cassandra
+  - dto.key
+  - dto.operation
+  - hue.historicalmaster.search.model
+  - hue.historicalmaster.util
+
+hue.historicalmaster.dto:
+  interface:
+  - framework.item.item.annotation
+  - framework.autoindex
+
+  class:
+  - hue.historicalmaster.util
+
+hue.historicalmaster.search.i18n:
+  interface:
+  - framework.elasticsearch.mapper
+
+  class:
+  - framework.core.i18n
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.mapper
+
+hue.historicalmaster.search.model:
+  interface:
+  - framework.elasticsearch.mapper
+
+  class:
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.basic.docsearch
+  - hue.historicalmaster.search.i18n
+
+hue.historicalmaster.search.service:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+
+  class:
+  - hue.historicalmaster.search.model
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.mapper
+
+hue.historicalmaster.service:
+  interface:
+  - framework.core.model.layer
+  - hue.historicalmaster.dto
+  - hue.historicalmaster.dao
+  - hue.historicalmaster.search.service
+
+  class:
+  - hue.historicalmaster.search.model
+  - access.cassandra
+
+hue.historicalmaster.util:
+  class:
+  - framework.core.datetime
+  - hue.historicalmaster.search.model
+
+hue.home.service.menu:
+  interface:
+  - framework.core.model.layer
+  - framework.core.menu
+  - framework.security.core.user
+
+  class:
+  - framework.core.menu.core.dto
+  - framework.core.menu.core.vo
+  - framework.security.core.session
+
+hue.home.service.menu.search:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.basic.autocomplete
+  - framework.core.menu
+  - framework.security.core.user
+
+  class:
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic
+  - hue.home.service.menu
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.filter
+  - framework.security.core.session
+
+hue.task.dao:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.task.domain
+  - framework.forneus.generator.handler.vo
+
+hue.task.domain:
+  class:
+  - framework.forneus.generator.handler.vo
+
+hue.task.service:
+  interface:
+  - framework.core.model.layer
+  - hue.task.dao
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - hue.task.domain
+
+framework.websocket:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.notification.service
+  - hue.timeline.websocket
+  - framework.security.core.session
+  - framework.web.servlet.listener
+
+hue.controller.globalnavi:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.home.converter
+  - hue.timeline.service
+
+  class:
+  - framework.forneus
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - hue.timeline.dto
+
+hue.controller.home:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.textresource
+  - hue.timeline.converter
+  - hue.timeline.secretary
+  - hue.timeline.service
+
+  class:
+  - framework.core.i18n
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.textresource
+  - framework.web.spring.mvc
+  - hue.controller.base
+  - hue.timeline.dto
+  - hue.timeline.entity
+  - hue
+  - hue.timeline.utils
+  - hue.timeline.vo
+  - hue.timeline.vo.secretary
+
+hue.controller.mobile:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.home.converter
+  - hue.timeline.converter
+  - hue.timeline.service
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - hue.controller.base
+  - hue.timeline.dto
+  - hue
+  - hue.timeline.feed
+  - hue.timeline.feedcontent.dto
+  - hue.timeline.utils
+  - hue.timeline.vo
+  - hue.timeline.vo.mobile
+
+hue.controller.task:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.task.service
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.web.spring.mvc
+  - hue.task.domain
+
+hue.controller.task.handler:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.web.view
+
+  class:
+  - framework.forneus.generator
+
+hue.controller.timeline:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.timeline.service
+  - framework.textresource
+  - hue.timeline.converter
+  - hue.timeline.service.operation
+  - framework.security.authentication
+  - framework.security.core.session
+  - framework.security.core.user
+  - hue.controller.pictureuploader
+  - hue.timeline.connector
+  - hue.timeline.secretary
+  - hue.timeline.feed
+  - framework.service
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.service
+  - framework.web.spring.mvc
+  - hue.timeline.dto
+  - framework.core.i18n
+  - framework.textresource
+  - hue.controller.base
+  - hue
+  - hue.timeline.utils
+  - hue.timeline.vo
+  - hue.controller.timeline.api.vo
+  - hue.timeline.feedcontent.dto
+  - hue.timeline.connector
+  - hue.timeline.connector.exception
+  - hue.timeline.entity
+  - framework.notification.service
+  - hue.timeline.constant
+  - hue.timeline.feed
+  - hue.timeline.feeddata.entity
+  - hue.timeline.vo.content
+  - hue.timeline.vo.mobile
+  - hue.timeline.websocket
+  - hue.core.dto
+  - hue.timeline.vo.secretary
+
+hue.controller.timeline.enums:
+hue.home.controller.enums:
+hue.home.controller:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.security.authentication
+  - framework.security.core.session
+  - framework.security.core.user
+  - hue.home.service.menu
+  - hue.home.service.menu.search
+  - hue.timeline.service
+
+  class:
+  - framework.core.i18n
+  - framework.core.menu.core.dto
+  - framework.core.menu.core.vo
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - hue.home.service.menu
+
+hue.home.controller.menu.enums:
+hue.home.converter:
+  interface:
+  - framework.core.model.layer
+  - framework.textresource
+  - hue.timeline.service
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - hue.timeline.dto
+  - framework.textresource
+  - hue.timeline.service.impl
+  - hue.timeline.utils
+
+hue.background:
+  interface:
+  - framework.elasticsearch.base.security
+  - framework.elasticsearch.base.type.layout
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.base.core.routing
+
+  class:
+  - framework.elasticsearch
+  - framework.elasticsearch.base.type
+  - framework.elasticsearch.base.type.layout
+  - framework.elasticsearch.base.type.service
+  - access.cassandra
+  - framework.elasticsearch.base.core.routing
+
+hue.expense:
+  interface:
+  - approvalflow.dao.application
+  - approvalflow.dao.metadatabinding
+  - approvalflow.dao.model
+  - approvalflow.dao.role
+  - framework.elasticsearch.basic.index
+  - hue.expense.payment.dao
+
+  class:
+  - access.cassandra
+  - approvalflow
+  - approvalflow.dao.application
+  - approvalflow.dao.metadatabinding
+  - approvalflow.dao.model
+  - approvalflow.dao.role
+  - approvalflow.dto.application
+  - approvalflow.dto.metadatabinding
+  - approvalflow.dto.model
+  - approvalflow.dto.role
+  - framework.elasticsearch
+  - framework.service
+  - hue.background
+  - hue.expense.payment.dao
+  - hue.expense.payment.dto
+
+hue.customerregistration.dto:
+  interface:
+  - framework.inputfw.dao
+
+hue.customerregistration.event:
+  interface:
+  - approvalflow.adaptor.event
+  - approvalflow.dto.application
+  - approvalflow.dto.event
+
+  class:
+  - framework.service
+  - approvalflow.dto.event
+
+hue.customerregistration.service:
+  interface:
+  - framework.inputfw.dao
+  - framework.security.core.user
+  - framework.inputfw.service
+  - framework.core.model.layer
+
+  class:
+  - hue.customerregistration.dto
+
+hue.dao.employee:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue
+
+hue.db.ate:
+  interface:
+  - access
+
+hue.dictionary.db.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.dictionary.db.dto
+  - access.cassandra
+
+hue.dictionary.db.dto:
+hue.dictionary:
+  interface:
+  - framework.core.model.layer
+  - hue.dictionary.db.dao
+  - framework.textresource
+
+  class:
+  - hue.core.dto
+  - hue.dictionary.db.dto
+
+hue.domain.employee:
+hue.domain:
+hue.dto:
+  interface:
+  - framework.item.mastersearch
+  - hue.historicalmaster.dto
+
+  class:
+  - hue.historicalmaster.util
+
+hue.ekisupaservice.dto:
+  interface:
+  - framework.inputfw.dao
+
+hue.ekisupaservice.service:
+  interface:
+  - framework.inputfw.service
+  - framework.core.model.layer
+
+  class:
+  - hue.ekisupaservice.dto
+
+hue.ekisupaservice.validator:
+  interface:
+  - framework.core.model.validation
+  - framework.item.validation
+  - hue.ekisupaservice.service
+
+  class:
+  - framework.core.model.validation
+  - hue.ekisupaservice.dto
+
+hue.employeelist.dao:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.employeelist.dto
+
+hue.employeelist.dao.impl:
+  interface:
+  - access
+  - framework.report.dao.spec
+  - framework.report.dto
+  - framework.security.cache
+  - hue.employeelist.dao
+
+  class:
+  - framework.core.spring.bean
+  - hue.employeelist
+  - hue.employeelist.dto
+
+hue.employeelist.dto:
+  interface:
+  - framework.report
+  - hue.bizdata
+  - hue.spreadsheet.configuration
+
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.employeelist:
+  interface:
+  - framework.report.dto
+  - access
+  - hue.employeelist.dao
+
+  class:
+  - hue.employeelist.dto
+  - hue.employeelist.dao.impl
+  - hue.spreadsheet
+
+hue.employeelist.entity:
+hue.employeelist.report:
+  interface:
+  - access
+  - framework.report.dao.spec
+  - framework.report.dto
+
+  class:
+  - framework.report.dto
+  - hue.employeelist.dao.impl
+
+hue.employeelist.service:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.mapper
+  - hue.employeelist.dao
+  - hue.personalization.dao
+  - hue.spreadsheet.API
+  - framework.elasticsearch.basic.autocomplete
+
+  class:
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.filter
+  - hue.employeelist.dto
+  - access.cassandra
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.autocomplete
+  - hue.bizdata
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.vo
+
+hue.employeelist.utils:
+  class:
+  - framework.forneus.generator.handler.vo
+  - hue.employeelist.dto
+  - hue.spreadsheet.dto.cell
+
+hue.expense.numbering.data:
+  interface:
+  - access
+  - hue.autonumbering.generator
+
+hue.expense.numbering.rule.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.expense.numbering.rule.dto
+  - dto.key
+
+hue.expense.numbering.rule.dto:
+hue.expense.payment.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.expense.payment.dto
+  - access.cassandra
+  - dto.key
+
+hue.expense.payment.dto:
+hue.expense.receiptUpload.dto:
+hue.expense.service:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dto.application
+  - hue.expense.numbering.data
+  - hue.autonumbering.generator
+  - hue.autonumbering.service
+  - hue.expense.numbering.rule.dao
+
+  class:
+  - framework.security.core.session
+  - hue.expense.numbering.rule.dto
+  - framework.service
+
+hue.externalservice.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.externalservice.domain
+  - dto.key
+
+hue.externalservice.domain:
+hue.externalservice.service:
+  interface:
+  - framework.core.model.layer
+  - hue.externalservice.dao
+
+  class:
+  - framework.security.core.session
+  - hue.externalservice.domain
+
+hue.feedback.export.domain:
+hue.feedback.export.service:
+  interface:
+  - framework.core.model.layer
+  - hue.timeline.service
+  - framework.web.feedback.dao
+  - hue.spreadsheet.API
+
+  class:
+  - framework.web.feedback.dto
+  - hue
+  - hue.spreadsheet.entity
+  - framework.web.feedback.util
+  - hue.spreadsheet.dto
+  - hue.timeline.dto
+  - framework.web.feedback.predicate
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet
+  - hue.spreadsheet.vo
+
+hue.i18n:
+  interface:
+  - framework.forneus
+  - framework.elasticsearch.mapper
+  - framework.core.model.layer
+  - framework.elasticsearch.basic.index
+  - hue.translation.service
+
+  class:
+  - framework.forneus
+  - framework.security.core.session
+  - framework.core.i18n
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.mapper
+  - hue.employeelist.dto
+  - hue
+
+hue.magicimportemployeelist.dao.impl:
+  interface:
+  - access
+  - framework.security.cache
+  - hue.magicimportemployeelist.dao
+
+  class:
+  - framework.core.spring.bean
+  - hue.magicimportemployeelist.dto
+
+hue.magicimportemployeelist.dao:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.magicimportemployeelist.dto
+
+hue.magicimportemployeelist.dto:
+  interface:
+  - hue.bizdata
+  - hue.spreadsheet.configuration
+
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.magicimportemployeelist:
+  interface:
+  - access
+  - hue.magicimportemployeelist.dao
+
+  class:
+  - hue.magicimportemployeelist.dao.impl
+  - hue.magicimportemployeelist.dto
+  - hue.spreadsheet
+
+hue.paymentrequest.dto:
+  class:
+  - approvalflow.adaptor.application
+
+hue.paymentrequest.event:
+  interface:
+  - approvalflow.adaptor.event
+  - approvalflow.dto.application
+  - approvalflow.dto.event
+
+  class:
+  - framework.service
+  - approvalflow.dto.event
+
+hue.paymentrequest.service:
+  interface:
+  - framework.inputfw.service
+  - framework.inputfw.entity
+  - framework.security.core.user
+
+  class:
+  - hue.paymentrequest.dto
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.entity
+
+hue.paymentrequest.validator:
+  interface:
+  - framework.core.model.validation
+  - framework.item.validation
+
+  class:
+  - framework.core.model.validation
+  - hue.paymentrequest.dto
+
+hue.purchase.dto:
+hue.purchase.service:
+  interface:
+  - framework.inputfw.service
+  - framework.inputfw.entity
+  - framework.security.core.user
+
+  class:
+  - hue
+  - framework.inputfw.entity
+
+hue.purchaseold:
+  interface:
+  - framework.core.model.layer
+
+hue.search:
+  interface:
+  - framework.core.model.layer
+
+hue.service.employee.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.service.employee.dto
+  - access.cassandra
+
+hue.service.employee.daotemp:
+  interface:
+  - framework.textresource
+  - hue.dao.employee
+
+  class:
+  - framework.textresource
+  - hue
+
+hue.service.employee.db:
+hue.service.employee.dto:
+  interface:
+  - hue.service.employee
+
+  class:
+  - access.cassandra
+
+hue.service.employee:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.base.type.service
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.docsearch.parser
+  - framework.elasticsearch.historical.docsearch
+  - hue.dao.employee
+  - hue.service.employee.dao
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.mapper
+
+  class:
+  - hue
+  - framework.core.datetime
+  - framework.core.i18n
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.historical.docsearch
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.aggregation
+  - framework.elasticsearch.request.facet
+  - framework.elasticsearch.request.filter
+  - hue.i18n
+  - hue.service.employee.dto
+  - hue.service.employee.util
+  - framework.elasticsearch.basic.autocomplete
+
+hue.service.employee.util:
+  interface:
+  - hue.service.employee
+
+hue.travelexpense.dto:
+  interface:
+  - framework.item.item.annotation
+  - framework.autoindex
+
+  class:
+  - dto.key
+  - approvalflow.adaptor.application
+
+hue.travelexpense.service:
+  interface:
+  - framework.inputfw.service
+  - framework.inputfw.entity
+  - framework.security.core.user
+  - framework.web.component.grid
+  - approvalflow.dto.application
+  - hue.expense.numbering.data
+  - hue.expense.service
+  - framework.core.model.layer
+  - framework.textresource
+
+  class:
+  - hue.travelexpense.dto
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.entity
+  - hue.expense.numbering.data
+  - framework.textresource
+
+hue.adapter:
+  interface:
+  - framework.web.servlet
+
+  class:
+  - framework.web.servlet
+
+hue.controller.canvasgrid:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+
+hue.controller.customerregistration:
+  interface:
+  - hue.customerregistration.service
+  - hue.personalization.controller
+
+  class:
+  - framework.inputfw.controller
+  - framework.web.spring.mvc
+  - hue.customerregistration.dto
+
+hue.controller.developerguide:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.web.spring.mvc
+
+hue.controller.dictionary:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.textresource
+  - hue.dictionary
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.textresource
+  - framework.web.spring.mvc
+
+hue.controller.dummymagicimport:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.magicimport.service
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+
+hue.controller.employee:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.textresource
+  - hue.employeelist.service
+  - framework.service
+  - hue.service.employee
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.textresource
+  - framework.web.spring.mvc
+  - hue.employeelist.dto
+  - hue.employeelist.utils
+  - framework.forneus.generator.handler.ui
+  - framework.core.i18n
+  - framework.elasticsearch.mapper
+  - framework.security.core.session
+  - hue
+  - hue.service.employee
+
+hue.controller.employeelist:
+  interface:
+  - access
+  - framework.forneus
+  - framework.report.service.spec
+  - framework.security.core.session
+  - framework.security.core.user
+  - hue.employeelist.service
+  - hue.personalization.controller
+  - hue.personalization.service
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.service
+  - framework.core.model.layer
+  - hue.bizdata
+  - hue.spreadsheet.API
+  - hue.spreadsheet.configuration
+
+  class:
+  - framework.elasticsearch.mapper
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.report.vo
+  - framework.web.spring.mvc
+  - hue.controller.employeelist.util
+  - hue.employeelist.dao.impl
+  - hue.employeelist.dto
+  - hue.employeelist
+  - hue.employeelist.service
+  - hue
+  - hue.personalization.request
+  - hue.metadata.dto
+  - hue.spreadsheet.entity
+
+hue.controller.employeelist.util:
+  class:
+  - framework.web.spring.mvc
+
+hue.controller.feedback:
+  interface:
+  - framework.core.model.layer
+  - framework.web.feedback.dao
+  - hue.feedback.export.service
+
+  class:
+  - framework.web.feedback.dto
+  - framework.web.spring.mvc
+
+hue.controller.helloworld:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+
+hue.controller.i18nsample:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.i18n
+  - hue.translation.service
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+  - hue.employeelist.dto
+  - hue
+  - framework.core.i18n
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+
+hue.controller.layout:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+
+hue.controller.layoutsample:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+
+hue.controller.magicimportgridcreator:
+  interface:
+  - framework.core.model.layer
+  - hue.spreadsheet.API
+
+  class:
+  - hue.magicimportemployeelist
+  - hue.magicimportemployeelist.dto
+  - hue.spreadsheet.entity
+
+hue.controller.masterdata.model:
+hue.controller.masterdata:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.master
+  - framework.inputfw.module.validation
+  - framework.inputfw.view.application
+  - framework.inputfw.view.search
+  - framework.security.core.session
+  - framework.textresource
+
+  class:
+  - framework.core.datetime
+  - framework.core.json
+  - framework.inputfw.controller
+  - framework.inputfw.model.master
+  - framework.inputfw.module
+  - framework.web.spring.mvc
+  - hue.historicalmaster.dto
+  - hue.historicalmaster.search.model
+
+hue.controller.mobile.expense:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.web.spring.mvc
+  - hue.expense
+
+hue.controller.paymentrequest:
+  interface:
+  - framework.core.model.layer
+  - framework.web.component.grid
+  - framework.item.validation
+  - hue.paymentrequest.service
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - framework.web.component.grid
+  - framework.inputfw.controller
+  - framework.inputfw.entity
+  - hue.paymentrequest.dto
+
+hue.controller.purchase:
+  interface:
+  - framework.core.model.layer
+  - framework.web.component.grid
+  - framework.forneus
+  - hue.purchase.service
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - framework.web.component.grid
+  - framework.forneus
+  - framework.inputfw.controller
+  - framework.web.spring.mvc
+  - hue
+
+hue.controller.showcase:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+
+hue.controller.travelexpense:
+  interface:
+  - framework.forneus
+  - framework.report.dto
+  - framework.security.core.user
+  - hue.personalization.controller
+  - hue.travelexpense.service
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.ui.instareport.data
+  - framework.inputfw.controller
+  - framework.report
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - hue.travelexpense.dto
+
+hue.controller.treedemo:
+  interface:
+  - framework.forneus.generator.handler.vo.treemodel
+  - framework.forneus
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo.treemodel
+  - framework.web.spring.mvc
+
+hue.handler.appflow.approval:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+
+hue.handler.ess:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.web.view
+
+  class:
+  - framework.forneus.generator
+
+hue.handler.layout:
+  interface:
+  - framework.forneus.generator
+  - framework.forneus.generator.annotation
+  - framework.web.view
+
+  class:
+  - framework.forneus.generator
+
+hue.handler.showcase:
+  interface:
+  - framework.forneus.generator.annotation
+  - framework.web.view
+
+  class:
+  - framework.forneus.generator
+
+hue.handler:
+  interface:
+  - framework.web.view
+
+  class:
+  - framework.forneus.generator
+
+hue:
+  interface:
+  - framework.core.spring.bean.scan
+
+framework.inputfw.calc.config:
+  interface:
+  - framework.core.model.layer
+  - framework.calculation
+  - framework.inputfw.calc.model
+  - framework.security.core.session
+  - framework.inputfw.calc.persist
+
+  class:
+  - framework.service
+  - framework.inputfw.calc.model
+  - framework.item.model.entity
+  - hue.core.dto
+
+framework.inputfw.calc:
+  interface:
+  - framework.inputfw.calc.model
+
+  class:
+  - framework.calculation.core.logic.model.operand.variable
+  - framework.inputfw.calc.model
+
+framework.inputfw.calc.model:
+  interface:
+  - framework.calculation.core.logic.model
+
+  class:
+  - framework.calculation.core.logic.model.operand.variable
+  - framework.calculation.core.logic
+
+framework.inputfw.calc.persist:
+  interface:
+  - framework.core.model.layer
+  - framework.calculation
+  - framework.calculation.core.logic.model
+  - framework.inputfw.calc.config
+  - framework.security.core.session
+
+  class:
+  - framework.service
+  - framework.calculation.core.logic
+  - framework.calculation.core.logic.model.operand.variable
+  - framework.core.json
+  - framework.inputfw.calc
+  - framework.inputfw.calc.model
+  - hue.core.dto
+
+framework.inputfw.controller:
+  interface:
+  - approvalflow.dto.application
+  - approvalflow.service.step
+  - approvalflow.service.submission
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.inputfw.entity
+  - framework.inputfw.module.calculation
+  - framework.inputfw.module.validation
+  - framework.inputfw.service
+  - framework.item.item
+  - framework.item.model
+  - framework.item.validation
+  - framework.security.core.session
+  - framework.service
+  - framework.textresource
+  - framework.security.core.user
+  - framework.inputfw.module
+
+  class:
+  - approvalflow.adaptor.application
+  - approvalflow
+  - approvalflow.util.application
+  - approvalflow.util.step
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.instareport.data
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.entity
+  - framework.inputfw.item
+  - framework.item.item
+  - framework.security.core.session
+  - framework.service
+  - framework.web.spring.mvc
+  - hue.core.dto
+  - framework.core.model.validation
+  - framework.item.validation
+  - framework.forneus
+  - framework.inputfw.model.application
+  - framework.core.datetime
+  - hue.timeline.vo
+
+framework.inputfw.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+framework.inputfw.entity:
+  interface:
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.vo
+
+framework.inputfw:
+framework.inputfw.item:
+  interface:
+  - framework.core.model.validation
+
+framework.inputfw.model.application:
+  interface:
+  - framework.inputfw.model
+  - framework.security.core.user
+
+  class:
+  - approvalflow.adaptor.application
+  - approvalflow
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.entity
+  - hue.timeline.vo
+  - framework.security.core.session
+
+framework.inputfw.model.autonumbering:
+framework.inputfw.model:
+  class:
+  - framework.forneus.databind.fvm.expression
+
+framework.inputfw.model.master:
+  interface:
+  - framework.inputfw.model
+
+  class:
+  - framework.elasticsearch.mapper
+  - hue.historicalmaster.search.model
+
+framework.inputfw.model.message:
+  interface:
+  - framework.inputfw.model
+
+  class:
+  - framework.forneus.generator.handler.vo
+
+framework.inputfw.model.timeline:
+  interface:
+  - framework.inputfw.model
+
+  class:
+  - hue.timeline.vo
+
+framework.inputfw.module.application:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dao.role
+  - approvalflow.dto.application
+  - approvalflow.service.assignment
+  - approvalflow.service.submission
+  - framework.talk.service
+
+  class:
+  - approvalflow.adaptor.application
+  - approvalflow.dto.application
+  - framework.inputfw.model.application
+  - approvalflow
+  - approvalflow.util.application
+  - framework.inputfw.controller
+
+framework.inputfw.module.autocomplete:
+  interface:
+  - framework.core.model.layer
+  - hue.personalization.service
+
+  class:
+  - hue.personalization.request
+  - framework.core.json
+  - framework.elasticsearch.base.core
+  - framework.security.core.session
+
+framework.inputfw.module.autonumbering:
+  interface:
+  - hue.autonumbering.generator
+  - framework.core.model.layer
+  - hue.application.dao
+  - hue.autonumbering.service
+
+  class:
+  - approvalflow.adaptor.application
+  - framework.service
+  - access.cassandra
+  - hue.application.dto
+  - framework.security.core.session
+  - hue.autonumbering.generator
+
+framework.inputfw.module.autosave:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.service
+
+  class:
+  - framework.security.core.session
+  - hue.application.dto
+
+framework.inputfw.module.cache:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.model
+  - framework.security.core.session
+
+framework.inputfw.module.calculation:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.model
+  - framework.inputfw.calc.persist
+  - framework.item.item.annotation
+
+  class:
+  - framework.inputfw.item
+  - framework.service
+
+framework.inputfw.module:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.submitted
+  - framework.item.validation
+  - framework.security.core.user
+  - approvalflow.dto.application
+  - framework.forneus
+  - framework.inputfw.model
+  - framework.inputfw.module.application
+  - framework.inputfw.module.autonumbering
+  - framework.inputfw.module.autosave
+  - framework.inputfw.module.cache
+  - framework.inputfw.module.calculation
+  - framework.inputfw.module.message
+  - framework.inputfw.module.share
+  - framework.inputfw.module.submitted.service
+  - framework.inputfw.module.validation
+  - hue.autonumbering.generator
+  - hue.timeline.service
+
+  class:
+  - approvalflow.adaptor.application
+  - framework.inputfw.model.application
+  - framework.inputfw.view
+  - framework.service
+  - access.cassandra
+  - framework.core.i18n
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.item
+  - framework.inputfw.model
+  - framework.inputfw.module.autonumbering
+  - framework.inputfw.module.message
+  - framework.inputfw.module.submitted
+  - framework.security.core.session
+  - hue.timeline.dto
+
+framework.inputfw.module.master:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.model
+  - hue.historicalmaster.dto
+  - hue.historicalmaster.service
+
+  class:
+  - framework.inputfw.model.master
+  - framework.inputfw.module
+  - framework.core.datetime
+  - hue.historicalmaster.search.model
+
+framework.inputfw.module.message.annotations:
+framework.inputfw.module.message:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - approvalflow.adaptor.application
+  - framework.inputfw.model.application
+
+framework.inputfw.module.report:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.inputfw.module.report.datasource
+
+  class:
+  - framework.forneus.generator.handler.ui.instareport.data
+  - framework.report
+
+framework.inputfw.module.report.datasource.annotations:
+framework.inputfw.module.report.datasource:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+framework.inputfw.module.share.entity:
+framework.inputfw.module.share:
+  interface:
+  - framework.inputfw.model
+  - framework.core.model.layer
+  - framework.security.core.user
+  - framework.inputfw.module.submitted.service
+  - framework.service
+  - framework.textresource
+  - hue.timeline.service
+
+  class:
+  - approvalflow.adaptor.application
+  - framework.inputfw.module.share.entity
+  - framework.security.core.session
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.module.submitted
+  - framework.service
+  - approvalflow.dto.application
+  - framework.core.i18n
+  - hue.core.dto
+  - hue.timeline.dto
+
+framework.inputfw.module.submitted.dao:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.submitted
+  - access
+
+  class:
+  - dto.key
+
+framework.inputfw.module.submitted.service:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.submitted
+  - approvalflow.dao.application
+  - approvalflow.dao.process
+  - approvalflow.dao.role
+  - framework.inputfw.module.submitted.dao
+  - framework.security.core.session
+
+  class:
+  - approvalflow.dto.application
+  - framework.inputfw.module.submitted
+  - approvalflow.dto.role
+  - approvalflow.util
+
+framework.inputfw.module.submitted:
+  interface:
+  - approvalflow.dto.application
+
+framework.inputfw.module.template.forneusidprovider.annotations:
+framework.inputfw.module.template.forneusidprovider:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+
+  class:
+  - framework.service
+
+framework.inputfw.module.template:
+  interface:
+  - framework.core.model.layer
+  - approvalflow.dao.application
+  - framework.inputfw.module.template.forneusidprovider
+  - framework.textresource
+  - hue.application.dao
+
+  class:
+  - approvalflow.dto.application
+  - framework.service
+  - framework.web.spring.mvc
+  - approvalflow.adaptor.application
+  - framework.security.core.session
+  - hue.application.dto
+
+framework.inputfw.module.validation:
+  interface:
+  - framework.core.model.layer
+  - framework.item.item
+  - framework.item.model
+  - framework.item.validation
+  - framework.inputfw.model
+  - framework.core.model.validation
+  - framework.textresource
+  - framework.security.core.session
+
+  class:
+  - framework.item.validation
+  - framework.service
+  - framework.item.item
+  - framework.inputfw.item
+  - framework.core.model.validation
+  - framework.web.servlet
+
+framework.inputfw.module.view.application:
+  interface:
+  - framework.inputfw.view
+
+  class:
+  - framework.inputfw.model.master
+
+framework.inputfw.module.view:
+  interface:
+  - framework.inputfw.model
+  - framework.inputfw.view.application
+  - framework.inputfw.view
+
+  class:
+  - framework.inputfw.controller
+  - framework.inputfw.view
+
+framework.inputfw.service:
+  interface:
+  - framework.web.component.grid
+  - approvalflow.dto.application
+  - approvalflow.service.application
+  - framework.core.model.layer
+  - framework.inputfw.entity
+  - framework.security.core.user
+  - access
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - framework.web.component.grid
+  - approvalflow.adaptor.application
+  - approvalflow.dto.application
+  - approvalflow.util.application
+  - framework.inputfw.entity
+  - hue.application.dto
+  - access.cassandra
+  - dto.key
+  - framework.core.datetime
+
+framework.inputfw.view.application:
+  interface:
+  - framework.inputfw.view
+  - approvalflow.service.step
+  - framework.forneus
+  - framework.talk.service
+  - framework.textresource
+  - framework.security.core.user
+  - framework.service
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.model.application
+  - approvalflow.adaptor.application
+  - framework.inputfw.controller
+  - approvalflow.util.application
+  - approvalflow.util.step
+  - framework.inputfw.model
+  - framework.security.core.session
+  - framework.talk.util
+  - framework.textresource
+  - framework.inputfw.model.master
+  - framework.forneus.generator.handler.util
+  - framework.inputfw.view.search
+  - framework.web.spring.mvc
+
+framework.inputfw.view:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.inputfw.model
+
+  class:
+  - framework.inputfw.controller
+  - framework.web.spring.mvc
+
+framework.inputfw.view.search:
+  interface:
+  - framework.inputfw.model
+  - framework.inputfw.view
+  - framework.forneus
+
+  class:
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.controller
+  - framework.inputfw.model.master
+  - framework.inputfw.view
+  - framework.web.spring.mvc
+  - framework.core.datetime
+
+hue.application.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - access.cassandra
+  - framework.service
+  - hue.application.dto
+  - dto.key
+  - dto.operation
+
+hue.application.dto:
+  class:
+  - framework.core.datetime
+
+hue.controller.autocomplete:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.autocomplete
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.security.core.session
+  - framework.service
+  - hue.personalization.request
+
+hue.controller.report:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.inputfw.module.report
+
+  class:
+  - framework.inputfw.controller
+  - framework.inputfw.module.report
+  - framework.report
+  - framework.web.spring.mvc
+
+hue.controller.share:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.share
+
+  class:
+  - framework.inputfw.module.share.entity
+  - framework.security.core.session
+
+hue.controller.template:
+  interface:
+  - framework.core.model.layer
+  - framework.inputfw.module.template
+
+  class:
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - approvalflow.dto.application
+
+hue.magicpaste.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.magicpaste.domain
+  - dto.key
+
+hue.magicpaste.domain:
+  class:
+  - dto.key
+  - framework.textresource
+
+hue.magicpaste.service:
+  interface:
+  - framework.core.model.layer
+  - framework.textresource
+  - hue.magicpaste.dao
+
+  class:
+  - hue.magicpaste.domain
+  - framework.textresource
+  - hue.core.dto
+
+framework.magicimport.constants:
+framework.magicimport.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.magicimport.dto
+  - hue.magicimport.dto.entity
+
+framework.magicimport.encoding:
+  class:
+  - framework.magicimport.constants
+
+framework.magicimport.entity.fileanalysis:
+  class:
+  - hue.magicimport.dto
+  - framework.magicimport.constants
+  - framework.magicimport.entity.suggest
+
+framework.magicimport.entity.process:
+framework.magicimport.entity.response:
+  class:
+  - framework.magicimport.entity.suggest
+  - framework.magicimport.entity.fileanalysis
+
+framework.magicimport.entity.suggest:
+  class:
+  - hue.magicimport.dto.entity
+
+framework.magicimport.enums:
+framework.magicimport.exception:
+framework.magicimport.fileAnalysis:
+  class:
+  - framework.magicimport.entity.fileanalysis
+  - framework.magicimport.constants
+  - framework.magicimport.encoding
+  - hue.magicimport.dto
+  - framework.magicimport.service
+
+framework.magicimport.service:
+  interface:
+  - framework.core.model.layer
+  - framework.magicimport.dao
+
+  class:
+  - framework.magicimport.entity.suggest
+  - hue.magicimport.dto.entity
+  - framework.magicimport.entity.response
+  - framework.magicimport.constants
+  - hue.magicimport.dto
+  - framework.magicimport.entity.fileanalysis
+  - framework.magicimport.fileAnalysis
+
+framework.magicimport.service.util:
+hue.controller.magicimport:
+  interface:
+  - framework.core.model.layer
+  - framework.magicimport.service
+  - hue.spreadsheet.API
+  - hue.spreadsheet.service
+
+  class:
+  - framework.magicimport.entity.fileanalysis
+  - framework.magicimport.entity.response
+  - framework.magicimport.service
+  - hue.magicimport.dto.entity
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+  - hue.spreadsheet
+
+hue.magicimport.dto:
+  class:
+  - hue.magicimport.dto.entity
+
+hue.magicimport.dto.entity:
+  class:
+  - framework.magicimport.entity.suggest
+
+hue.magicimport.dto.enums:
+framework.magic.dict:
+framework.magicpaste.api.analyzer:
+  class:
+  - framework.magicpaste.api
+
+framework.magicpaste.api.coreengine.base.analysis:
+  interface:
+  - framework.magicpaste.api.coreengine.base.parameter
+  - framework.magicpaste.api
+  - framework.magicpaste.api.coreengine.base.combinator
+  - framework.magicpaste.api.coreengine.base.physicaltokenizer
+  - framework.magicpaste.api.coreengine.base.scorer
+  - framework.magicpaste.api.coreengine.base.token
+  - framework.magicpaste.api.coreengine.base.tokenizer
+  - framework.magicpaste.api.coreengine.input
+  - framework.taskexecutor
+  - framework.magicpaste.api.coreengine.base.mapper
+  - framework.magicpaste.api.coreengine.metadata
+
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.base.token
+  - framework.taskexecutor
+
+framework.magicpaste.api.coreengine.base.charfilter:
+framework.magicpaste.api.coreengine.base.combinator:
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.base.token
+  - framework.magicpaste.api.coreengine.base.common
+
+framework.magicpaste.api.coreengine.base.common:
+  class:
+  - framework.magicpaste.api.coreengine.util
+
+framework.magicpaste.api.coreengine.base.learn.calc:
+  interface:
+  - framework.magicpaste.api.coreengine.base.learn.entity
+
+  class:
+  - framework.magicpaste.api.coreengine.base.learn.entity
+
+framework.magicpaste.api.coreengine.base.learn.dao:
+  interface:
+  - framework.core.model.layer
+  - framework.magicpaste.api.coreengine.base.learn.entity
+
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.base.learn.entity
+  - framework.magicpaste.api.coreengine.basic.common
+  - framework.magicpaste.api.coreengine.input
+
+framework.magicpaste.api.coreengine.base.learn.entity:
+  interface:
+  - framework.magicpaste.api.coreengine.input
+  - framework.security.core.user
+
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+
+framework.magicpaste.api.coreengine.base.learn.service:
+  interface:
+  - framework.core.model.layer
+  - framework.magicpaste.api.coreengine.base.learn.entity
+  - framework.magicpaste.api.coreengine.base.learn.dao
+
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.base.learn.entity
+
+framework.magicpaste.api.coreengine.base.mapper:
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+
+framework.magicpaste.api.coreengine.base.parameter:
+  interface:
+  - framework.magicpaste.api
+
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+
+framework.magicpaste.api.coreengine.base.physicaltokenizer:
+  interface:
+  - framework.magicpaste.api.coreengine.input
+
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.base.position
+  - framework.magicpaste.api.coreengine.base.token
+
+framework.magicpaste.api.coreengine.base.position:
+  interface:
+  - framework.magicpaste.api.coreengine.base.token
+
+framework.magicpaste.api.coreengine.base.scorer:
+  interface:
+  - framework.magicpaste.api.coreengine.base.parameter
+  - framework.magicpaste.api.coreengine.base.token
+
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.base.parameter
+  - framework.magicpaste.api
+  - framework.magicpaste.api.coreengine.base.token
+  - framework.magicpaste.api.coreengine.util
+  - framework.magicpaste.api.coreengine.base.position
+
+framework.magicpaste.api.coreengine.base.source:
+framework.magicpaste.api.coreengine.base.stat:
+framework.magicpaste.api.coreengine.base.token:
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+
+framework.magicpaste.api.coreengine.base.tokenizer:
+  interface:
+  - framework.magicpaste.api.coreengine.base.token
+
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.base.token
+  - framework.magicpaste.api.coreengine.base.position
+
+framework.magicpaste.api.coreengine.basic.common:
+  class:
+  - framework.magicpaste.api.coreengine.base.common
+
+framework.magicpaste.api.coreengine.basic.form:
+framework.magicpaste.api.coreengine.basic.learn.calc:
+  interface:
+  - framework.magicpaste.api.coreengine.base.learn.calc
+  - framework.magicpaste.api.coreengine.base.learn.entity
+
+  class:
+  - framework.magicpaste.api.coreengine.base.learn.entity
+
+framework.magicpaste.api.coreengine.basic:
+  interface:
+  - framework.magicpaste.api.coreengine.base.learn.calc
+  - framework.magicpaste.api.coreengine.input
+  - framework.magicpaste.api
+  - framework.magicpaste.api.coreengine.base.physicaltokenizer
+  - framework.magicpaste.api.coreengine.base.scorer
+  - framework.magicpaste.api.coreengine.base.token
+  - framework.magicpaste.api.coreengine.base.tokenizer
+  - framework.magicpaste.api.coreengine.basic.rule
+
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.basic.mapper
+  - framework.magicpaste.api.coreengine.common
+  - framework.magicpaste.api.coreengine.input
+  - framework.magicpaste.api
+  - framework.magicpaste.api.coreengine.base.combinator
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.base.physicaltokenizer
+  - framework.magicpaste.api.coreengine.base.position
+  - framework.magicpaste.api.coreengine.base.scorer
+  - framework.magicpaste.api.coreengine.base.tokenizer
+  - framework.magicpaste.api.coreengine.basic.common
+  - framework.magicpaste.api.coreengine.basic.learn.calc
+  - framework.magicpaste.api.coreengine.basic.rule
+  - framework.magicpaste.api.coreengine.metadata
+
+framework.magicpaste.api.coreengine.basic.mapper:
+  interface:
+  - framework.magicpaste.api.coreengine.base.mapper
+
+  class:
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.base.position
+  - framework.magicpaste.api.coreengine.base.token
+
+framework.magicpaste.api.coreengine.basic.rule:
+  interface:
+  - framework.magicpaste.api.coreengine.base.scorer
+  - framework.magicpaste.api.coreengine.base.parameter
+
+  class:
+  - framework.magicpaste.api.coreengine.common
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.util
+  - framework.magicpaste.api.coreengine.base.analysis
+  - framework.magicpaste.api.coreengine.base.parameter
+  - framework.magicpaste.api.coreengine.service
+
+framework.magicpaste.api.coreengine.batch:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.elasticsearch.base.core
+  - framework.magicpaste.api.coreengine.service
+
+  class:
+  - framework.magicpaste.api.coreengine.service
+  - framework.elasticsearch.base.core
+  - framework.magicpaste.api.coreengine.common
+
+framework.magicpaste.api.coreengine.common:
+framework.magicpaste.api.coreengine.input:
+  class:
+  - framework.magicpaste.api.coreengine.common
+
+framework.magicpaste.api.coreengine.metadata:
+  interface:
+  - framework.magicpaste.api.coreengine.input
+
+  class:
+  - framework.magicpaste.api.coreengine.input
+
+framework.magicpaste.api.coreengine.service:
+  interface:
+  - framework.elasticsearch.base.core
+  - framework.magicpaste.api
+  - hue.dao.magicpaste
+  - framework.magicpaste.api.coreengine.base.parameter
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.magicpaste.api.coreengine.basic.form
+  - hue.service.magicpaste.util
+  - framework.elasticsearch.base.core
+  - framework.magicpaste.api.coreengine.basic.rule
+  - framework.magicpaste.api.coreengine.base.common
+  - framework.magicpaste.api.coreengine.common
+  - framework.magicpaste.api.coreengine.util
+  - framework.magicpaste.api.coreengine.basic
+  - dto.key
+
+framework.magicpaste.api.coreengine.util:
+  interface:
+  - access
+  - framework.magicpaste.api.coreengine.service
+
+framework.magicpaste.api.engineProxy:
+  interface:
+  - framework.magicpaste.api.coreengine.service
+
+  class:
+  - framework.magicpaste.api.coreengine.basic
+  - framework.magicpaste.api.coreengine.basic.mapper
+  - framework.magicpaste.api.layoutengine.engines
+
+framework.magicpaste.api:
+  interface:
+  - framework.core.model.layer
+  - framework.magicpaste.api.coreengine.service
+  - framework.magicpaste.api.engineProxy
+  - framework.taskexecutor
+
+  class:
+  - framework.magicpaste.api.analyzer
+  - framework.magicpaste.api.reweighter
+  - framework.magicpaste.api.separator
+  - framework.magicpaste.api.engineProxy
+  - framework.magicpaste.api.layoutengine.engines
+  - framework.taskexecutor
+
+framework.magicpaste.api.layoutengine:
+  class:
+  - framework.magicpaste.api.layoutengine.extractor
+  - framework.magicpaste.api.layoutengine.matcher
+
+framework.magicpaste.api.layoutengine.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - framework.magicpaste.api.layoutengine
+  - framework.magicpaste.api.layoutengine.entity
+  - dto.key
+  - access.cassandra
+  - framework.magicpaste.api.layoutengine.util
+
+framework.magicpaste.api.layoutengine.engines:
+  interface:
+  - framework.cache.util
+  - framework.magicpaste.api.layoutengine.dao
+  - framework.taskexecutor
+
+  class:
+  - framework.magicpaste.api.layoutengine
+  - framework.magicpaste.api.layoutengine.dao
+  - framework.taskexecutor
+
+framework.magicpaste.api.layoutengine.entity:
+  class:
+  - dto.key
+
+framework.magicpaste.api.layoutengine.extractor:
+  interface:
+  - framework.magicpaste.api.layoutengine
+
+  class:
+  - framework.magicpaste.api.layoutengine.util
+  - framework.magicpaste.api
+
+framework.magicpaste.api.layoutengine.matcher:
+  interface:
+  - framework.magicpaste.api.layoutengine
+
+  class:
+  - framework.magicpaste.api.layoutengine.util
+  - framework.magicpaste.api.layoutengine
+
+framework.magicpaste.api.layoutengine.util:
+  class:
+  - framework.magicpaste.api.layoutengine
+  - framework.magicpaste.api.layoutengine.dao
+
+framework.magicpaste.api.reweighter:
+  class:
+  - framework.magicpaste.api
+
+framework.magicpaste.api.separator:
+  class:
+  - framework.magicpaste.api.analyzer
+  - framework.magicpaste.api
+
+framework.magicpaste.api.util:
+framework.magicpaste.api.weighter:
+  class:
+  - framework.magicpaste.api
+
+framework.magicpaste.decorator:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.domain.magicpaste
+
+framework.magicpaste.englishDict:
+framework.magicpaste.entity:
+framework.magicpaste.entity.relation:
+framework.magicpaste.exception:
+hue.controller.magicpaste:
+  interface:
+  - framework.core.model.layer
+  - hue.service.magicpaste
+
+  class:
+  - framework.report.dto.magiclayout
+  - framework.security.core.session
+  - framework.service
+  - hue.domain.magicpaste
+
+hue.dao.magicpaste:
+  interface:
+  - access
+  - framework.core.model.layer
+
+  class:
+  - dto.key
+  - hue.domain.magicpaste
+
+hue.domain.magicpaste:
+  class:
+  - dto.key
+  - framework.magicpaste.decorator
+
+hue.service.magicpaste.converter:
+  class:
+  - hue.service.magicpaste.util
+
+hue.service.magicpaste:
+  interface:
+  - framework.core.model.layer
+  - framework.cache
+  - framework.cache.util
+  - framework.magicpaste.api
+  - framework.magicpaste.decorator
+  - framework.report.service.spec
+  - framework.report.service.spec.magiclayout
+  - hue.dao.magicpaste
+
+  class:
+  - framework.report.dto.magiclayout
+  - hue.domain.magicpaste
+  - framework.report.dto
+  - framework.security.core.session
+  - framework.service
+  - hue.service.magicpaste.converter
+  - hue.service.magicpaste.offsetCalculator
+  - hue.service.magicpaste.util
+
+hue.service.magicpaste.offsetCalculator:
+  class:
+  - hue.domain.magicpaste
+  - hue.service.magicpaste.util
+
+hue.service.magicpaste.util:
+  class:
+  - hue.domain.magicpaste
+
+hue.controller.mail:
+  interface:
+  - framework.core.model.layer
+  - hue.mail.service.spec
+  - framework.forneus
+
+  class:
+  - framework.security.core.session
+  - hue.mail.dto
+  - hue.mail.entity
+  - hue.mail.dto.keys
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.web.spring.mvc
+  - hue.mail.dto.meta
+  - hue.mail.vo
+
+hue.mail.core:
+  interface:
+  - hue.mail.dao.spec
+  - hue.mail.service.spec
+  - access
+  - framework.notification.coordinator.impl
+  - hue
+  - hue.huedrive.dao
+  - hue.huedrive.service
+  - hue.spreadsheet.service
+  - framework.mq
+
+  class:
+  - hue.mail.dto
+  - hue.mail.notification
+  - framework.mq
+  - framework.notification.config
+  - framework.notification.coordinator.impl
+  - framework.websocket
+  - hue.mail.service.impl
+  - access.cassandra
+  - framework.notification.coordinator.impl.kafka
+  - hue.dfs.impl
+  - hue
+  - hue.huedrive.dao
+  - hue.huedrive.service
+  - hue.mail.dao.impl
+  - hue.mail.websocket
+  - framework.core.datetime
+  - hue.mail.util
+  - hue.huedrive.dto
+  - hue.mail.dto.keys
+  - hue.mail.entity.message
+
+hue.mail.dao.impl:
+  interface:
+  - access
+  - hue.mail.dao.spec
+  - hue.mail.dto
+
+  class:
+  - hue.mail.dto
+  - hue.mail.dto.keys
+  - access.cassandra
+  - dto.key
+  - hue.mail.dto.counter
+
+hue.mail.dao.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.mail.dto
+  - hue.mail.dto.keys
+
+hue.mail.dto.counter:
+hue.mail.dto.keys:
+  class:
+  - access.cassandra
+
+hue.mail.dto:
+  class:
+  - hue.mail.dto.keys
+  - framework.security.core.session
+  - hue.huedrive.dto
+  - hue.mail.entity
+  - hue.mail.util
+
+hue.mail.dto.meta:
+  class:
+  - hue.mail.dto
+  - hue.mail.vo
+
+hue.mail.entity:
+  class:
+  - hue.mail.dto
+  - hue.mail.util
+  - hue.huedrive.dto
+  - hue.mail.dto.keys
+
+hue.mail.entity.message:
+  class:
+  - hue.mail.dto.keys
+  - hue.mail.dto
+
+hue.mail.notification:
+  interface:
+  - framework.notification.listener
+
+  class:
+  - hue.mail.dto.keys
+  - hue.mail.entity.message
+  - hue.mail.websocket
+  - framework.notification.coordinator.impl
+  - hue.mail.dto
+
+hue.mail.service.impl:
+  interface:
+  - hue.mail.dao.spec
+  - hue.mail.service.spec
+  - hue.mail.dto
+  - hue
+  - hue.huedrive.service
+  - framework.mq
+
+  class:
+  - framework.security.core.session
+  - hue.mail.dto
+  - hue.mail.dto.keys
+  - hue.mail.vo
+  - hue.mail.entity
+  - framework.core.datetime
+  - hue.mail.util
+  - hue.huedrive.dto
+  - hue.mail.core
+  - access.cassandra
+  - hue.mail.entity.message
+  - hue.mail.notification
+
+hue.mail.service.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.mail.dto
+  - hue.mail.dto.keys
+  - hue.mail.vo
+  - hue.mail.entity
+  - hue.huedrive.dto
+  - hue.mail.core
+
+hue.mail.util:
+  class:
+  - hue.mail.dto
+
+hue.mail.vo:
+  interface:
+  - hue.mail.dto
+
+  class:
+  - framework.core.datetime
+  - hue.mail.dto
+  - hue.mail.dto.keys
+  - hue.mail.entity
+
+hue.mail.websocket:
+  interface:
+  - framework.websocket
+  - hue.mail.dao.spec
+  - hue.mail.service.spec
+
+  class:
+  - framework.websocket
+  - hue.mail.dto
+  - hue.mail.dto.keys
+  - hue.mail.entity
+
+hue.autonumbering.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.autonumbering.dto.rule.elements
+  - hue.autonumbering.dto.sequence
+  - dto.key
+  - dto.operation
+  - hue.autonumbering.dto
+  - hue.autonumbering.dto.rule
+
+hue.autonumbering.generator:
+  interface:
+  - framework.core.model.layer
+  - hue.autonumbering.dao
+  - hue.autonumbering.dto.rule.elements
+  - hue.autonumbering.generator.elementcompiler
+
+  class:
+  - hue.autonumbering.dto.rule
+  - hue.autonumbering.dto
+  - hue.autonumbering.dto.rule.elements
+  - hue.autonumbering.generator.elementcompiler
+  - hue.autonumbering.specialcheckdigit
+
+hue.autonumbering.generator.elementcompiler:
+  interface:
+  - hue.autonumbering.generator
+  - framework.core.model.layer
+  - hue.autonumbering.dao
+
+  class:
+  - hue.autonumbering.dto.rule.elements
+
+hue.autonumbering.service:
+  interface:
+  - framework.core.model.layer
+  - hue.autonumbering.generator
+  - hue.autonumbering.dao
+
+  class:
+  - hue.autonumbering.dto
+
+hue.autonumbering.specialcheckdigit:
+  interface:
+  - hue.autonumbering.generator.elementcompiler
+
+hue.autonumbering.dto:
+hue.autonumbering.dto.rule.elements:
+  class:
+  - hue.autonumbering.dto.rule
+
+hue.autonumbering.dto.rule:
+  interface:
+  - hue.autonumbering.dto.rule.elements
+
+hue.autonumbering.dto.rule.options:
+hue.autonumbering.dto.sequence:
+hue.personalization.controller:
+  interface:
+  - framework.core.model.layer
+  - hue.personalization.service
+
+  class:
+  - framework.security.core.session
+  - hue
+  - hue.personalization.request
+
+hue.personalization.dao:
+  interface:
+  - framework.core.model.layer
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+
+  class:
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+
+hue.personalization.magicinput.controller:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.session
+  - hue.personalization.magicinput.entity
+  - hue.personalization.magicinput.service
+
+  class:
+  - hue.personalization.magicinput.entity
+
+hue.personalization.magicinput.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.personalization.magicinput.dto
+  - dto.key
+
+hue.personalization.magicinput.dto:
+hue.personalization.magicinput.entity:
+hue.personalization.magicinput.service:
+  interface:
+  - framework.core.model.layer
+  - hue.personalization.magicinput.entity
+  - framework.elasticsearch.basic.autocomplete
+  - hue.personalization.magicinput.dao
+  - hue.service.mastersearch.setting
+
+  class:
+  - hue.personalization.magicinput.entity
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.mapper
+  - hue.personalization.magicinput.dto
+
+hue.personalization.provider:
+hue.personalization.request:
+  class:
+  - framework.elasticsearch.base.core
+
+hue.personalization.service:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.user
+  - hue.service.mastersearch
+  - framework.elasticsearch.mapper
+  - hue.personalization.dao
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.security.core.session
+  - hue.personalization.util
+  - hue.service.mastersearch
+  - framework.elasticsearch.request.filter
+  - framework.elasticsearch.basic
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+
+hue.personalization.type:
+hue.personalization.util:
+batch.adapter:
+  interface:
+  - framework.core.spring.bean.scan
+  - framework.web.servlet
+
+  class:
+  - framework.web.servlet
+
+batch.controller:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - batch.job.personalization.history
+
+batch.job.personalization.history.dto:
+batch.job.personalization.history:
+  interface:
+  - hue.personalization.service
+
+  class:
+  - batch.job.personalization.history.dto
+  - hue.personalization.util
+
+framework.remote.client:
+framework.remote.client.rest.argument:
+  interface:
+  - framework.remote.client.rest.template
+
+  class:
+  - framework.remote.client.rest.authentication
+  - framework.remote.client.rest.template
+
+framework.remote.client.rest.authentication:
+  interface:
+  - framework.remote.client.rest.template
+
+  class:
+  - framework.remote.client.rest.argument
+  - framework.remote.client.rest.template
+
+framework.remote.client.rest.handler:
+framework.remote.client.rest:
+  interface:
+  - framework.remote.client.rest.argument
+  - framework.remote.client.rest.template
+  - framework.remote.client.rest.authentication
+
+  class:
+  - framework.remote.client.rest.argument
+  - framework.remote.client.rest.template
+
+framework.remote.client.rest.template:
+  interface:
+  - framework.remote.client.rest.authentication
+  - framework.remote.client.rest
+  - framework.remote.client.rest.argument
+
+  class:
+  - framework.remote.client.rest
+  - framework.remote.client.rest.argument
+  - framework.remote.client.rest.authentication
+
+hue.controller:
+  interface:
+  - framework.core.model.layer
+  - framework.security.authority
+  - hue.service.mastersearch
+
+  class:
+  - framework.item.mastersearch
+  - hue.service.mastersearch
+
+hue.service.mastersearch:
+  interface:
+  - framework.elasticsearch.mapper
+  - framework.item.mastersearch
+  - framework.core.model.layer
+  - framework.elasticsearch.basic.autocomplete
+  - hue.service.mastersearch.setting
+
+  class:
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.base.core
+  - hue.service.mastersearch.setting
+  - framework.core.datetime
+  - framework.elasticsearch.request.filter
+
+hue.service.mastersearch.setting:
+  interface:
+  - framework.item.mastersearch
+  - framework.core.model.layer
+
+  class:
+  - framework.item.mastersearch
+  - framework.security.core.session
+
+hue.service.mastersearch.vo:
+framework.report.annotation:
+framework.report.dao.impl:
+  interface:
+  - access
+  - framework.report.dao.spec
+  - framework.report.dto
+
+  class:
+  - dto.key
+  - framework.report.dto
+  - access.cassandra
+
+framework.report.dao.impl.magiclayout:
+  interface:
+  - framework.report.dao.spec.magiclayout
+
+  class:
+  - framework.report.dto.magiclayout
+
+framework.report.dao.multipage.impl:
+  interface:
+  - access
+  - framework.report.dao.multipage.spec
+
+  class:
+  - dto.key
+  - framework.report.dto.multipage
+
+framework.report.dao.multipage.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.report.dto.multipage
+
+framework.report.dao.spec:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.report.dto
+
+  class:
+  - framework.report.dto
+  - access.cassandra
+
+framework.report.dao.spec.magiclayout:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.report.dto.magiclayout
+
+framework.report.denormalize:
+framework.report.dto.conversion:
+  class:
+  - framework.report.logic.conversion
+
+framework.report.dto:
+  class:
+  - dto.key
+  - framework.report.utils
+
+framework.report.dto.magiclayout:
+framework.report.dto.multipage:
+  class:
+  - framework.report.dto
+
+framework.report.enums.magiclayout:
+  class:
+  - framework.report.logic.magiclayout.analyzer
+  - framework.report.logic.magiclayout.mapping
+
+framework.report.logic.conversion:
+  class:
+  - framework.report.dto.conversion
+  - framework.report.logic.magiclayout
+
+framework.report.logic.magiclayout.analyzer:
+  class:
+  - framework.report.dto.magiclayout
+  - framework.report.utils
+
+framework.report.logic.magiclayout:
+  class:
+  - framework.report.dto.magiclayout
+  - framework.report.logic.conversion
+
+framework.report.logic.magiclayout.mapping:
+  interface:
+  - framework.report.dao.spec.magiclayout
+
+  class:
+  - framework.report.dto.magiclayout
+
+framework.report.logic.magiclayout.modelconvertors:
+  class:
+  - framework.report.dto.magiclayout
+
+framework.report.service.impl:
+  interface:
+  - framework.report.dao.spec
+  - framework.report.service.spec
+  - access
+  - framework.forneus.db.service.spec
+  - hue
+
+  class:
+  - framework.report.dto
+  - framework.report.vo
+  - access.cassandra
+  - framework.forneus.db.dto
+  - framework.report.utils
+  - framework.report
+  - framework.reportconvertor
+  - framework.reportconvertor.elements
+  - framework.reportconvertor.logic
+
+framework.report.service.impl.decorationtools:
+framework.report.service.impl.magiclayout:
+  interface:
+  - framework.report.service.spec.magiclayout
+  - framework.report.service.spec.magiclayout.fileconversion
+  - framework.report.dao.spec.magiclayout
+
+  class:
+  - framework.report.dto.magiclayout
+  - framework.report.utils
+  - framework.report.logic.magiclayout.modelconvertors
+
+framework.report.service.impl.magiclayout.fileconversion:
+  interface:
+  - framework.report.service.spec.magiclayout.fileconversion
+
+  class:
+  - framework.report.dto.magiclayout
+  - framework.report.logic.magiclayout
+
+framework.report.service.multipage.impl:
+  interface:
+  - framework.report.dao.multipage.spec
+  - framework.report.service.multipage.spec
+  - framework.forneus.db.service.spec
+  - framework.report.dao.spec
+
+  class:
+  - framework.report.dto.multipage
+  - framework.forneus.db.dto
+  - framework.report.dto
+
+framework.report.service.multipage.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.report.dto.multipage
+  - framework.report.dto
+
+framework.report.service.spec:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.report.dto
+  - framework.report.vo
+
+framework.report.service.spec.magiclayout:
+  interface:
+  - framework.core.model.layer
+  - framework.report.service.spec.magiclayout.fileconversion
+
+  class:
+  - framework.report.dto.magiclayout
+
+framework.report.service.spec.magiclayout.fileconversion:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.report.dto.magiclayout
+
+framework.report.utils:
+  interface:
+  - framework.report.dao.spec
+
+  class:
+  - framework.report.dto
+  - framework.report.dto.magiclayout
+
+framework.report.vo:
+  class:
+  - framework.report.dto
+
+framework.reportconvertor.constants:
+framework.reportconvertor.dao:
+  class:
+  - framework.reportconvertor
+
+framework.reportconvertor.dto:
+framework.reportconvertor.elements.crossgrid:
+  interface:
+  - framework.reportconvertor.elements
+
+  class:
+  - framework.reportconvertor
+  - framework.reportconvertor.elements.grid
+  - framework.reportconvertor.logic
+
+framework.reportconvertor.elements.grid:
+  interface:
+  - framework.reportconvertor.elements
+
+  class:
+  - framework.reportconvertor
+  - framework.reportconvertor.logic
+
+framework.reportconvertor.elements.gridlayout:
+  interface:
+  - framework.reportconvertor.elements
+
+  class:
+  - framework.reportconvertor
+  - framework.reportconvertor.elements
+  - framework.reportconvertor.logic
+
+framework.reportconvertor.elements:
+  class:
+  - framework.reportconvertor
+  - framework.reportconvertor.elements.crossgrid
+  - framework.reportconvertor.elements.grid
+  - framework.reportconvertor.elements.gridlayout
+  - framework.reportconvertor.logic
+
+framework.reportconvertor.logic:
+  class:
+  - framework.reportconvertor
+  - framework.reportconvertor.elements
+  - framework.reportconvertor.elements.crossgrid
+  - framework.reportconvertor.elements.grid
+  - framework.reportconvertor.elements.gridlayout
+  - framework.reportconvertor.dao
+
+framework.reportconvertor:
+  class:
+  - framework.reportconvertor.elements
+  - framework.reportconvertor.logic
+
+hue.controller.instareport:
+  interface:
+  - access
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.report.dao.spec
+  - framework.report.dto
+  - framework.report.service.spec
+  - framework.security.cache
+  - hue.bizdata
+  - framework.report.service.spec.magiclayout.fileconversion
+  - framework.cache
+  - framework.report.service.multipage.spec
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.ui.instareport.data
+  - framework.report
+  - framework.report.dto
+  - framework.report.utils
+  - framework.report.vo
+  - framework.web.spring.mvc
+  - hue.bizdata
+  - hue.instareport.dao.impl
+  - hue.instareport.dto
+  - framework.reportconvertor
+  - framework.reportconvertor.logic
+  - framework.security.core.session
+  - framework.forneus.databind.fvm.expression
+  - framework.report.dto.multipage
+
+hue.controller.magiclayout:
+  interface:
+  - access
+  - framework.cache
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.report.dao.spec
+  - framework.report.dto
+  - framework.report.service.spec
+  - framework.report.service.spec.magiclayout
+  - framework.security.cache
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.ui.instareport.data
+  - framework.forneus.generator.handler.vo
+  - framework.report
+  - framework.report.dto
+  - framework.report.dto.magiclayout
+  - framework.report.utils
+  - framework.security.core.session
+  - framework.web.spring.mvc
+
+hue.controller.reporteditor:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.report.service.multipage.spec
+  - framework.report.service.spec
+
+  class:
+  - framework.core.i18n
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.report.dto.multipage
+  - framework.report.utils
+  - framework.web.spring.mvc
+  - hue
+
+hue.instareport.dao.impl:
+  interface:
+  - access
+  - framework.report.dao.spec
+  - framework.report.dto
+
+  class:
+  - framework.report.dto
+  - hue.instareport.dto
+  - framework.report.dao.impl
+  - framework.report.utils
+
+hue.instareport.dto:
+  interface:
+  - framework.report.dto
+
+hue.reporteditor.dto:
+hue.executor:
+  interface:
+  - access
+  - framework.textresource
+  - hue.service
+  - framework.web.service
+
+  class:
+  - access
+  - access.cassandra
+  - hue.core.dto
+  - framework.forneus.generator
+  - hue.service
+  - framework.report
+  - framework.service
+
+hue.metadata.dao:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.metadata.dto
+
+hue.metadata.dao.impl:
+  interface:
+  - access
+  - hue.metadata.dao
+
+  class:
+  - dto.key
+  - hue.metadata.dto
+  - hue.metadata.dto.key
+
+hue.metadata.dto:
+  class:
+  - hue.metadata.dto.key
+
+hue.metadata.dto.key:
+  class:
+  - dto.key
+
+hue.metadata:
+  interface:
+  - framework.item.model
+
+hue.spreadsheet:
+  interface:
+  - access
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.service
+
+  class:
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.vo
+  - dto.key
+  - hue.spreadsheet.db.dao.impl
+
+hue.spreadsheet.API:
+  interface:
+  - framework.core.model.layer
+  - hue.bizdata
+  - access
+  - framework.security.core.session
+  - framework.security.core.user
+  - hue.spreadsheet
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.service
+
+  class:
+  - hue.bizdata
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.vo
+  - hue.spreadsheet
+
+hue.spreadsheet.business.mock:
+  interface:
+  - access
+  - hue.spreadsheet.configuration
+
+  class:
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.mock
+  - hue.spreadsheet.entity
+
+hue.spreadsheet.cache:
+  class:
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.vo
+
+hue.spreadsheet.config:
+hue.spreadsheet.configuration:
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.spreadsheet.db.dao:
+  interface:
+  - framework.core.model.layer
+  - hue.spreadsheet
+
+  class:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.document
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.filter
+
+hue.spreadsheet.db.dao.impl:
+  interface:
+  - access
+  - hue.spreadsheet
+  - hue.spreadsheet.db.dao
+  - framework.elasticsearch.base.core.routing
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+
+  class:
+  - dto.key
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.document
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.filter
+  - access.cassandra
+
+hue.spreadsheet.dto.cell:
+  interface:
+  - hue.spreadsheet.range.operation
+  - hue.spreadsheet
+
+  class:
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.dto
+  - hue.spreadsheet
+  - dto.key
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.dto.key
+
+hue.spreadsheet.dto.chart:
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.spreadsheet.dto:
+  interface:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet
+
+  class:
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.entity
+
+hue.spreadsheet.dto.document:
+  class:
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.vo
+
+hue.spreadsheet.dto.filter:
+hue.spreadsheet.dto.history:
+  class:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+
+hue.spreadsheet.dto.image:
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.spreadsheet.dto.key:
+  class:
+  - dto.key
+
+hue.spreadsheet.dto.log:
+hue.spreadsheet.dto.mock:
+  interface:
+  - hue.bizdata
+  - hue.spreadsheet.configuration
+
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.spreadsheet.dto.pivot:
+  class:
+  - framework.core.i18n
+  - hue.spreadsheet.utils
+
+hue.spreadsheet.dto.protectrange:
+  class:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet
+
+hue.spreadsheet.dto.user:
+hue.spreadsheet.elasticsearch:
+hue.spreadsheet.entity:
+  interface:
+  - hue.spreadsheet
+  - framework.security.core.user
+
+  class:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet
+  - hue.spreadsheet.formula.expresssion
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.utils
+
+hue.spreadsheet.enumeration:
+hue.spreadsheet.exception:
+hue.spreadsheet.formula.calculator:
+  interface:
+  - hue.spreadsheet.formula.core.basic
+
+  class:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.expresssion
+
+hue.spreadsheet.formula.core.basic:
+  class:
+  - hue.spreadsheet
+
+hue.spreadsheet.formula.core.operand:
+  class:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet
+  - hue.spreadsheet.entity
+
+hue.spreadsheet.formula.core.operator:
+  interface:
+  - hue.spreadsheet.formula.core.basic
+
+  class:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.core.operand
+  - hue.spreadsheet
+  - hue.spreadsheet.formula.calculator
+
+hue.spreadsheet.formula.entity:
+  class:
+  - hue.spreadsheet
+
+hue.spreadsheet.formula.exception:
+hue.spreadsheet.formula.expresssion:
+  class:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.core.operand
+  - hue.spreadsheet.formula.core.operator
+  - hue.spreadsheet
+
+hue.spreadsheet.formula.util:
+hue.spreadsheet.model:
+hue.spreadsheet.provider:
+hue.spreadsheet.range.contract:
+  interface:
+  - hue.spreadsheet.service
+
+  class:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.range.util
+  - hue.spreadsheet.utils
+
+hue.spreadsheet.range.core:
+  interface:
+  - hue.spreadsheet.range.contract
+
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.spreadsheet.range.example:
+  interface:
+  - hue.spreadsheet.range.contract
+  - framework.core.model.layer
+
+  class:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.range.util
+
+hue.spreadsheet.range.example.mock:
+hue.spreadsheet.range.operation:
+  class:
+  - hue.spreadsheet.dto.cell
+
+hue.spreadsheet.range.operation.impl:
+  class:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.range.operation
+
+hue.spreadsheet.range.util:
+  interface:
+  - hue.spreadsheet.range.operation
+
+  class:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.range.operation.impl
+
+hue.spreadsheet.service:
+  interface:
+  - framework.core.model.layer
+  - framework.taskexecutor
+  - framework.security.core.user
+  - hue.spreadsheet.range.contract
+  - hue.spreadsheet.range.operation
+
+  class:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.dto.chart
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.vo
+  - access.cassandra
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.history
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.dto.protectrange
+  - hue.spreadsheet.range.core
+  - framework.elasticsearch.mapper
+  - hue.bizdata
+
+hue.spreadsheet.service.impl:
+  interface:
+  - hue.spreadsheet.service
+  - access
+  - hue.spreadsheet
+  - hue.spreadsheet.db.dao
+  - framework.taskexecutor
+  - framework.security.core.user
+  - framework.security.core.account.dao
+  - hue.spreadsheet.range.contract
+  - hue.spreadsheet.range.operation
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+  - framework.cache
+  - framework.security.cache
+  - framework.security.core.session
+  - hue.bizdata
+  - hue.metadata.dao
+
+  class:
+  - hue.spreadsheet
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.entity
+  - dto.key
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.chart
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.formula.calculator
+  - hue.spreadsheet.formula.core.operand
+  - hue.spreadsheet.formula.expresssion
+  - hue.spreadsheet.dto.pivot
+  - access.cassandra
+  - framework.security.core.session
+  - hue.spreadsheet.dto.history
+  - hue.spreadsheet.dto.image
+  - hue.core.dto
+  - hue.spreadsheet.dto.protectrange
+  - hue.spreadsheet.range.core
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.filter
+  - framework.core.i18n
+  - hue.bizdata
+  - hue.metadata.dto
+  - framework.elasticsearch.basic.autocomplete
+
+hue.spreadsheet.utils:
+  interface:
+  - framework.textresource
+
+  class:
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.dto
+  - framework.security.core.session
+  - framework.textresource
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.entity
+  - framework.core.i18n
+
+hue.spreadsheet.vo:
+  interface:
+  - hue.spreadsheet.range.contract
+
+  class:
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet
+
+hue.controller.ess:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.print
+  - hue.spreadsheet.service
+
+  class:
+  - framework.core.i18n
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.web.spring.mvc
+  - hue.metadata.dto
+  - hue.spreadsheet
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.utils
+
+hue.controller.exception:
+hue.controller.samples:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.spreadsheet.API
+
+  class:
+  - framework.forneus
+  - framework.web.spring.mvc
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+
+hue.controller.spreadsheet:
+  interface:
+  - framework.core.model.layer
+  - hue.spreadsheet.service
+  - hue.spreadsheet.db.dao
+  - framework.security.core.user
+  - hue.spreadsheet.range.example
+  - framework.security.core.session
+  - hue.bizdata
+  - hue.huedrive.service
+  - hue.spreadsheet.API
+
+  class:
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.dto.chart
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.document
+  - framework.security.core.session
+  - hue.spreadsheet.dto.history
+  - hue.controller
+  - hue.spreadsheet.range.example
+  - framework.elasticsearch.mapper
+  - framework.web.spring.mvc
+  - hue.bizdata
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.dto.protectrange
+
+hue.listener:
+  interface:
+  - framework.notification.listener
+
+  class:
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.vo
+  - hue.websocket.utils
+  - framework.cache.redis
+
+hue.websocket.entity:
+hue.websocket.spreadsheet:
+  interface:
+  - hue.spreadsheet.service
+  - hue.spreadsheet.range.contract
+  - hue.spreadsheet.range.operation
+  - framework.websocket
+
+  class:
+  - hue.spreadsheet.entity
+  - hue.websocket.utils
+  - framework.notification.service
+  - hue.listener
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.vo
+  - hue
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.range.util
+
+hue.websocket.utils:
+  class:
+  - framework.websocket
+  - hue
+  - hue.websocket.spreadsheet
+
+framework.print:
+  interface:
+  - framework.core.model.layer
+  - hue.spreadsheet.API
+  - hue.spreadsheet.service
+
+  class:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.vo
+  - hue.metadata.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+
+hue.timeline.adapter:
+  interface:
+  - framework.security.core.user
+  - hue.core.service.personnel
+  - hue.timeline.service
+
+  class:
+  - hue.timeline.dto
+  - hue
+
+hue.timeline.cache:
+hue.timeline.connector.exception:
+  class:
+  - hue.timeline.connector
+
+hue.timeline.connector:
+  interface:
+  - framework.core.model.layer
+  - hue.timeline.service
+
+  class:
+  - hue.timeline.connector.parser
+  - hue.timeline.connector.exception
+  - hue.timeline.dto
+
+hue.timeline.connector.parser:
+  class:
+  - hue.timeline.connector.exception
+
+hue.timeline.constant:
+  interface:
+  - hue.timeline.service.operation
+
+  class:
+  - framework.core.i18n
+  - hue.timeline.dto
+  - hue.timeline.service.operation
+
+hue.timeline.counter:
+  class:
+  - hue.timeline.utils
+
+hue.timeline.dao:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+  - framework.service
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+
+hue.timeline.dao.impl:
+  interface:
+  - access
+  - hue.timeline.dao
+  - framework.cache.processing.service
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.basic.index
+  - framework.core.model.layer
+
+  class:
+  - dto.key
+  - access.cassandra
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+  - hue.timeline.counter
+  - hue.timeline.service.converter
+  - hue.timeline.utils
+  - framework.service
+  - framework.elasticsearch.basic.autocomplete
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+
+hue.timeline.dto:
+  class:
+  - framework.service
+  - framework.core.i18n
+  - hue.timeline.entity
+  - hue.timeline.utils
+  - hue.timeline.feedcontent.dto
+
+hue.timeline.entity:
+  interface:
+  - framework.cache.redis
+
+  class:
+  - hue.timeline.entity.key
+  - framework.core.i18n
+  - hue.timeline.feeddata.entity
+  - hue.timeline.utils
+
+hue.timeline.entity.key:
+  class:
+  - dto.key
+  - hue.timeline.utils
+
+hue.timeline.exceptions:
+hue.timeline.feedcontent.dto:
+  class:
+  - framework.service
+  - hue.timeline.dto
+  - hue.timeline.feeddata.entity
+  - framework.core.i18n
+  - hue.timeline.entity
+
+hue.timeline.feeddata.entity:
+  class:
+  - framework.service
+  - framework.core.i18n
+  - hue.timeline.entity
+
+hue.timeline.filter:
+  class:
+  - hue.timeline.dto
+
+hue.timeline.service:
+  interface:
+  - framework.core.model.layer
+  - hue.timeline.connector
+  - hue.timeline.service.operation
+
+  class:
+  - hue.timeline.dto
+  - framework.service
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+  - hue.timeline.connector
+  - hue.timeline.connector.exception
+  - hue.timeline.feedcontent.dto
+  - hue
+
+hue.timeline.service.converter:
+  interface:
+  - hue.timeline.service
+
+  class:
+  - framework.core.i18n
+  - hue.timeline.adapter
+  - hue.timeline.dto
+  - hue.timeline.entity
+  - hue
+  - hue.timeline.feedcontent.dto
+  - hue.timeline.feeddata.entity
+  - framework.security.core.session
+  - framework.service
+  - hue.timeline.entity.key
+
+hue.timeline.service.impl:
+  interface:
+  - hue.timeline.service
+  - hue.timeline.dao
+  - hue
+  - framework.security.core.user
+  - hue.timeline.connector
+  - framework.service
+  - framework.cache.processing.service
+  - hue.timeline.service.operation
+
+  class:
+  - hue.timeline.dto
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+  - framework.service
+  - hue.timeline.service.converter
+  - hue.timeline.adapter
+  - hue.timeline.constant
+  - hue
+  - hue.timeline.connector
+  - hue.timeline.connector.exception
+  - framework.elasticsearch.base.core
+  - framework.elasticsearch.basic.docsearch
+  - framework.elasticsearch.mapper
+  - framework.elasticsearch.request.filter
+  - framework.security.core.session
+  - hue.timeline.feedcontent.dto
+  - hue.timeline.feeddata.entity
+  - hue.timeline.utils
+  - framework.elasticsearch.basic.autocomplete
+  - hue.core.dto
+  - framework.elasticsearch.basic
+  - framework.core.i18n
+  - hue.timeline.service.operation
+
+hue.timeline.service.operation:
+  class:
+  - framework.core.i18n
+  - hue.timeline.constant
+  - hue.timeline.dto
+
+hue.timeline.utils.dateunit:
+hue.timeline.utils:
+  class:
+  - framework.core.datetime
+  - framework.core.i18n
+  - framework.security.core.session
+  - hue.timeline.feedcontent.dto
+
+hue.timeline.connector.gitlab:
+  interface:
+  - hue.timeline.connector
+  - framework.textresource
+  - hue.timeline.secretary
+  - hue.timeline.service
+
+  class:
+  - framework.core.i18n
+  - hue.timeline.connector
+  - hue.timeline.connector.exception
+  - hue.timeline.dto
+  - framework.textresource
+  - hue.timeline.connector.parser
+  - hue.timeline.utils
+  - hue.timeline.vo.secretary
+
+hue.controller.base:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.web.spring.mvc
+  - hue
+
+hue.controller.timeline.api.vo:
+hue.timeline.converter:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.timeline.dto
+  - hue.timeline.vo
+
+hue.timeline.converter.impl:
+  interface:
+  - framework.textresource
+  - hue.timeline.service
+  - framework.service
+  - hue.timeline.converter
+  - hue.timeline.service.operation
+
+  class:
+  - hue.timeline.dto
+  - hue.timeline.feedcontent.dto
+  - hue.timeline.utils
+  - hue.timeline.vo
+  - hue.timeline.vo.content
+  - hue.timeline.vo.mobile
+  - framework.core.datetime
+  - framework.core.i18n
+  - framework.forneus.generator.handler.primitive
+  - framework.forneus.generator.handler.vo
+  - framework.security.core.session
+  - framework.service
+  - hue.core.dto
+  - hue.timeline.entity
+  - hue
+  - framework.textresource
+  - hue.timeline.converter
+
+hue.timeline.feed:
+  interface:
+  - framework.core.model.layer
+  - hue.timeline.converter
+  - hue.timeline.service
+
+  class:
+  - hue.timeline.dto
+  - hue.timeline.vo
+
+hue.timeline.listener.impl:
+  interface:
+  - hue.timeline.service
+
+  class:
+  - framework.notification.service
+  - hue.timeline.dto
+  - hue.timeline.websocket
+
+hue.timeline.secretary:
+  interface:
+  - framework.core.model.layer
+  - hue.timeline.service
+  - framework.textresource
+
+  class:
+  - framework.core.i18n
+  - hue.timeline.vo.secretary
+  - hue.timeline.vo
+  - framework.security.core.session
+  - framework.textresource
+
+hue.timeline.vo.content:
+  class:
+  - hue.timeline.vo
+  - framework.forneus.generator.handler.vo
+  - hue.timeline.utils
+
+hue.timeline.vo.mobile:
+  class:
+  - hue.timeline.vo.content
+  - framework.forneus.generator.handler.vo
+  - hue.timeline.vo
+
+hue.timeline.vo.secretary:
+hue.timeline.vo:
+  class:
+  - hue.timeline.dto
+  - framework.core.i18n
+  - hue.timeline.utils
+  - hue.timeline.vo.content
+  - framework.forneus.generator.handler.vo
+  - framework.forneus.databind.fvm.expression
+  - hue.timeline.feeddata.entity
+  - framework.core.datetime
+  - hue.timeline.vo.secretary
+
+hue.timeline.websocket.exception:
+hue.timeline.websocket:
+  interface:
+  - framework.notification.listener
+  - framework.websocket
+
+  class:
+  - hue.timeline.vo
+  - framework.cache.redis
+  - hue.timeline.dto
+
+cassandra.migration:
+  interface:
+  - access
+
+  class:
+  - access.cassandra
+  - hue.timeline.migration
+
+cassandra.migration.util:
+  class:
+  - access.cassandra
+  - cassandra.migration
+
+ess:
+  interface:
+  - access
+  - ess.migration
+
+  class:
+  - cassandra.migration
+  - ess.migration
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+
+ess.migration:
+  interface:
+  - access
+
+  class:
+  - access.cassandra
+  - cassandra.migration
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+
+hue.timeline.demo.entity:
+hue.timeline.entity.m20150312163642:
+hue.timeline.entity.m20150325104025.step1:
+  class:
+  - hue.timeline.entity
+  - hue.timeline.feeddata.entity
+
+hue.timeline.entity.m20150325104025.step2:
+  class:
+  - hue.timeline.entity
+  - hue.timeline.feeddata.entity
+
+hue.timeline.entity.m20150329170000:
+  interface:
+  - framework.cache.redis
+
+  class:
+  - hue.timeline.entity
+  - framework.core.i18n
+  - framework.service
+  - hue.timeline.feeddata.entity
+
+hue.timeline.entity.m20150410174047.after.UserFeedProfile:
+  class:
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+
+hue.timeline.entity.m20150410174047.before.UserFeedProfile:
+  class:
+  - hue.timeline.entity.key
+
+hue.timeline.entity.m20150410174047:
+  class:
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+
+hue.timeline.entity.m20150430104115:
+  class:
+  - hue.timeline.entity.key
+
+hue.timeline.entity.m20150430113613:
+  class:
+  - hue.timeline.entity.key
+
+hue.timeline.entity.m20150616215856.after:
+hue.timeline.entity.m20150616215856.before:
+hue.timeline.entity.m20150623093857:
+  interface:
+  - framework.cache.redis
+
+  class:
+  - hue.timeline.entity
+  - hue.timeline.feeddata.entity
+
+hue.timeline.entity.m20150625103147:
+  class:
+  - hue.timeline.entity.key
+
+hue.timeline.migration:
+  interface:
+  - access
+
+  class:
+  - access.cassandra
+  - cassandra.migration
+
+migrations:
+  interface:
+  - access
+
+  class:
+  - cassandra.migration
+  - framework.core.i18n
+  - framework.service
+  - hue.timeline.entity
+  - hue.timeline.entity.m20150329170000
+  - hue.timeline.feeddata.entity
+  - dto.key
+  - access.cassandra
+  - timeline.editcomment
+  - framework.core.datetime
+  - hue.firststepguide.dto
+  - hue.firststepguide.layouts
+  - hue.firststepguide.templates
+  - timeline.commentattachment
+  - timeline.publiclevel
+
+timeline:
+  class:
+  - access.cassandra
+  - cassandra.migration.util
+  - hue.timeline.entity
+  - timeline.feeddata.operation
+  - cassandra.migration
+
+timeline.commentattachment:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - cassandra.migration
+  - access.cassandra
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+
+timeline.editcomment:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - cassandra.migration
+  - access.cassandra
+  - hue.timeline.entity
+  - hue.timeline.entity.key
+
+timeline.feeddata.operation.before:
+  interface:
+  - framework.cache.redis
+
+  class:
+  - hue.timeline.entity
+  - framework.core.i18n
+  - framework.service
+  - hue.timeline.feeddata.entity
+
+timeline.feeddata.operation:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - cassandra.migration
+  - access.cassandra
+  - framework.core.i18n
+  - framework.service
+  - hue.timeline.entity
+  - hue.timeline.feeddata.entity
+
+timeline.feeddata:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - cassandra.migration
+  - framework.core.i18n
+  - hue.timeline.entity.m20150325104025.step1
+  - hue.timeline.feeddata.entity
+  - hue.timeline.vo.content
+  - hue.timeline.entity.m20150325104025.step2
+
+timeline.fixfollow:
+  interface:
+  - access
+  - hue.timeline.dao
+
+  class:
+  - cassandra.migration
+  - hue.timeline.dao.impl
+  - hue.timeline.entity
+
+timeline.imageurl:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - cassandra.migration
+
+timeline.publiclevel:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - dto.key
+  - cassandra.migration
+  - hue.timeline.entity
+
+timeline.timelineshareinnerfeeddata:
+  interface:
+  - access
+
+  class:
+  - cassandra.migration
+  - access.cassandra
+  - hue.timeline.entity
+
+timeline.useroperation.before:
+  interface:
+  - framework.cache.redis
+
+  class:
+  - hue.timeline.entity
+  - framework.core.i18n
+  - framework.service
+  - hue.timeline.feeddata.entity
+
+timeline.useroperation:
+  interface:
+  - access
+  - hue.timeline.migration
+
+  class:
+  - cassandra.migration
+  - access.cassandra
+  - framework.core.i18n
+  - framework.service
+  - hue.timeline.entity
+  - hue.timeline.feeddata.entity
+
+hue.timeline.client:
+hue.translation.dto:
+hue.translation.service:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue
+  - hue.translation.setting
+
+hue.translation.setting:
+  class:
+  - hue
+
+framework.item.validation.list:
+  interface:
+  - framework.item.validation
+  - framework.core.model.validation
+
+  class:
+  - framework.core.model.validation
+
+framework.item.validation.type:
+  interface:
+  - hue.core.dto
+  - access
+  - hue.historicalmaster.dto
+  - hue.historicalmaster.service
+  - framework.item.model
+
+  class:
+  - framework.item.model.entity
+  - framework.textresource
+
+framework.websocket.setting:
+access.cassandra:
+  interface:
+  - access.cassandra.context
+  - access
+  - access.cassandra.util.concurrent
+
+  class:
+  - access.cassandra.iterator
+  - dto.key
+  - dto.operation
+  - access.cassandra.context
+  - access.cassandra.util.concurrent
+  - access.cassandra.serialization
+
+access.cassandra.cache:
+access.cassandra.context:
+  class:
+  - access.cassandra
+
+access.cassandra.exception:
+access.cassandra.iterator:
+  class:
+  - access.cassandra
+  - dto.key
+
+access.cassandra.serialization:
+  interface:
+  - framework.serializer
+
+  class:
+  - framework.serializer
+
+access.cassandra.setting:
+access.cassandra.util.concurrent:
+  class:
+  - access.cassandra
+  - access.cassandra.iterator
+
+access.cassandra.uuid:
+access:
+  interface:
+  - access.cassandra.util.concurrent
+
+  class:
+  - dto.key
+  - dto.operation
+  - access.cassandra
+
+dto.annotation:
+dto.jar:
+dto.key:
+  class:
+  - access.cassandra
+
+dto.operation:
+  class:
+  - dto.key
+
+access.sync.batch:
+  class:
+  - access.cassandra
+  - access.sync
+
+access.sync:
+  interface:
+  - access
+
+  class:
+  - access.cassandra
+
+dto.annotation.processor:
+dto.annotation.processor.util:
+framework.cassandra.filter.authority:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.cassandra.filter.rule
+  - framework.security.core.session
+  - framework.security.staticreader
+  - framework.security.authority
+  - framework.security.core.user
+
+  class:
+  - dto.key
+  - access.cassandra
+  - dto.operation
+  - framework.item.item
+  - framework.cassandra.filter.rule
+  - framework.security.authority
+  - framework.security.core.session
+  - framework.security.staticreader
+
+framework.cassandra.filter.core:
+  interface:
+  - framework.cassandra.filter.rule
+  - framework.mq
+  - framework.security.core.user
+  - access
+  - framework.cassandra.filter.authority
+
+  class:
+  - framework.cassandra.filter.rule
+  - framework.mq
+  - framework.item.item
+  - access.cassandra
+  - dto.key
+  - dto.operation
+  - framework.cassandra.filter.authority
+
+framework.cassandra.filter.rule:
+  interface:
+  - framework.core.model.layer
+  - framework.cassandra.filter.authority
+  - access
+  - framework.security.core.user
+  - framework.security.staticreader
+  - framework.security.core.account.dao
+
+  class:
+  - hue.filter.dto
+  - access.cassandra
+  - dto.key
+  - dto.operation
+  - hue.core.dto.user
+
+framework.cassandra.staticsetting.dao:
+  interface:
+  - access
+  - framework.core.model.layer
+
+  class:
+  - access.cassandra
+  - framework.cassandra.staticsetting.dto
+
+framework.cassandra.staticsetting.dto:
+framework.cassandra.staticsetting.service:
+  class:
+  - access.cassandra
+  - framework.cassandra.staticsetting.dao
+  - framework.cassandra.staticsetting.dto
+
+framework.cassandra.staticsetting:
+  interface:
+  - framework.cassandra.staticsetting.service
+  - access
+
+  class:
+  - access.cassandra
+  - dto.key
+  - dto.operation
+
+hue.filter.dto:
+access.dependency.analyzer.asm:
+  class:
+  - access.dependency.analyzer
+
+access.dependency.analyzer:
+  class:
+  - access.dependency.analyzer.asm
+
+access.maven.plugin:
+  class:
+  - access.dependency.analyzer
+  - access.cassandra
+
+hue.ac.biz.expense.ekisupa:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - hue.ac.dto.expense
+
+hue.ac.biz.expense.externalservice.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.ac.biz.expense.externalservice.domain
+  - dto.key
+
+hue.ac.biz.expense.externalservice.domain:
+hue.ac.biz.expense.externalservice.service:
+  interface:
+  - framework.core.model.layer
+  - hue.ac.biz.expense.externalservice.dao
+
+  class:
+  - framework.security.core.session
+  - hue.ac.biz.expense.externalservice.domain
+
+hue.ac.biz.expense.numbering.data:
+  interface:
+  - access
+  - hue.autonumbering.generator
+
+hue.ac.biz.expense.numbering.rule.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.ac.biz.expense.numbering.rule.dto
+  - access.cassandra
+  - dto.key
+
+hue.ac.biz.expense.numbering.rule.dto:
+hue.ac.biz.expense.payment.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - hue.ac.biz.expense.payment.dto
+  - access.cassandra
+  - dto.key
+
+hue.ac.biz.expense.payment.dto:
+hue.ac.biz.expense.service:
+  interface:
+  - framework.core.model.layer
+
+  class:
+  - framework.service
+
+hue.ac.biz.expense.shorttransapp.dao:
+  interface:
+  - framework.core.model.layer
+  - access
+
+  class:
+  - access.cassandra
+  - hue.ac.dto.expense
+  - approvalflow.util
+  - dto.key
+
+hue.ac.biz.expense.shorttransapp.ekisupa:
+  interface:
+  - framework.core.model.layer
+  - framework.security.core.session
+
+  class:
+  - framework.forneus.generator.handler.vo
+  - hue.ac.dto.expense
+
+hue.ac.biz.expense.shorttransapp.event:
+  interface:
+  - approvalflow.adaptor.event
+  - approvalflow.dto.application
+  - approvalflow.dto.event
+  - hue.ac.biz.expense.shorttransapp.dao
+  - access
+
+  class:
+  - approvalflow.dto.event
+  - framework.service
+  - access.cassandra
+  - hue.ac.dto.expense
+
+hue.ac.biz.expense.shorttransapp.service:
+  interface:
+  - framework.core.model.layer
+  - hue.ac.biz.expense.externalservice.dao
+  - hue.ac.biz.expense.externalservice.service
+  - approvalflow.dao.application
+  - approvalflow.service.application
+  - hue.ac.biz.expense.shorttransapp.dao
+  - framework.inputfw.service
+  - framework.inputfw.entity
+  - framework.security.core.user
+  - framework.web.component.grid
+  - framework.textresource
+  - framework.item.validation
+
+  class:
+  - hue.ac.dto.expense
+  - framework.security.core.session
+  - hue.ac.biz.expense.externalservice.domain
+  - hue.ac.biz.expense.externalservice.service
+  - approvalflow.dto.application
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.entity
+  - framework.textresource
+  - approvalflow.adaptor.application
+  - framework.item.validation.list
+
+hue.ac.biz.expense.shorttransapp:
+  interface:
+  - approvalflow.dao.application
+  - framework.forneus
+  - framework.inputfw.module.report.datasource
+  - framework.security.core.user
+  - framework.inputfw.module.message
+  - hue.ac.biz.expense.service
+  - hue.ac.biz.expense.shorttransapp.service
+
+  class:
+  - hue.ac.dto.expense
+  - approvalflow.dto.application
+  - framework.calculation.core.logic.model.operator.groupby
+  - framework.core.datetime
+  - framework.forneus
+  - framework.security.core.session
+  - framework.inputfw.module.message
+  - framework.inputfw.model.application
+
+hue.ac.biz.expense.shorttransapp.validator:
+  interface:
+  - framework.core.calendar
+  - framework.core.model.validation
+  - framework.item.validation
+
+  class:
+  - framework.core.model.validation
+  - framework.security.core.session
+  - hue.ac.dto.expense
+  - framework.item.validation.list
+  - hue.ac.biz.expense.shorttransapp
+
+hue.ac.biz.expense.taxiexpense.service:
+  interface:
+  - framework.inputfw.service
+  - framework.security.core.user
+  - framework.core.model.layer
+  - framework.textresource
+  - framework.item.validation
+
+  class:
+  - hue.ac.dto.expense
+  - framework.forneus.generator.handler.vo
+  - framework.textresource
+  - approvalflow.adaptor.application
+  - framework.item.validation.list
+
+hue.ac.biz.expense.taxiexpense:
+  interface:
+  - framework.inputfw.module.message
+  - hue.ac.biz.expense.service
+  - hue.ac.biz.expense.shorttransapp.service
+
+  class:
+  - framework.core.datetime
+  - framework.inputfw.module.message
+  - framework.security.core.session
+  - hue.ac.dto.expense
+  - framework.inputfw.model.application
+
+hue.ac.biz.expense.taxiexpense.validator:
+  interface:
+  - framework.core.calendar
+  - framework.core.model.validation
+  - framework.item.validation
+
+  class:
+  - framework.core.model.validation
+  - framework.security.core.session
+  - hue.ac.dto.expense
+  - framework.item.validation.list
+  - hue.ac.biz.expense.taxiexpense
+
+hue.ac.dto.expense:
+  interface:
+  - approvalflow.dto.application
+  - framework.item.item.annotation
+  - framework.autoindex
+  - hue
+  - framework.inputfw.module.submitted
+
+  class:
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.vo
+  - approvalflow.adaptor.application
+  - framework.calculation.core.logic.model.operator.groupby
+  - approvalflow.dto.submmission
+  - approvalflow.dto.application
+  - framework.security.core.user
+
+hue.controller.ac.expense.ekisupa:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.ac.biz.expense.shorttransapp.ekisupa
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.ui
+  - framework.forneus.generator.handler.vo
+  - framework.web.spring.mvc
+  - hue.ac.biz.expense.ekisupa
+  - hue.ac.dto.expense
+
+hue.controller.ac.expense.shorttransapp:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - hue.ac.biz.expense.shorttransapp.service
+  - hue.ac.biz.expense.externalservice.service
+  - framework.inputfw.controller
+  - framework.inputfw.module
+  - hue.ac.biz.expense.shorttransapp.ekisupa
+  - hue.timeline.service
+  - approvalflow.formatter
+  - framework.item.item
+  - framework.inputfw.module.template.forneusidprovider
+
+  class:
+  - framework.forneus
+  - framework.forneus.generator.handler.vo
+  - framework.web.spring.mvc
+  - hue.ac.dto.expense
+  - hue.ac.biz.expense.externalservice.domain
+  - framework.inputfw.controller
+  - framework.inputfw.model
+  - framework.inputfw.model.application
+  - framework.security.core.session
+  - hue.ac.biz.expense.shorttransapp
+  - hue.timeline.dto
+  - framework.core.datetime
+
+hue.controller.ac.expense.taxiexpense:
+  interface:
+  - framework.core.model.layer
+  - framework.forneus
+  - framework.inputfw.controller
+  - framework.inputfw.module
+  - framework.inputfw.module.autocomplete
+  - hue.ac.biz.expense.taxiexpense.service
+  - hue.spreadsheet.service
+  - hue.timeline.service
+
+  class:
+  - framework.elasticsearch.base.core
+  - framework.forneus
+  - framework.forneus.generator.handler.util
+  - framework.forneus.generator.handler.vo
+  - framework.inputfw.controller
+  - framework.inputfw.model
+  - framework.inputfw.model.application
+  - framework.security.core.session
+  - framework.web.spring.mvc
+  - hue.ac.dto.expense
+  - hue.personalization.request
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.vo
+  - hue.timeline.dto
+
+hue.optimize.components:
+  interface:
+  - framework.core.model.layer
+  - access
+  - framework.service
+  - hue.optimize.components.register
+
+  class:
+  - framework.service
+  - framework.staticsetting
+  - framework.forneus
+  - hue.core.dto
+  - hue.optimize.components.register
+  - framework.item.item
+  - access
+  - access.cassandra
+
+hue.optimize.components.register.cassandra:
+  interface:
+  - access
+  - hue.optimize.components.register
+
+  class:
+  - framework.service
+  - hue.core.dto
+  - hue.optimize.components.register
+
+hue.optimize.components.register:
+  class:
+  - framework.service
+  - hue.core.dto
+
+hue.optimize.filtersecmeta:
+  interface:
+  - access
+  - hue.staticwriter
+
+  class:
+  - hue
+  - hue.service
+  - hue.staticwriter
+  - framework.security.meta.filter
+
+hue.optimize:
+hue.optimize.writer:
+  interface:
+  - framework.forneus
+
+hue.service:
+  interface:
+  - framework.core.model.layer
+  - framework.core.i18n
+  - framework.forneus
+  - framework.forneus.stax
+  - framework.item.item
+  - framework.report
+  - hue.optimize.writer
+  - access
+  - framework.style
+  - framework.textresource
+
+  class:
+  - framework.forneus
+  - framework.report
+  - framework.core.json
+  - framework.forneus.stax
+  - framework.item.item
+  - hue.core.dto
+  - hue.optimize.writer
+  - access
+  - access.cassandra
+  - hue.core.dto.style
+  - framework.textresource
+
+hue.staticwriter:
+  interface:
+  - framework.core.model.layer
+

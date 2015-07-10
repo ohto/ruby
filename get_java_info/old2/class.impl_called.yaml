@@ -1,0 +1,154 @@
+hue.dfs.config.DFSConfiguration:
+  type: class
+  source: company-framework/company-distributed-file-system/company-dfs-impl/src/main/java/com/worksap/company/hue/dfs/config/DFSConfiguration.java
+  import:
+  - hue.dfs.impl.HadoopFilelAccessDaoImpl
+  - hue.dfs.impl.MogileFileAccessDaoImpl
+  - hue.dfs.impl.S3FileAccessDaoImpl
+
+framework.cache.processing.service.CacheProcessingServiceImpl:
+  type: class
+  source: company-framework/company-framework-cache-processing/src/main/java/com/worksap/company/framework/cache/processing/service/CacheProcessingServiceImpl.java
+  import:
+  - framework.notification.coordinator.impl.NotificationServerCoordinator
+
+framework.notification.coordinator.impl.IRealNotificationServerCoordinator:
+  type: interface
+  source: company-framework/company-framework-notification/src/main/java/com/worksap/company/framework/notification/coordinator/impl/IRealNotificationServerCoordinator.java
+  import:
+  - framework.notification.coordinator.impl.kafka.KafkaNotificationServerCoordinator
+  - framework.notification.coordinator.impl.redis.RedisNotificationServerCoordinator
+
+framework.notification.coordinator.impl.kafka.KafkaNotificationCoreCoordinator:
+  type: class
+  source: company-framework/company-framework-notification/src/main/java/com/worksap/company/framework/notification/coordinator/impl/kafka/KafkaNotificationCoreCoordinator.java
+  import:
+  - framework.notification.coordinator.impl.NotificationCoreCoordinator
+
+framework.notification.coordinator.impl.kafka.KafkaNotificationServerCoordinator:
+  type: class
+  source: company-framework/company-framework-notification/src/main/java/com/worksap/company/framework/notification/coordinator/impl/kafka/KafkaNotificationServerCoordinator.java
+  import:
+  - framework.notification.coordinator.impl.IRealNotificationServerCoordinator
+  - framework.notification.coordinator.impl.NotificationServerCoordinator
+
+framework.notification.coordinator.impl.redis.RedisNotificationCoreCoordinator:
+  type: class
+  source: company-framework/company-framework-notification/src/main/java/com/worksap/company/framework/notification/coordinator/impl/redis/RedisNotificationCoreCoordinator.java
+  import:
+  - framework.notification.coordinator.impl.NotificationCoreCoordinator
+
+framework.notification.coordinator.impl.redis.RedisNotificationServerCoordinator:
+  type: class
+  source: company-framework/company-framework-notification/src/main/java/com/worksap/company/framework/notification/coordinator/impl/redis/RedisNotificationServerCoordinator.java
+  import:
+  - framework.notification.coordinator.impl.IRealNotificationServerCoordinator
+  - framework.notification.coordinator.impl.NotificationServerCoordinator
+
+framework.notification.listener.redis.RedisMessageFrontListenerAdapter:
+  type: class
+  source: company-framework/company-framework-notification-front/src/main/java/com/worksap/company/framework/notification/listener/redis/RedisMessageFrontListenerAdapter.java
+  import:
+  - framework.notification.coordinator.impl.NotificationServerCoordinator
+
+framework.core.menu.MenuHierarchyManagerImpl:
+  type: class
+  source: company-framework/company-menu/src/main/java/com/worksap/company/framework/core/menu/MenuHierarchyManagerImpl.java
+  import:
+  - framework.core.menu.dao.impl.MenuIconsDaoImpl
+
+framework.forneus.ForneusConfig:
+  type: class
+  source: company-framework/forneus-spring-view/src/main/java/com/worksap/company/framework/forneus/ForneusConfig.java
+  import:
+  - framework.forneus.db.dao.impl.ForneusXmlDaoImpl
+  - framework.forneus.db.service.impl.ForneusXmlServiceImpl
+
+hue.employeelist.EmployeeWorksheetBuilder:
+  type: class
+  source: company-hue-biz/src/main/java/com/worksap/company/hue/employeelist/EmployeeWorksheetBuilder.java
+  import:
+  - hue.employeelist.dao.impl.EmployeeDaoImpl
+
+hue.employeelist.report.EmployeeInformationGenerator:
+  type: class
+  source: company-hue-biz/src/main/java/com/worksap/company/hue/employeelist/report/EmployeeInformationGenerator.java
+  import:
+  - hue.employeelist.dao.impl.EmployeeDaoImpl
+
+hue.magicimportemployeelist.MagicImportEmployeeWorksheetBuilder:
+  type: class
+  source: company-hue-biz/src/main/java/com/worksap/company/hue/magicimportemployeelist/MagicImportEmployeeWorksheetBuilder.java
+  import:
+  - hue.magicimportemployeelist.dao.impl.MagicImportEmployeeDaoImpl
+
+hue.controller.employeelist.EmployeeListController:
+  type: class
+  source: company-hue-front/src/main/java/com/worksap/company/hue/controller/employeelist/EmployeeListController.java
+  import:
+  - hue.employeelist.dao.impl.EmployeeDaoImpl
+
+hue.mail.core.MailMainReceiver:
+  type: class
+  source: company-mail/src/main/java/com/worksap/company/hue/mail/core/MailMainReceiver.java
+  import:
+  - hue.mail.service.impl.MailReceiveServiceImpl
+
+hue.mail.core.MailMainReceiverConfig:
+  type: class
+  source: company-mail/src/main/java/com/worksap/company/hue/mail/core/MailMainReceiverConfig.java
+  import:
+  - hue.mail.dao.impl.MailAccountFilterIndexDaoImpl
+  - hue.mail.dao.impl.MailAccountToUserIndexDaoImpl
+  - hue.mail.dao.impl.MailBodyDaoImpl
+  - hue.mail.dao.impl.MailCategoryDaoImpl
+  - hue.mail.dao.impl.MailCategoryToMailIndexDaoImpl
+  - hue.mail.dao.impl.MailDaoImpl
+  - hue.mail.dao.impl.MailFilterDaoImpl
+  - hue.mail.dao.impl.MailMessageReceivedIndexDaoImpl
+  - hue.mail.dao.impl.MailToMailCategoryIndexDaoImpl
+  - hue.mail.service.impl.MailFilterExecutionServiceImpl
+  - hue.mail.service.impl.MailFilterManagementServiceImpl
+  - hue.mail.service.impl.MailReceiveServiceImpl
+
+framework.report.utils.MappingAlgoTempStatic:
+  type: class
+  source: company-report-engine/src/main/java/com/worksap/company/framework/report/utils/MappingAlgoTempStatic.java
+  import:
+  - framework.report.service.impl.magiclayout.LayoutAlgoServiceImpl
+
+hue.controller.instareport.CommonReportController:
+  type: class
+  source: company-report-module/src/main/java/com/worksap/company/hue/controller/instareport/CommonReportController.java
+  import:
+  - hue.instareport.dao.impl.ACReapetTestDataGenerator
+  - hue.instareport.dao.impl.DataBeanList
+
+hue.instareport.dao.impl.JasperReportFileAccess:
+  type: class
+  source: company-report-module/src/main/java/com/worksap/company/hue/instareport/dao/impl/JasperReportFileAccess.java
+  import:
+  - framework.report.dao.impl.JasperReportFilesDaoImpl
+
+hue.spreadsheet.RowBlockCreator:
+  type: class
+  source: company-spreadsheet/src/main/java/com/worksap/company/hue/spreadsheet/RowBlockCreator.java
+  import:
+  - hue.spreadsheet.db.dao.impl.WorksheetDaoImpl
+
+hue.spreadsheet.range.util.RangeUtil:
+  type: class
+  source: company-spreadsheet/src/main/java/com/worksap/company/hue/spreadsheet/range/util/RangeUtil.java
+  import:
+  - hue.spreadsheet.range.operation.impl.DeleteColRowOperation
+  - hue.spreadsheet.range.operation.impl.InsertColRowOperation
+  - hue.spreadsheet.range.operation.impl.MoveColRowOperation
+  - hue.spreadsheet.range.operation.impl.UpdateCellOperation
+
+timeline.fixfollow.FixFollow:
+  type: class
+  source: company-timeline-migration/src/main/java/com/worksap/company/timeline/fixfollow/FixFollow.java
+  import:
+  - hue.timeline.dao.impl.FollowDaoImpl
+  - hue.timeline.dao.impl.TimelineUserDaoImpl
+

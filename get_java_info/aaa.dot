@@ -1,0 +1,295 @@
+digraph package_info {
+graph [rankdir=RL]
+subgraph "cluster_hue" {
+label = "hue"
+"hue.executor"
+subgraph "cluster_hue.metadata" {
+label = "hue.metadata"
+"hue.metadata"
+subgraph "cluster_hue.metadata.dao" {
+label = "hue.metadata.dao"
+"hue.metadata.dao"
+"hue.metadata.dao.impl"
+}
+
+subgraph "cluster_hue.metadata.dto" {
+label = "hue.metadata.dto"
+"hue.metadata.dto"
+"hue.metadata.dto.key"
+}
+
+}
+
+subgraph "cluster_hue.spreadsheet" {
+label = "hue.spreadsheet"
+"hue.spreadsheet"
+"hue.spreadsheet.API"
+"hue.spreadsheet.business.business.mock"
+"hue.spreadsheet.cache"
+"hue.spreadsheet.config"
+"hue.spreadsheet.configuration"
+subgraph "cluster_hue.spreadsheet.db.dao" {
+label = "hue.spreadsheet.db.dao"
+"hue.spreadsheet.db.dao"
+"hue.spreadsheet.db.dao.impl"
+}
+
+subgraph "cluster_hue.spreadsheet.dto" {
+label = "hue.spreadsheet.dto"
+"hue.spreadsheet.dto" [style = filled, fillcolor = "#FF9999"]
+"hue.spreadsheet.dto.cell" [style = filled, fillcolor = "#FF9999"]
+"hue.spreadsheet.dto.chart"
+"hue.spreadsheet.dto.document" [style = filled, fillcolor = "#FF9999"]
+"hue.spreadsheet.dto.filter"
+"hue.spreadsheet.dto.history"
+"hue.spreadsheet.dto.image"
+"hue.spreadsheet.dto.key"
+"hue.spreadsheet.dto.log"
+"hue.spreadsheet.dto.mock" [style = filled, fillcolor = "#9999FF"]
+"hue.spreadsheet.dto.pivot"
+"hue.spreadsheet.dto.protectrange"
+"hue.spreadsheet.dto.user"
+}
+
+"hue.spreadsheet.elasticsearch"
+"hue.spreadsheet.entity" [style = filled, fillcolor = "#FF9999"]
+"hue.spreadsheet.enumeration"
+"hue.spreadsheet.exception"
+subgraph "cluster_hue.spreadsheet.formula" {
+label = "hue.spreadsheet.formula"
+"hue.spreadsheet.formula.calculator"
+subgraph "cluster_hue.spreadsheet.formula.core" {
+label = "hue.spreadsheet.formula.core"
+"hue.spreadsheet.formula.core.basic"
+"hue.spreadsheet.formula.core.operand"
+"hue.spreadsheet.formula.core.operator"
+}
+
+"hue.spreadsheet.formula.entity"
+"hue.spreadsheet.formula.exception"
+"hue.spreadsheet.formula.expresssion"
+"hue.spreadsheet.formula.util" [style = filled, fillcolor = "#9999FF"]
+}
+
+"hue.spreadsheet.model" [style = filled, fillcolor = "#9999FF"]
+"hue.spreadsheet.provider"
+subgraph "cluster_hue.spreadsheet.range" {
+label = "hue.spreadsheet.range"
+"hue.spreadsheet.range.contract"
+"hue.spreadsheet.range.core"
+subgraph "cluster_hue.spreadsheet.range.example" {
+label = "hue.spreadsheet.range.example"
+"hue.spreadsheet.range.example"
+"hue.spreadsheet.range.example.mock"
+}
+
+subgraph "cluster_hue.spreadsheet.range.operation" {
+label = "hue.spreadsheet.range.operation"
+"hue.spreadsheet.range.operation"
+"hue.spreadsheet.range.operation.impl"
+}
+
+"hue.spreadsheet.range.util"
+}
+
+subgraph "cluster_hue.spreadsheet.service" {
+label = "hue.spreadsheet.service"
+"hue.spreadsheet.service"
+"hue.spreadsheet.service.impl"
+}
+
+"hue.spreadsheet.utils"
+"hue.spreadsheet.vo"
+}
+
+}
+
+"hue.metadata.dao" -> "hue.metadata.dto" [color = red]
+"hue.metadata.dao.impl" -> "hue.metadata.dao" [color = blue]
+"hue.metadata.dao.impl" -> "hue.metadata.dto" [color = red]
+"hue.metadata.dao.impl" -> "hue.metadata.dto.key" [color = red]
+"hue.metadata.dto" -> "hue.metadata.dto.key" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.db.dao" [color = blue]
+"hue.spreadsheet" -> "hue.spreadsheet.dto.cell" [color = blue]
+"hue.spreadsheet" -> "hue.spreadsheet.service" [color = blue]
+"hue.spreadsheet" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.dto.key" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.exception" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.db.dao.impl" [color = red]
+"hue.spreadsheet" -> "hue.spreadsheet.provider" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.API" -> "hue.spreadsheet.db.dao" [color = blue]
+"hue.spreadsheet.API" -> "hue.spreadsheet.service" [color = blue]
+"hue.spreadsheet.API" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet" [color = red]
+"hue.spreadsheet.API" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet.business.mock" -> "hue.spreadsheet.configuration" [color = blue]
+"hue.spreadsheet.business.mock" -> "hue.spreadsheet" [color = red]
+"hue.spreadsheet.business.mock" -> "hue.spreadsheet.dto.mock" [color = red]
+"hue.spreadsheet.business.mock" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.cache" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.cache" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet.configuration" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.db.dao" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.db.dao" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.db.dao" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.db.dao" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.db.dao" [color = blue]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.exception" [color = red]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet.range.operation" [color = blue]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet.model" [color = red]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet.formula.entity" [color = red]
+"hue.spreadsheet.dto.cell" -> "hue.spreadsheet.dto.key" [color = red]
+"hue.spreadsheet.dto.chart" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto" -> "hue.spreadsheet.dto.cell" [color = blue]
+"hue.spreadsheet.dto" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.dto" -> "hue.spreadsheet.dto.key" [color = red]
+"hue.spreadsheet.dto" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.dto.document" -> "hue.spreadsheet.range.core" [color = red]
+"hue.spreadsheet.dto.document" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto.document" -> "hue.spreadsheet.dto.pivot" [color = red]
+"hue.spreadsheet.dto.document" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.dto.document" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.dto.document" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet.dto.history" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.dto.history" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto.history" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.dto.history" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.dto.image" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto.mock" -> "hue.spreadsheet.configuration" [color = blue]
+"hue.spreadsheet.dto.mock" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto.pivot" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.dto.protectrange" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.dto.protectrange" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.formula.expresssion" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.dto.user" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet.entity" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.formula.calculator" -> "hue.spreadsheet.formula.core.basic" [color = blue]
+"hue.spreadsheet.formula.calculator" -> "hue.spreadsheet.formula.core.basic" [color = red]
+"hue.spreadsheet.formula.calculator" -> "hue.spreadsheet.formula.expresssion" [color = red]
+"hue.spreadsheet.formula.core.basic" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.formula.core.basic" [color = red]
+"hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.formula.util" [color = red]
+"hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.core.basic" [color = blue]
+"hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.core.basic" [color = red]
+"hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.core.operand" [color = red]
+"hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.calculator" [color = red]
+"hue.spreadsheet.formula.entity" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.core.basic" [color = red]
+"hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.core.operand" [color = red]
+"hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.core.operator" [color = red]
+"hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.range.contract" -> "hue.spreadsheet.service" [color = blue]
+"hue.spreadsheet.range.contract" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.range.contract" -> "hue.spreadsheet.provider" [color = red]
+"hue.spreadsheet.range.contract" -> "hue.spreadsheet.range.core" [color = red]
+"hue.spreadsheet.range.contract" -> "hue.spreadsheet.range.util" [color = red]
+"hue.spreadsheet.range.contract" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.range.core" -> "hue.spreadsheet.range.contract" [color = blue]
+"hue.spreadsheet.range.core" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.range.example" -> "hue.spreadsheet.range.contract" [color = blue]
+"hue.spreadsheet.range.example" -> "hue.spreadsheet.range.example.mock" [color = blue]
+"hue.spreadsheet.range.example" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.range.example" -> "hue.spreadsheet.range.util" [color = red]
+"hue.spreadsheet.range.operation" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.range.operation.impl" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.range.operation.impl" -> "hue.spreadsheet.range.operation" [color = red]
+"hue.spreadsheet.range.util" -> "hue.spreadsheet.range.operation" [color = blue]
+"hue.spreadsheet.range.util" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.range.util" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.range.util" -> "hue.spreadsheet.range.operation.impl" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.range.contract" [color = blue]
+"hue.spreadsheet.service" -> "hue.spreadsheet.range.operation" [color = blue]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.formula.entity" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.pivot" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.chart" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.filter" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.history" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.image" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.protectrange" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.dto.user" [color = red]
+"hue.spreadsheet.service" -> "hue.spreadsheet.range.core" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.service" [color = blue]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet" [color = blue]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.db.dao" [color = blue]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.range.contract" [color = blue]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.range.operation" [color = blue]
+"hue.spreadsheet.service.impl" -> "hue.metadata.dao" [color = blue]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.chart" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.utils" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.key" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.exception" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.vo" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.entity" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.calculator" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.core.operand" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.exception" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.expresssion" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.pivot" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.filter" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.history" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.image" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.protectrange" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.user" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.provider" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.range.core" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.metadata.dto" [color = red]
+"hue.spreadsheet.service.impl" -> "hue.spreadsheet.elasticsearch" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.dto.key" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.dto" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.provider" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.dto.pivot" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.entity" [color = red]
+"hue.spreadsheet.utils" -> "hue.spreadsheet.elasticsearch" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.range.contract" [color = blue]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.dto.document" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.dto.filter" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.dto.cell" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.dto.pivot" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.elasticsearch" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.config" [color = red]
+"hue.spreadsheet.vo" -> "hue.spreadsheet.dto" [color = red]
+}

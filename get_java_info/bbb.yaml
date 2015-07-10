@@ -1,0 +1,370 @@
+company-spreadsheet:
+  hue.executor:
+
+  hue.metadata.dao:
+  - hue.metadata.dto
+
+  hue.metadata.dao.impl:
+  - hue.metadata.dao
+  - hue.metadata.dto
+  - hue.metadata.dto.key
+
+  hue.metadata.dto:
+  - hue.metadata.dto.key
+
+  hue.metadata.dto.key:
+
+  hue.metadata:
+
+  hue.spreadsheet:
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.exception
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.config
+  - hue.spreadsheet.db.dao.impl
+  - hue.spreadsheet.enumeration
+  - hue.spreadsheet.provider
+  - hue.spreadsheet.service
+
+  hue.spreadsheet.API:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.vo
+  - hue.spreadsheet
+  - hue.spreadsheet.config
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.enumeration
+  - hue.spreadsheet.service
+
+  hue.spreadsheet.business.mock:
+  - hue.spreadsheet
+  - hue.spreadsheet.configuration
+  - hue.spreadsheet.dto.mock
+  - hue.spreadsheet.entity
+
+  hue.spreadsheet.cache:
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.vo
+
+  hue.spreadsheet.config:
+
+  hue.spreadsheet.configuration:
+  - hue.spreadsheet.dto.cell
+
+  hue.spreadsheet.db.dao:
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.document
+
+  hue.spreadsheet.db.dao.impl:
+  - hue.spreadsheet
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.config
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.exception
+
+  hue.spreadsheet.dto.cell:
+  - hue.spreadsheet.range.operation
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.model
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.key
+
+  hue.spreadsheet.dto.chart:
+  - hue.spreadsheet.dto.cell
+
+  hue.spreadsheet.dto:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet
+  - hue.spreadsheet.enumeration
+
+  hue.spreadsheet.dto.document:
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.enumeration
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.vo
+
+  hue.spreadsheet.dto.filter:
+
+  hue.spreadsheet.dto.history:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+
+  hue.spreadsheet.dto.image:
+  - hue.spreadsheet.dto.cell
+
+  hue.spreadsheet.dto.key:
+
+  hue.spreadsheet.dto.log:
+
+  hue.spreadsheet.dto.mock:
+  - hue.spreadsheet.configuration
+  - hue.spreadsheet.dto.cell
+
+  hue.spreadsheet.dto.pivot:
+  - hue.spreadsheet.utils
+
+  hue.spreadsheet.dto.protectrange:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.config
+
+  hue.spreadsheet.dto.user:
+
+  hue.spreadsheet.elasticsearch:
+
+  hue.spreadsheet.entity:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.formula.exception
+  - hue.spreadsheet.formula.expresssion
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.enumeration
+  - hue.spreadsheet.dto.user
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.utils
+
+  hue.spreadsheet.enumeration:
+
+  hue.spreadsheet.exception:
+
+  hue.spreadsheet.formula.calculator:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.expresssion
+
+  hue.spreadsheet.formula.core.basic:
+  - hue.spreadsheet.formula.exception
+
+  hue.spreadsheet.formula.core.operand:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.exception
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.formula.util
+
+  hue.spreadsheet.formula.core.operator:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.core.operand
+  - hue.spreadsheet.formula.exception
+  - hue.spreadsheet.formula.calculator
+
+  hue.spreadsheet.formula.entity:
+  - hue.spreadsheet.formula.exception
+
+  hue.spreadsheet.formula.exception:
+
+  hue.spreadsheet.formula.expresssion:
+  - hue.spreadsheet.formula.core.basic
+  - hue.spreadsheet.formula.core.operand
+  - hue.spreadsheet.formula.core.operator
+  - hue.spreadsheet.formula.exception
+
+  hue.spreadsheet.formula.util:
+
+  hue.spreadsheet.model:
+
+  hue.spreadsheet.provider:
+
+  hue.spreadsheet.range.contract:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.provider
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.range.util
+  - hue.spreadsheet.service
+  - hue.spreadsheet.utils
+
+  hue.spreadsheet.range.core:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.range.contract
+
+  hue.spreadsheet.range.example:
+  - hue.spreadsheet.range.contract
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.range.example.mock
+  - hue.spreadsheet.range.util
+
+  hue.spreadsheet.range.example.mock:
+
+  hue.spreadsheet.range.operation:
+  - hue.spreadsheet.dto.cell
+
+  hue.spreadsheet.range.operation.impl:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.range.operation
+
+  hue.spreadsheet.range.util:
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.range.operation
+  - hue.spreadsheet.range.operation.impl
+
+  hue.spreadsheet.service:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.dto.chart
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.dto.filter
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.history
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.dto.protectrange
+  - hue.spreadsheet.dto.user
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.range.operation
+  - hue.spreadsheet.elasticsearch
+  - hue.spreadsheet.enumeration
+
+  hue.spreadsheet.service.impl:
+  - hue.spreadsheet
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.service
+  - hue.spreadsheet.config
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.chart
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.enumeration
+  - hue.spreadsheet.exception
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.formula.calculator
+  - hue.spreadsheet.formula.core.operand
+  - hue.spreadsheet.formula.exception
+  - hue.spreadsheet.formula.expresssion
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.dto.filter
+  - hue.spreadsheet.dto.history
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.dto.protectrange
+  - hue.spreadsheet.dto.user
+  - hue.spreadsheet.provider
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.range.operation
+  - hue.spreadsheet.elasticsearch
+  - hue.metadata.dao
+  - hue.metadata.dto
+
+  hue.spreadsheet.utils:
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.config
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.key
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.provider
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.elasticsearch
+
+  hue.spreadsheet.vo:
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.filter
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.pivot
+  - hue.spreadsheet.elasticsearch
+  - hue.spreadsheet.config
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.enumeration
+
+company-spreadsheet-front:
+  hue.controller.ess:
+  - framework.print
+  - hue.metadata.dto
+  - hue.spreadsheet.config
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.service
+  - hue.spreadsheet.utils
+
+  hue.controller.exception:
+
+  hue.controller.samples:
+  - hue.spreadsheet.API
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.entity
+
+  hue.controller.spreadsheet:
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.service
+  - hue.spreadsheet.vo
+  - hue.spreadsheet.dto.chart
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.config
+  - hue.spreadsheet.db.dao
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.history
+  - hue.spreadsheet.enumeration
+  - hue.controller.exception
+  - hue.spreadsheet.range.example
+  - hue.spreadsheet.dto.user
+  - hue.spreadsheet.elasticsearch
+  - hue.spreadsheet.exception
+  - hue.spreadsheet.utils
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.dto.protectrange
+  - hue.spreadsheet.API
+
+  hue.listener:
+  - hue.spreadsheet.entity
+  - hue.spreadsheet.vo
+  - hue.websocket.utils
+
+  hue.websocket.entity:
+
+  hue.websocket.spreadsheet:
+  - hue.spreadsheet.entity
+  - hue.websocket.utils
+  - hue.listener
+  - hue.spreadsheet.formula.entity
+  - hue.spreadsheet.service
+  - hue.spreadsheet.vo
+  - hue.websocket.entity
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.dto.filter
+  - hue.spreadsheet.dto.image
+  - hue.spreadsheet.range.core
+  - hue.spreadsheet.range.operation
+  - hue.spreadsheet.range.util
+
+  hue.websocket.utils:
+  - hue.websocket.entity
+  - hue.websocket.spreadsheet
+
+company-spreadsheet-printservice:
+  framework.print:
+  - hue.spreadsheet.dto
+  - hue.spreadsheet.vo
+  - hue.metadata.dto
+  - hue.spreadsheet.API
+  - hue.spreadsheet.dto.cell
+  - hue.spreadsheet.dto.document
+  - hue.spreadsheet.service
+

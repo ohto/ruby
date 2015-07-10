@@ -1,0 +1,1873 @@
+0a9abc57   Merge branch 'ticket-50014' into 'develop' ... Browse Code 
+TODA, Kengo 30 minutes ago  
+2c5d1838   Merge branch 'ticket-50338' into 'develop' ... Browse Code 
+Vibhas Kumar about 2 hours ago  
+731ae15e   Merge branch 'ticket-49490' into 'develop' ... Browse Code 
+Hiro Sato about 2 hours ago  
+53dd0d25   refs #50014 Update 'SessionNotificationListener'. Browse Code 
+Irene about 2 hours ago  
+efbca0c1   Merge branch 'ticket-51075' into 'develop' ... Browse Code 
+Go Akazawa about 3 hours ago  
+61e75c59   Merge branch 'fix-calculation-typo' into 'develop' ... Browse Code 
+Hiro Sato about 3 hours ago  
+6173d0c9   bug fix delete magic number of columnId, bug fix double click apply button Browse Code 
+xu_t about 3 hours ago  
+a90b5b7f   js doc Browse Code 
+xu_t about 3 hours ago  
+49e7cd0a   format Browse Code 
+xu_t about 3 hours ago  
+e0da2095   can use arrow key to move cursor after import data from schedule Browse Code 
+xu_t about 3 hours ago  
+10057563   bug fix count last data row, can use arrow key to move cursor after import data from ic card dialog Browse Code 
+xu_t about 3 hours ago  
+0e8b1c90   keep defXml be same to the mergedXml Browse Code 
+xu_t about 3 hours ago  
+90683846   Merge branch 'ticket-50373' into 'develop' ... Browse Code 
+TODA, Kengo about 3 hours ago  
+4039793f   typo Browse Code 
+Yusuke Tada about 4 hours ago  
+6d2695fe   Merge branch 'ticket-50790' into 'develop' ... Browse Code 
+Wu Hua about 4 hours ago  
+72f93c06   Merge branch 'ticket-47855' into 'develop' ... Browse Code 
+Wu Hua about 4 hours ago  
+2b97caf5   Merge branch 'develop-tmpl' into 'develop' ... Browse Code 
+Naofumi Tsujii about 5 hours ago  
+ 15 Jun, 2015
+
+23 commits
+
+cc93273c   Merge branch 'ticket-51082' into 'develop' ... Browse Code 
+Masanori TAKAMI about 16 hours ago  
+7d17d055   change method name Browse Code 
+Minoru Kamiya about 17 hours ago  
+707a4456   use project code Browse Code 
+Yusuke Tada about 17 hours ago  
+04e3567d   Merge branch 'ticket-51022' into 'develop' ... Browse Code 
+Shunhong Zhong about 17 hours ago  
+6a9f92a0   update apache twill to 0.6.0-customized-SNAPSHOT Browse Code 
+Shunhong Zhong about 17 hours ago  
+ee1b16ec   Merge branch 'fix-ssc-on-runtime' into 'develop' ... Browse Code 
+Masanori TAKAMI about 17 hours ago  
+58cfaac4   fix typo Browse Code 
+Minoru Kamiya about 17 hours ago  
+a1007112   fix error about generating mergedXml on runtime phase Browse Code  1
+Daisuke Akagawa about 18 hours ago  
+2f405359   Merge branch 'ticket-50944-new' into 'develop' ... Browse Code 
+Gao Shang about 18 hours ago  
+b8ba1d22   Merge branch 'ticket-49788' into 'develop' ... Browse Code 
+Yuichiro Izumi about 18 hours ago  
+be937e60   refs #47855 Update for code review. Add a get method for MailBodyDao Browse Code 
+Jiang Sheng about 18 hours ago  
+e8eee1d3   refs #47855 Register Reply/Forward events in mail-app and mail-detail Browse Code 
+Lokesh Rajwani about 18 hours ago  
+f6fe90fe   refs #47855 Replace assertEquals with assertThat Browse Code 
+Jiang Sheng about 18 hours ago  
+3ce365da   refs #47855 Fix the time zone in the test forward. Browse Code 
+Jiang Sheng about 18 hours ago  
+79e416a5   refs #47855 Implement test cases for replyAll and forward Browse Code 
+Jiang Sheng about 18 hours ago  
+c674a9cd   refs #47855 Implement test case for Reply. Browse Code 
+Jiang Sheng about 18 hours ago  
+8a6cf660   refs #47855 Add skeleton for reply test Browse Code 
+Jiang Sheng about 18 hours ago  
+f85dbe4b   refs #47855 Create createMockData for Reply test Browse Code 
+Jiang Sheng about 18 hours ago  
+cea51521   refs #47855 Do not use SESSION in service level. Browse Code 
+Jiang Sheng about 18 hours ago  
+6dbe8f49   refs #47855 Add event handle for list operation bar reply/forward Browse Code 
+Jiang Sheng about 18 hours ago  
+649411bf   refs #47855 Implement reply/forward on client side for mail-details Browse Code 
+Jiang Sheng about 18 hours ago  
+9e9fd1f5   refs #47855 Basic implementation of server side for generating reply/forward draft Browse Code 
+Jiang Sheng about 18 hours ago  
+9c4113cd   refs #47855 Temp update for reply/forward Browse Code 
+Jiang Sheng about 18 hours ago  
+ 15 Jun, 2015
+
+40 commits
+
+f08b4611   ess fix bug of autofil Browse Code 
+Xin　Huang about 18 hours ago  
+35dffe34   Merge branch 'ticket-51036' into 'develop' ... Browse Code 
+Wu Hua about 19 hours ago  
+3781e027   Merge branch 'ticket-50298' into 'develop' ... Browse Code 
+Wu Hua about 19 hours ago  
+b4925eee   Merge branch 'ticket-49483' into 'develop' ... Browse Code 
+Yuichiro Izumi about 19 hours ago  
+76bcc7f8   refs #51082 fix Browse Code 
+Minoru Kamiya about 19 hours ago  
+ba94b976   Merge branch 'fix-deploy-config-files' into 'develop' ... Browse Code 
+Shoichiro Yoshida about 19 hours ago  
+d85644da   Merge branch 'ticket-48885' into 'develop' ... Browse Code 
+Wu Hua about 19 hours ago  
+146c6aa0   refs #50298 Change as suggestion Browse Code 
+Binh Thanh about 19 hours ago  
+d3bec44a   Merge branch 'scroll-canvas-auto' into 'develop' ... Browse Code 
+Yuichiro Izumi about 19 hours ago  
+4c938ab1   refs #51036 Merge remote-tracking branch 'origin/develop' into ticket-51036 ... Browse Code 
+Gong Li about 19 hours ago  
+b0a2a9fd   Merge branch 'ticket-46328' into 'develop' ... Browse Code 
+Yuichiro Izumi about 19 hours ago  
+6308206a   #49788 Browse Code 
+Yusuke Sasaki about 20 hours ago  
+68208889   Merge branch 'ticket-50930' into 'develop' ... Browse Code 
+Wu Hua about 20 hours ago  
+8683811e   Merge branch 'ticket-50713' into 'develop' ... Browse Code 
+Wu Hua about 20 hours ago  
+85242c45   Merge branch 'ticket-51073' into 'develop' ... Browse Code 
+Kohei Asano about 20 hours ago  
+f13ff231   refs #50298 load more support in client side Browse Code 
+Binh Thanh about 20 hours ago  
+8ce62ed6   refs #50298 load more implemented in controller Browse Code 
+Binh Thanh about 20 hours ago  
+9fa68e36   refs #50298 add data load more boolean to mail-list Browse Code 
+Binh Thanh about 20 hours ago  
+02046c74   refs #51082 handle empty key Browse Code 
+Minoru Kamiya about 20 hours ago  
+02d7e9b1   refs #50115 Backend for mail paging Browse Code 
+Aseem Anand about 20 hours ago  
+c1698b65   refs #48885 fix commit errors Browse Code 
+Ye Kaiqi about 20 hours ago  
+9277537c   refs #48885 fix pre-commit errors Browse Code 
+Ye Kaiqi about 20 hours ago  
+68e16b8a   refs #48885 finish template config on compose page Browse Code 
+Ye Kaiqi about 20 hours ago  
+55994b08   refs #48885 commit before rebase Browse Code 
+Ye Kaiqi about 20 hours ago  
+bf148494   refs #48885 implement compose template settings half done Browse Code 
+Ye Kaiqi about 20 hours ago  
+db577f12   refs #48885 implement apply signature Browse Code 
+Ye Kaiqi about 20 hours ago  
+1bb5e74e   refs #48885 commit before checkout Browse Code 
+Ye Kaiqi about 20 hours ago  
+8cf263ca   refs #48885 implement dropdown-items Browse Code 
+Ye Kaiqi about 20 hours ago  
+2bbcfa6f   refs #47996 commit before rebase Browse Code 
+Ye Kaiqi about 20 hours ago  
+16697635   Merge branch 'ticket-50778' into 'develop' ... Browse Code 
+Wu Hua about 20 hours ago  
+7a22fab7   Merge branch 'ticket-50328' into 'develop' ... Browse Code 
+Wu Hua about 20 hours ago  
+49bdc2a4   support kva#executeAtomicByOperations Browse Code 
+Kohei Asano about 20 hours ago  
+3af59689   refs #51073 send messages on async kva operations Browse Code 
+Kohei Asano about 20 hours ago  
+a731edc8   Merge branch 'ticket-50020' into 'develop' ... Browse Code 
+Wu Hua about 20 hours ago  
+0305ddc7   Merge branch 'test-autoindex-runtime' into 'develop' ... Browse Code 
+Kohei Asano about 20 hours ago  
+e345ed0b   refs #49483 change attrs and fix bugs Browse Code 
+Junichi Saito about 21 hours ago  
+eab62f70   merge with develop Browse Code 
+Nikhil Gulumkar about 21 hours ago  
+fb17c94b   ESS Print Fix Conflicts Resolved Browse Code 
+Nikhil Gulumkar about 21 hours ago  
+dcd2dfe0   refs #50930 Solved: preview for japanese character coming garbled. Browse Code 
+Vishal Raj about 21 hours ago  
+74450fff   Merge branch 'fix-static-setting-compiler' into 'develop' ... Browse Code 
+Masanori TAKAMI about 21 hours ago  
+ 15 Jun, 2015
+
+40 commits
+
+7bbfb5d0   refs #51036 refactor preview and thumbnail generation Browse Code 
+Gong Li about 21 hours ago  
+7d0d929e   format option lines, set Xmx to 4G Browse Code 
+Xiao Han about 22 hours ago  
+eed8849a   remove -verbose:gc, -Xloggc will override this option ... Browse Code 
+Xiao Han about 22 hours ago  
+a383fa69   refs #50373 update cache process service javadoc Browse Code 
+Irene about 22 hours ago  
+ec9720e9   test AbstractIndexGenerator Browse Code 
+Kohei Asano about 22 hours ago  
+73c635a1   Merge branch 'ticket-50881' into 'develop' ... Browse Code 
+Kohei Asano about 22 hours ago  
+f1acf1e6   Merge branch 'timeline-mobile-0.2.4' into 'develop' ... Browse Code 
+UMEDA Yuki about 22 hours ago  
+49783e80   fix error on ssc Browse Code  1
+Daisuke Akagawa about 22 hours ago  
+c47c6c16   Merge branch 'ticket-48661' into 'develop' ... Browse Code 
+Wu Hua about 22 hours ago  
+629f66b6   Merge remote-tracking branch 'origin/develop' into ticket-50881 Browse Code 
+Kohei Asano about 23 hours ago  
+4bffcc4d   fix spring context problems Browse Code 
+Kohei Asano about 23 hours ago  
+c592d53c   Merge branch 'ticket-49252' into 'develop' ... Browse Code 
+Yuichiro Izumi about 23 hours ago  
+05713bc1   Merge branch 'ticket-50946' into 'develop' ... Browse Code 
+Gao Shang about 23 hours ago  
+417d9ce2   refs #50947 [ESS] rename method Browse Code 
+Zhan Zhiyuan about 24 hours ago  
+b83b0166   row header D&D Browse Code 
+Akio Iwahori about 24 hours ago  
+82921f3c   Merge branch 'bugfix-approvalflow' into 'develop' ... Browse Code 
+Takuya Azuma about 24 hours ago  
+124a72f0   Merge branch 'update-ekisupa-server-ip' into 'develop' ... Browse Code 
+Naofumi Tsujii about 24 hours ago  
+883aabfd   Merge branch 'ticket-48909' into 'develop' ... Browse Code 
+Wu Hua about 24 hours ago  
+4a01f6c4   refs #50947 [ESS] fix bug for can not delete image Browse Code 
+Zhan Zhiyuan a day ago  
+e02c0ca1   Merge branch 'ticket-50944-new' into 'develop' ... Browse Code 
+Gao Shang a day ago  
+8a30cb27   Merge branch 'ticket-50091' into timeline-mobile-0.2.4 Browse Code 
+Yuji Koyama a day ago  
+0572a00a   Implement share action Browse Code 
+Yuji Koyama a day ago  
+de2ec079   Merge branch 'timeline' into 'develop' ... Browse Code 
+Jack a day ago  
+dedcc3b2   fix pom.xml Browse Code 
+Ryuta　Suetsugu a day ago  
+09b8dd16   fix pom.xml Browse Code 
+Ryuta　Suetsugu a day ago  
+589ffbb6   Merge branch 'fix-talk-finish' into 'develop' ... Browse Code 
+Hiro Sato a day ago  
+783f5832   ref ticket-50705 implement passback api in timeline approval flow service Browse Code 
+Jianqing Xie a day ago  
+71aeafd1   Merge branch 'ticket-50952' into 'develop' ... Browse Code 
+Takuya Azuma a day ago  
+89cfbb20   ref ticket-50049 store Connector cache data into cassandra Browse Code 
+Jianqing Xie a day ago  
+91beb4d2   Merge branch 'ticket-50812' into 'develop' ... Browse Code 
+Gao Shang a day ago  
+f4da68f4   refs #50944 ess fix undo range update Browse Code 
+Xin　Huang a day ago  
+451db92f   fix a bug about talk in finish page. Browse Code 
+IWANE Shuhei a day ago  
+8eb344d3   fix remove row logic add unbind event Browse Code 
+Takuya Azuma a day ago  
+e683ff4c   updated ip address for aws environments Browse Code 
+Hiro Sato a day ago  
+9140f4ee   Merge branch 'ticket-50947' into 'develop' ... Browse Code 
+Gao Shang a day ago  
+2386bcb4   Merge branch 'ticket-49362' into 'develop' ... Browse Code 
+Chen Evan a day ago  
+8824fa97   Merge branch 'ess-five-conedit' into 'develop' ... Browse Code 
+Gao Shang a day ago  
+24d380fd   refs #50881: suppress sending message when no index Browse Code 
+Kohei Asano a day ago  
+e2098bdf   Add testcase Browse Code 
+Ryuta　Suetsugu a day ago  
+d334e32f   Merge branch 'ticket-50973' into 'develop' ... Browse Code 
+Takuya Azuma a day ago  
+ 15 Jun, 2015
+
+13 commits
+
+36b2407d   refs #50947 [ESS] fix bug for can not delete image Browse Code 
+Zhan Zhiyuan a day ago  
+9de73883   Merge branch 'mail-config' into 'develop' ... Browse Code 
+Daisuke Akagawa a day ago  
+a3d32bf8   Merge branch 'switch-env' into 'develop' ... Browse Code 
+Xiao Han a day ago  
+7f5183ca   fix index stream filter Browse Code 
+Takuya Azuma a day ago  
+e29fd97a   Add mail config for internal-release. Browse Code 
+Shoichiro Yoshida a day ago  
+20c231ed   [ess] refactor hide/show row/col ... Browse Code 
+Xingxu Wu a day ago  
+9af62a27   Merge branch 'ticket-50686i' into 'develop' ... Browse Code 
+Yuichiro Izumi a day ago  
+538f8937   Change builder logic to show image in shared feed ... Browse Code 
+Yuji Koyama a day ago  
+903d7fdc   Merge branch 'ticket-50954' into 'develop' ... Browse Code 
+Takuya Azuma a day ago  
+90cd8209   fix remove from Browse Code 
+Takuya Azuma a day ago  
+f2b2ec01   Modify unnecessary modification Browse Code 
+Yuji Koyama a day ago  
+3d041310   Shared feed Browse Code 
+Yuji Koyama a day ago  
+b6eab75f   Merge branch 'ticket-48793-4' into 'develop' ... Browse Code 
+Takuya Azuma a day ago  
+ 14 Jun, 2015
+
+3 commits
+
+2f936a4c   Merge branch 'ticket-50957' into 'develop' ... Browse Code 
+Kenji Furuta a day ago  
+ca3efcfa   refs #50957, upgrade ess exporting feature Browse Code 
+Kenji Furuta a day ago  
+10c6ad18   autocomplete target data modify when hover out Browse Code 
+Akio Iwahori 2 days ago  
+ 13 Jun, 2015
+
+6 commits
+
+405bbd0c   Fix. Browse Code 
+Shoichiro Yoshida 3 days ago  
+b11cc10c   Change environment management logic. Browse Code 
+Shoichiro Yoshida 3 days ago  
+f2799fd4   Fix launch-cluster script. Browse Code 
+Shoichiro Yoshida 3 days ago  
+5fba6d33   Merge branch 'mq-use-kafka' into 'develop' ... Browse Code 
+Shoichiro Yoshida 3 days ago  
+def01ab7   Merge branch 'retry-smoke-test' into 'develop' ... Browse Code 
+Shoichiro Yoshida 3 days ago  
+2788a8db   Merge branch 'remove-launch-cluster-from-branch' into 'develop' ... Browse Code 
+Shoichiro Yoshida 3 days ago  
+ 12 Jun, 2015
+
+18 commits
+
+557be923   Aggregate logic to launch-cluster. Browse Code 
+Shoichiro Yoshida 4 days ago  
+dd142571   Merge branch 'enable-dot-server' into 'develop' ... Browse Code 
+Xiao Han 4 days ago  
+dda424d4   disable warm up and advance compile Browse Code 
+Xiao Han 4 days ago  
+6dd72245   change class loader of tomcat, use forneus.properties Browse Code 
+Xiao Han 4 days ago  
+d947b412   remove method Browse Code 
+Takuya Azuma 4 days ago  
+3c76e07e   Merge branch 'develop-tmpl' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+a5f2fb44   to 100 percent Browse Code 
+Li Sai 4 days ago  
+43a8e4f0   add test case Browse Code 
+Li Sai 4 days ago  
+55591306   fix test Browse Code 
+Takuya Azuma 4 days ago  
+974a5bcd   fix node reference Browse Code 
+Takuya Azuma 4 days ago  
+bd6dac01   add keyword index configuration Browse Code 
+Takuya Azuma 4 days ago  
+03e24658   rename and create testcase Browse Code 
+Takuya Azuma 4 days ago  
+44172f67   JUnit Test Classes Browse Code 
+Shunsuke Kaneko 4 days ago  
+dc1663f5   group test Browse Code 
+Li Sai 4 days ago  
+aceb28ab   add assignment service Browse Code 
+Takuya Azuma 4 days ago  
+7e456427   fix some test case Browse Code 
+Li Sai 4 days ago  
+fbda733d   AssigmentServiceImplTest Browse Code 
+Takuya Azuma 4 days ago  
+d20f75ff   ApprovalListServiceImplTest Browse Code 
+Takuya Azuma 4 days ago  
+ 12 Jun, 2015
+
+40 commits
+
+0584678a   ApprovalTrayServiceImplTest Browse Code 
+Takuya Azuma 4 days ago  
+648e8483   ApprovalActionServiceImplTest Browse Code 
+Takuya Azuma 4 days ago  
+b381263b   create test cases Browse Code 
+Takuya Azuma 4 days ago  
+9efa616b   submit action test Browse Code 
+Takuya Azuma 4 days ago  
+fd3dbfb2   create processor test Browse Code 
+Takuya Azuma 4 days ago  
+7feb464f   filter test Browse Code 
+Takuya Azuma 4 days ago  
+d7fe357c   SubmissionListServiceImpl test Browse Code 
+Takuya Azuma 4 days ago  
+64a06d6a   add service of application dao Browse Code 
+Takuya Azuma 4 days ago  
+f8ddaf33   summary item formatter test Browse Code 
+Takuya Azuma 4 days ago  
+d65dc3ea   add formatter beans Browse Code 
+Takuya Azuma 4 days ago  
+90cfa4e8   add event lisners bean for test Browse Code 
+Takuya Azuma 4 days ago  
+7e369fb6   not necesary files Browse Code 
+Takuya Azuma 4 days ago  
+34b50f61   Merge branch 'ticket-50382-2' into 'develop' ... Browse Code 
+Takuya Azuma 4 days ago  
+8f292cb7   Merge branch 'col-width-on-confirm' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+bc4fef0c   fix format Browse Code 
+Takuya Azuma 4 days ago  
+8047a984   fix application count Browse Code 
+Takuya Azuma 4 days ago  
+fb01dc96   pre-commit Browse Code 
+Yusuke Tada 4 days ago  
+ebcc4491   fix degrade Browse Code 
+Yusuke Tada 4 days ago  
+4cbe699c   fixed width Browse Code 
+Hiro Sato 4 days ago  
+b84e8028   Merge branch 'ticket-46857-additional' into 'develop' ... Browse Code 
+Kenji Furuta 4 days ago  
+efa460f2   Merge branch 'enable-dot-server' into 'develop' ... Browse Code 
+Xiao Han 4 days ago  
+d4614d79   refs #50903, use hyperlink feature to download attachment Browse Code 
+Kenji Furuta 4 days ago  
+44042306   Merge branch 'fix-external-system-link' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+4db8ecd3   Merge branch 'develop-tmpl' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+336644ed   fixed bug. Browse Code 
+Masashi Kutsuna 4 days ago  
+27d8029e   fix compilation error Browse Code 
+Yusuke Tada 4 days ago  
+fbe1cc5f   Merge branch 'ticket-49490' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+933cd3ca   Merge branch 'ticket-50906' into 'develop' ... Browse Code 
+Hirofumi Tateno 4 days ago  
+1a6f2f3f   Merge branch 'develop-workaround-timeline' into 'develop' ... Browse Code 
+Jack 4 days ago  
+c3f2e4b6   Merge branch 'ticket-46287' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+636d2582   unit test Browse Code 
+Yusuke Tada 4 days ago  
+3620a499   Merge branch 'develop-tmpl' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+ccfa6148   support shift+enter and shift+tab. Browse Code 
+Wei Weiliang 4 days ago  
+9fdf2488   Merge branch 'ticket-45482-0612' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+cb350697   fix row number Browse Code 
+xu_t 4 days ago  
+2c4b8d42   Merge remote-tracking branch 'origin' into ticket-50091 Browse Code 
+Yuji Koyama 4 days ago  
+d8e85f48   [ess] support hide/show col/row ... Browse Code 
+Xingxu Wu 4 days ago  
+7a73193c   [ess] share cell editing information ... Browse Code 
+Xingxu Wu 4 days ago  
+b0e89102   [ess] support resize row/col ... Browse Code 
+Xingxu Wu 4 days ago  
+256777b5   fix bug Browse Code  1
+Hirofumi Tateno 4 days ago  
+ 12 Jun, 2015
+
+40 commits
+
+d626e7cc   add forneus.properties for internal release, enable ux log Browse Code 
+Xiao Han 4 days ago  
+9c2913e8   auto scrolling when pressing arrow key to change active cell. Browse Code 
+Wei Weiliang 4 days ago  
+b0ef6c38   refs #49483 create new WapCarousel Component Browse Code 
+Junichi Saito 4 days ago  
+0dfd02d5   Merge branch 'ticket-50902' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+b0a2f1e5   fix build error Browse Code 
+Yusuke Tada 4 days ago  
+6a325dd8   Merge branch 'ticket-50899' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+8e91fdc1   pre-commit Browse Code 
+Yusuke Tada 4 days ago  
+67953a81   refs #50902 fix jenkins Browse Code 
+Gong Li 4 days ago  
+379017ea   Merge branch 'tiny-fix-on-controller' into 'develop' ... Browse Code 
+Yusuke Tada 4 days ago  
+e19b3361   fix test error on local Browse Code 
+Yusuke Tada 4 days ago  
+f8a056d9   fix handling onchange Browse Code 
+Yusuke Tada 4 days ago  
+012ea2e3   unit test Browse Code 
+Yusuke Tada 4 days ago  
+3003a65b   unit test Browse Code 
+Yusuke Tada 4 days ago  
+2774132e   unit test Browse Code 
+Yusuke Tada 4 days ago  
+18614612   unit test Browse Code 
+Yusuke Tada 4 days ago  
+4e2c1267   unit test Browse Code 
+Yusuke Tada 4 days ago  
+a04695fc   maybeformat Browse Code 
+xu_t 4 days ago  
+8b25e219   multi mode space not override Browse Code 
+Akio Iwahori 4 days ago  
+36cb716a   Post shared feed function Browse Code 
+Yuji Koyama 4 days ago  
+a07e5fa1   make ekisupa method support GET method Browse Code 
+Hiro Sato 4 days ago  
+392d9c16   refs #50831 ess fix painting merged cells Browse Code 
+Xin　Huang 4 days ago  
+dcb44394   fix temporary rendering bug of grid Browse Code 
+Yuichiro Izumi 4 days ago  
+75338cee   refs #50790 pass pre-commit Browse Code 
+Gong Li 4 days ago  
+a2105f5f   hot fix wrong line number Browse Code 
+xu_t 4 days ago  
+1abb1bc7   refs #50790 make input element focus after the dialog is opened Browse Code 
+Gong Li 4 days ago  
+2a4e8d0e   HTML Page css change Browse Code 
+Achyut Balaji 4 days ago  
+e32022af   fix test cases ... Browse Code 
+Jack 4 days ago  
+35f5ce66   fix test cases ... Browse Code 
+Jack 4 days ago  
+8b683377   #49252 Browse Code 
+Yusuke Sasaki 4 days ago  
+dfaf0581   Merge branch 'ticket-50850' into 'develop' ... Browse Code 
+Yuichiro Izumi 4 days ago  
+7b33e55f   workaround for multiple id ... Browse Code 
+Jack 4 days ago  
+609e17f7   Merge branch 'bugfix-approvalflow' into 'develop' ... Browse Code 
+Takuya Azuma 4 days ago  
+a5bb0ea7   Merge branch 'fix-workspace-dir' into 'develop' ... Browse Code 
+Kohei Asano 4 days ago  
+ebe6c7a7   #50850 Browse Code 
+Yusuke Sasaki 4 days ago  
+6365ba34   Merge branch 'ticket-50637' into 'develop' ... Browse Code 
+Wu Hua 4 days ago  
+8245e13c   fix exported file name Browse Code 
+Ni Lei 4 days ago  
+98e543db   Merge branch 'ticket-50108' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+35b4dc80   bugfix Browse Code 
+Ryuta　Suetsugu 4 days ago  
+ce9b4f28   Merge branch 'ticket-50812' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+25a64cc5   Merge branch 'fix-develop' into 'develop' ... Browse Code 
+Tomoki Odaka 4 days ago  
+ 12 Jun, 2015
+
+40 commits
+
+4b664756   Merge branch 'ticket-49261-2' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+525a0d5f   Merge branch 'ticket-share-advanced' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+b39db637   avoid using cassandra.properties even in test scope Browse Code 
+Kohei Asano 4 days ago  
+b5680254   refs #50778 fix pre-commit errors Browse Code 
+Ye Kaiqi 4 days ago  
+2ea3595a   Merge branch 'fix-amount-calc-copy-history' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+d52d7343   Fix develop. Browse Code 
+Shoichiro Yoshida 4 days ago  
+716c3eb3   fix worksapce directory environment variable name Browse Code 
+Kohei Asano 4 days ago  
+b6e51ee8   refs #50812 ess fix autowrap saving Browse Code 
+Xin　Huang 4 days ago  
+07dc032f   fix-share-button advanced error Browse Code 
+IWANE Shuhei 4 days ago  
+69a040af   fix bug : bugs moving to next application(past application) Browse Code 
+Kunihiko Harada 4 days ago  
+fb2f418a   refs #50637 Null check for current user id. Browse Code 
+Vishal Raj 4 days ago  
+3be1e8a3   Merge branch 'ticket-50740' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+394c8ebf   Merge branch 'ticket-50804' into 'develop' ... Browse Code 
+TAKAHASHI Yuto 4 days ago  
+2829d9bd   Merge branch 'ticket-46313-3' into 'develop' ... Browse Code 
+Kunihiko Harada 4 days ago  
+894501e1   refs #50637 Tags null check. Browse Code 
+Vishal Raj 4 days ago  
+702dd1af   rename ssc-tool-pom to sdr-tool-pom Browse Code 
+Yuki Inoue 4 days ago  
+22342a64   Merge branch 'fix-defer-engine' into 'develop' ... Browse Code 
+He Weng 4 days ago  
+f644f72a   Merge branch 'ticket-46858-bugfix' into 'develop' ... Browse Code 
+Yosuke Uzawa 4 days ago  
+9d648c1b   Merge branch 'fix-magic-paste-bug' into 'develop' ... Browse Code 
+Yosuke Uzawa 4 days ago  
+49994f1d   refs #50740 Browse Code 
+Zhan Zhiyuan 4 days ago  
+778f5784   minor fix Browse Code 
+Chen Minli 4 days ago  
+94ad4164   Merge branch 'develop' into ticket-46313-3 Browse Code 
+Hiroki　Tanioka 4 days ago  
+c50e7ff0   Revised Ariel access test case. Browse Code 
+Hiroki　Tanioka 4 days ago  
+69ce4e9b   fix amount calculation from history copy Browse Code 
+Yusuke Sasaki 4 days ago  
+ac7ed572   added deploy script for static-def-registerer Browse Code 
+Yuki Inoue 4 days ago  
+63019a24   Merge branch 'ticket-edp2-es-fix-1' into 'develop' ... Browse Code 
+Kunihiko Harada 4 days ago  
+fcb46801   Merge branch 'ticket-50686' into 'develop' ... Browse Code 
+Yuichiro Izumi 4 days ago  
+da9c0012   Merge branch 'ticket-50631' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+8074e7a0   JS errors fixed Browse Code 
+Rohit Dnyandeo Tawde 4 days ago  
+0544caa9   Merge branch 'ticket-50772-2' into 'develop' ... Browse Code 
+Wei Weiliang 4 days ago  
+bd86f936   Merge branch 'timeline-change-range' into 'develop' ... Browse Code 
+Jack 4 days ago  
+e0191701   Width issue fixed Browse Code 
+Rohit Dnyandeo Tawde 4 days ago  
+874fa427   Merge branch 'ticket-50819' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+d8c32fc6   Merge branch 'ticket-50710' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+f4f0b7a2   refs #50637 Show Me if the file belongs to logged in user. Browse Code 
+Vishal Raj 4 days ago  
+e6ad4672   refs #50637 Remove tags information on delete. Browse Code 
+Vishal Raj 4 days ago  
+2ddd586d   Fixed less optimisation issues Browse Code 
+Rohit Dnyandeo Tawde 4 days ago  
+4e8e859e   fix format Browse Code 
+Chen Minli 4 days ago  
+4b27d458   Merge branch 'ticket-50676' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+954cfa2d   modify Browse Code 
+Kenji Furuta 4 days ago  
+ 12 Jun, 2015
+
+40 commits
+
+651142f8   Merge branch 'ticket-50096' into 'develop' ... Browse Code 
+Takuya Azuma 4 days ago  
+a336b7e7   refs#50631 history with multiple sheets Browse Code 
+WEI Dawei 4 days ago  
+ae66e759   Merge branch 'ess-five-test' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+0fc0f5f1   change post range to person ... Browse Code 
+Jack 4 days ago  
+f86f9ab7   remove remove-to menu Browse Code 
+Takuya Azuma 4 days ago  
+c2fd08ec   fix-magic-paste-nig Browse Code 
+Chen Minli 4 days ago  
+a5bcaa93   set removable Browse Code 
+Takuya Azuma 4 days ago  
+f4b36698   add removable Browse Code 
+Takuya Azuma 4 days ago  
+899878a6   Merge with develop Browse Code 
+Shailesh Ahuja 4 days ago  
+3916961c   Merge branch 'ticket-50724' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+5763bd83   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50676 Browse Code 
+Nikhil Gulumkar 4 days ago  
+d09544d7   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50819 Browse Code 
+Akhil Soni 4 days ago  
+878ad592   Encoding Problem in JasperViewImpl Browse Code 
+Akhil Soni 4 days ago  
+23659677   Merge branch 'ticket-49967' into 'develop' ... Browse Code 
+Go Akazawa 4 days ago  
+0766e27c   Merge branch 'develop' into ticket-46313-3 Browse Code 
+Hiroki　Tanioka 4 days ago  
+9166b2fc   final commit with fix Browse Code 
+Nikhil Gulumkar 4 days ago  
+243180d7   Merge branch 'fake-cache-manager' into 'develop' ... Browse Code 
+Kohei Asano 4 days ago  
+115e6610   Merge remote-tracking branch 'origin/develop' into ticket-50686 Browse Code 
+Akio Iwahori 4 days ago  
+045ad9f9   hover suggest Browse Code 
+Akio Iwahori 4 days ago  
+f9009b65   Merge branch 'ticket-49490' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+0b26f25d   Merge branch 'ticket-50619' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+e5a0fe0c   fake cache manager initialization Browse Code 
+Kohei Asano 4 days ago  
+fc7b5bdb   add commit pom.xml Browse Code 
+Masashi Kutsuna 4 days ago  
+f8de4d8d   Merge branch 'ticket-50772' into 'develop' ... Browse Code 
+Junichi Saito 4 days ago  
+27914802   auto scrolling when active cell changed. Browse Code 
+Wei Weiliang 4 days ago  
+838a6e0b   Merge branch 'ticket-48271' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+a9dab0b0   fixed background process for elasticsearch. Browse Code 
+Masashi Kutsuna 4 days ago  
+54192e88   design change of editor tool Browse Code 
+SINGH HIMANSHU KUMAR 4 days ago  
+98224cf0   Merge branch 'ticket-50067' into 'develop' ... Browse Code 
+Junichi Saito 4 days ago  
+35d96a1c   [ess] fix a bug in test ... Browse Code 
+Xingxu Wu 4 days ago  
+0bbf5d65   bug fix Browse Code 
+Yuichiro Izumi 4 days ago  
+85bf046a   refs #49967 Fix for pre-commit Browse Code 
+mayank 4 days ago  
+9e0c3e1f   Merge branch 'ticket-49891' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+e1ce41a2   fix format Browse Code 
+Yuichiro Izumi 4 days ago  
+a7bab64c   Task #50648 Browse Code 
+Li Chenyao 4 days ago  
+794b387f   refs #50778 fix a bug in the integration of mail-side-menu with compose/config Browse Code 
+Ye Kaiqi 4 days ago  
+df84ed39   refs #50619 fix typo Browse Code 
+Zhan Zhiyuan 4 days ago  
+d7af1171   Merge branch 'develop' into ticket-46313-3 Browse Code 
+Hiroki　Tanioka 4 days ago  
+199f5822   delete meaningless method Browse Code 
+xu_t 4 days ago  
+ec993cf6   new fix Browse Code 
+xu_t 4 days ago  
+ 12 Jun, 2015
+
+39 commits
+
+ff091189   bugfix when value is empty display NaN Browse Code 
+Yuichiro Izumi 4 days ago  
+73ba2da6   Merge branch 'ticket-50619' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+eac83497   Merge branch 'ticket-49408checkbox' into 'develop' ... Browse Code 
+Junichi Saito 4 days ago  
+74f9da3f   refs #49967 Fix for magic-import dialog Browse Code 
+mayank 4 days ago  
+39bbe117   refs #50035 Fix for file-upload not working Browse Code 
+mayank 4 days ago  
+4e7539d2   Merge branch 'ticket-50598' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+80b5baf2   Merge branch 'ticket-49418' into 'develop' ... Browse Code 
+Gao Shang 4 days ago  
+c6ea4f01   bug fix wrong buttons shown Browse Code 
+xu_t 4 days ago  
+628282a7   delete no necessary update Browse Code 
+xu_t 4 days ago  
+65ce037e   delete no necessary update Browse Code 
+xu_t 4 days ago  
+8d915628   refs #50713 Change style and Update mail detail selection info when select mails Browse Code 
+Le Minh Khue 4 days ago  
+62dc5991   Merge branch 'ticket-48110' into 'develop' ... Browse Code 
+WEI Dawei 4 days ago  
+71340525   refs #50619 fix bug for can not copy line break Browse Code 
+Zhan Zhiyuan 4 days ago  
+b5326cc2   Merge branch 'ticket-plaster' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+75334ed6   Merge branch 'ticket-50749' into 'develop' ... Browse Code 
+Hirofumi Tateno 4 days ago  
+21a1e9a2   temporarily fix javascript error. Browse Code 
+IWANE Shuhei 4 days ago  
+51371369   Merge branch 'ticket-49196' into 'develop' ... Browse Code 
+WEI Dawei 4 days ago  
+46b5adb6   Merge branch 'ticket-48271' into 'develop' ... Browse Code 
+WEI Dawei 4 days ago  
+eea8878d   Merge branch 'ticket-50682' into 'develop' ... Browse Code 
+WEI Dawei 4 days ago  
+57dfc5b0   Merge branch 'ticket-50210' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+4a8f9faf   bug fix Browse Code 
+Yuichiro Izumi 4 days ago  
+5839d9c8   Merge branch 'ticket-46857' into 'develop' ... Browse Code 
+He Weng 4 days ago  
+86f3865c   Merge branch 'ticket-50091' into 'timeline-mobile-0.2.4' ... Browse Code 
+Yuji Koyama 4 days ago  
+4eab96b2   Merge branch 'ticket-50382' into 'develop' ... Browse Code 
+Takuya Azuma 4 days ago  
+8efc6ec2   Merge branch 'ticket-49490' into 'develop' ... Browse Code 
+Hiro Sato 4 days ago  
+d73472e9   Show shared content Browse Code 
+Yuji Koyama 4 days ago  
+0b752798   Merge branch 'BugFix_enum' into 'develop' ... Browse Code 
+Takuya Azuma 4 days ago  
+65d32571   fix format Browse Code 
+Takuya Azuma 4 days ago  
+0f728b3a   create test Browse Code 
+Naokata Shikuma 4 days ago  
+ecfa22ec   fix cast bug on version Browse Code 
+Naokata Shikuma 4 days ago  
+4cd0aaa2   Merge branch 'ticket-50748' into 'develop' ... Browse Code 
+Hirofumi Tateno 5 days ago  
+34640cb2   Merge branch 'develop' into ticket-50748 ... Browse Code 
+Naokata Shikuma 5 days ago  
+c3b3526f   Merge branch 'ticket-50270' into 'develop' ... Browse Code 
+Hirofumi Tateno 5 days ago  
+716c28be   Merge branch 'ticket-50269' into 'develop' ... Browse Code 
+Hirofumi Tateno 5 days ago  
+0daec7fe   Merge branch 'ticket-41054_2' into 'develop' ... Browse Code 
+Hirofumi Tateno 5 days ago  
+489e1d19   Merge branch 'ticket-44978' into 'develop' ... Browse Code 
+Hirofumi Tateno 5 days ago  
+aa8b45ef   refs #50748 Make words_ja_kanji supporting auto-reading Browse Code 
+Naokata Shikuma 5 days ago  
+9e30c7d4   fix bug Browse Code 
+Naokata Shikuma 5 days ago  
+4d385a3e   Merge branch 'fix-copy-btn' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+ 11 Jun, 2015
+
+1 commit
+
+24e8aab0   refs #50067, fix bug in wap-file-uploader.js Browse Code 
+Kenji Furuta 5 days ago  
+ 12 Jun, 2015
+
+1 commit
+
+4b847a7a   import autocomplete test from ticket-41054_2 Browse Code 
+Naokata Shikuma 5 days ago  
+ 11 Jun, 2015
+
+39 commits
+
+869bd95d   Merge branch 'ticket-49819' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+70bf6426   Merge branch 'fix-sigle-select-bug' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+f34e79da   refacotring Browse Code 
+Yuichiro Izumi 5 days ago  
+8c78db51   #49891 Browse Code 
+Yusuke Sasaki 5 days ago  
+57d80132   bug fix Browse Code 
+Yuichiro Izumi 5 days ago  
+f02260ee   Modify Enum Utility Classses Browse Code 
+Shunsuke Kaneko 5 days ago  
+0abc2331   delete miss merge Browse Code 
+xu_t 5 days ago  
+cefeacb5   ess pivot range after pre-commit Browse Code 
+Xin　Huang 5 days ago  
+50ef086f   fix copy-button & restart Browse Code 
+IWANE Shuhei 5 days ago  
+ea1f90d6   calcurate bulk approval application count Browse Code 
+Takuya Azuma 5 days ago  
+1f73cd63   refs #50598 after precommit Browse Code 
+Xin　Huang 5 days ago  
+6009985e   fix deps Browse Code 
+xu_t 5 days ago  
+f62fab4a   row select error Browse Code 
+xu_t 5 days ago  
+658204fb   fix format Browse Code 
+xu_t 5 days ago  
+f4e3a8d8   improve detail-grid column size Browse Code 
+xu_t 5 days ago  
+172572d9   hot fix grid header height Browse Code 
+xu_t 5 days ago  
+35294826   disable ic and calendar button before load data Browse Code 
+xu_t 5 days ago  
+efcae3ee   comment out schedule filter button Browse Code 
+xu_t 5 days ago  
+2eabda1f   disable ic and calendar button before load data Browse Code 
+xu_t 5 days ago  
+3ee968f6   improve dlg partailupdate Browse Code 
+xu_t 5 days ago  
+8591c00e   Revert "badge bold badge border-raduis" ... Browse Code 
+xu_t 5 days ago  
+d0870e93   design hot fix Browse Code 
+xu_t 5 days ago  
+bdbcae77   calcurate after approve Browse Code 
+Takuya Azuma 5 days ago  
+122a7097   improve grid column size Browse Code 
+xu_t 5 days ago  
+933fa2b5   extend space between inputbox and label Browse Code 
+xu_t 5 days ago  
+89930949   grid header height Browse Code 
+xu_t 5 days ago  
+8f1bf04b   badge bold badge border-raduis Browse Code 
+xu_t 5 days ago  
+30f09651   design fix Browse Code 
+xu_t 5 days ago  
+c83f5f16   merge miss Browse Code 
+xu_t 5 days ago  
+b8cde21b   delete badge animation and insert from last data row Browse Code 
+xu_t 5 days ago  
+90414fac   delete badge animation Browse Code 
+xu_t 5 days ago  
+18905fc9   bug fix Browse Code 
+xu_t 5 days ago  
+97daef33   bug fix column width Browse Code 
+xu_t 5 days ago  
+45389878   bug fix grid column size and delete no feature column Browse Code 
+xu_t 5 days ago  
+f3ee4a52   Merge branch 'ticket-50524' into 'develop' ... Browse Code 
+Wu Hua 5 days ago  
+4828e997   Merge branch 'fix-disappeared-talk' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+93a84a61   Merge branch 'ticket-50162' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+cbfb5236   Merge branch 'ticket-50724' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+7be0ce52   fix dependency error by modify pom.xml Browse Code 
+Kenji Furuta 5 days ago  
+ 11 Jun, 2015
+
+40 commits
+
+37a20722   Merge branch 'ticket-49484' into 'develop' ... Browse Code 
+Hokuto Nimura 5 days ago  
+912aff0b   Merge branch 'ticket-50725' into 'develop' ... Browse Code 
+Masanori TAKAMI 5 days ago  
+e783c6b2   fix auto complete dismiss bug Browse Code 
+Yusuke Sasaki 5 days ago  
+b36e5848   fixed: talk disappeared. Browse Code 
+Hiro Sato 5 days ago  
+3c87ca17   Merge branch 'ticket-48793-3' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+47c19c93   ess pivot range correct event type Browse Code 
+Xin　Huang 5 days ago  
+baaf4661   fix cut/paste removing extra code Browse Code 
+Xin　Huang 5 days ago  
+4ac96a41   js beautified Browse Code 
+Kenji Furuta 5 days ago  
+28521c70   fix cycle dependency in js, modify logging way in java Browse Code 
+Kenji Furuta 5 days ago  
+1014b567   enum to class Browse Code 
+Takuya Azuma 5 days ago  
+3264e66c   Merge branch 'the-last-fix' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+182df43b   icons for elements in tag palette Browse Code 
+SINGH HIMANSHU KUMAR 5 days ago  
+5821a6a8   Merge branch 'ticket-50108' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+a62caf25   refs #50725 Browse Code 
+Daisuke Akagawa 5 days ago  
+d281a642   changed icons of the tags in the element palette Browse Code 
+SINGH HIMANSHU KUMAR 5 days ago  
+954f8d7b   Merge branch 'ticket-50457' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+6410d0fa   Fix bugs and add error checking Browse Code 
+Shailesh Ahuja 5 days ago  
+851c0141   Merge branch 'ticket-49408' into 'develop' ... Browse Code 
+Wei Weiliang 5 days ago  
+b842b5a9   Merge branch 'ticket-49749' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+26c71fb7   Merge branch 'ticket-50640' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+227613cd   Merge branch 'editor-mode' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+d058fada   fix lint error in js, move compress/decompress function to ZipUtil Browse Code 
+Kenji Furuta 5 days ago  
+1db90ffe   Merge branch 'ticket-50711' into 'develop' ... Browse Code 
+Shoichiro Yoshida 5 days ago  
+2cfea52c   fixed difference with concept regarding input from history Browse Code 
+Hiro Sato 5 days ago  
+2a78fd0a   beautification done by pre-commit Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+80308687   refs #48110 update js Browse Code 
+Henry 5 days ago  
+e6cfb055   Merge branch 'timeline-user-name' into 'develop' ... Browse Code 
+Zheng Pujie 5 days ago  
+5ce8ca8c   refs #48110 change logic to data model Browse Code 
+Henry 5 days ago  
+3c9b684a   fix paging tool Browse Code 
+Takuya Azuma 5 days ago  
+90590246   fix initial count Browse Code 
+Takuya Azuma 5 days ago  
+2b971493   Merge branch 'ticket-48876' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+affdd71c   49749 fix not shown title Browse Code 
+IWANE Shuhei 5 days ago  
+b3985dad   Fixed problems caused after merged Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+a2fa0356   bug fix rowselector and change default option of list type Browse Code 
+Yuichiro Izumi 5 days ago  
+bd2d509a   Merge branch 'fix-header-button-path' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+8a64d625   Merge branch 'fix-advance-payment' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+10ab21b8   Merge branch 'ticket-49185' into 'develop' ... Browse Code 
+Gao Shang 5 days ago  
+2519deee   refs #50711 modify loglevel Browse Code 
+Kota Tabei 5 days ago  
+c53d6bcc   Merge branch 'ticket-49033' into 'develop' ... Browse Code 
+WEI Dawei 5 days ago  
+bafaecd7   Merge branch 'ticket-50641' into 'develop' ... Browse Code 
+WEI Dawei 5 days ago  
+ 11 Jun, 2015
+
+40 commits
+
+a005a1af   refs #50711 delete line break Browse Code 
+Kota Tabei 5 days ago  
+ca389cdf   refs #50162 Corrected incorrect name. Browse Code 
+Vishal Raj 5 days ago  
+f5438314   refs #50598 ess fix cut/paste between multi sheets Browse Code 
+Xin　Huang 5 days ago  
+3345f36c   Merge branch 'ticket-50375' into 'develop' ... Browse Code 
+Minoru Kamiya 5 days ago  
+9b2947fb   refs #49185 fix typo Browse Code 
+Zhan Zhiyuan 5 days ago  
+846cc01d   refs #49185 fix bug for Using context menu to insert rows and column, first time… ... Browse Code 
+Zhan Zhiyuan 5 days ago  
+b515c61f   refs #50162 J unit test written. Browse Code 
+Vishal Raj 5 days ago  
+0e9bb331   change api result from html to json Browse Code 
+Kenji Furuta 5 days ago  
+d4ce5b9f   refs #50682 [li_yu] fix the style (when editing sheet name in tab manager, click… ... Browse Code 
+Kyle 5 days ago  
+24fddaf7   Merge branch 'bugfix-approvalflow' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+149bb4af   fix header-button path Browse Code 
+Yusuke Sasaki 5 days ago  
+4d19c728   Merge branch 'ticket-50086' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+e5ede032   compress attachment file before store to cassandra Browse Code 
+Kenji Furuta 5 days ago  
+772c81c5   Fixed conflicts Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+747394cd   fix user name ... Browse Code 
+Jack 5 days ago  
+40301a1a   use EditorMode of zhuge editor. Browse Code 
+Wei Weiliang 5 days ago  
+d0f690b9   fix menu static compile logic Browse Code 
+Yu Nakajima 5 days ago  
+f74e582f   Merge branch 'ticket-49763' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+aab76fac   fix test case Browse Code 
+Chen Minli 5 days ago  
+686de86f   Merge branch 'BugFix_InboxRows' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+38123094   Merge branch 'fixes-small-points' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+16ed2b6a   On double click of static text / text field we should text content should get selected Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+bc5d3180   bugfix ... Browse Code 
+Ryuta　Suetsugu 5 days ago  
+e0eb28e4   Merge branch 'ticket-48434' into 'develop' ... Browse Code 
+Gao Shang 5 days ago  
+ac27f05b   fix unmodifiable bug Browse Code 
+Li Sai 5 days ago  
+06c31ae5   Merge branch 'ticket-44978-test' into ticket-44978 Browse Code 
+Yuki Inoue 5 days ago  
+20724911   test for autocomplete fuzzy Browse Code 
+Yuki Inoue 5 days ago  
+4e620964   Merge branch 'develop' into ticket-44978 Browse Code 
+Yuki Inoue 5 days ago  
+9cf358ca   refs #49461 Corrected drag over style for options. Browse Code 
+Vishal Raj 5 days ago  
+feb02dd3   ess to insta-report trnasition fix Browse Code 
+SINGH HIMANSHU KUMAR 5 days ago  
+481c7456   refs #49461 Drag over style for options. Browse Code 
+Vishal Raj 5 days ago  
+68a81f84   beautification done by pre-commit Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+cadddcd8   Merge branch 'ticket-50676-1' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+b4424f40   Merge branch 'ticket-50405' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+70865cef   pre-commit Browse Code 
+IWANE Shuhei 5 days ago  
+ea997c12   fixed default column width for FullHD Browse Code 
+Hiro Sato 5 days ago  
+b50c1eaf   run pre-commit Browse Code 
+Li Chenyao 5 days ago  
+13e0c07a   Merge branch 'ticket-45282' into 'develop' ... Browse Code 
+Junichi Saito 5 days ago  
+5e720b18   eliminate redundent compilation Browse Code 
+Chen Minli 5 days ago  
+9bd1e0b0   pre-commit Browse Code 
+IWANE Shuhei 5 days ago  
+ 11 Jun, 2015
+
+40 commits
+
+691639a2   refs #49196 [wu_q] error happens when add new worksheet Browse Code 
+Wu QiLin 5 days ago  
+7cbf5a60   Fixed problem of resize after zoom, fixed problem of UI distortion (Due to prev… ... Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+58d21fe2   Merge branch 'fixes-on-input-from-history' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+1d023361   Merge branch 'develop' of scm.hue.workslan:company/company-framework into develop Browse Code 
+Hiro Sato 5 days ago  
+a08df448   fixed grid default width for full HD Browse Code 
+Hiro Sato 5 days ago  
+aedbb35f   Merge branch 'ticket-50388' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+98aef543   BugFix_InboxRows Browse Code 
+Shunsuke Kaneko 5 days ago  
+888bec05   Merge branch 'fix-burdendepartment' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+4a1ae487   refs #48661 Added bean injection for test case Browse Code 
+Yongzhen Ng 5 days ago  
+2477954e   Merge branch 'fix-report-bug' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+9ef9cd38   bugfix ... Browse Code 
+Ryuta　Suetsugu 5 days ago  
+93e5b38e   Merge branch 'ticket-49793' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+a3c2fda5   #49763 Browse Code 
+Yusuke Sasaki 5 days ago  
+367f9be9   Merge branch 'ticket-50235' into 'develop' ... Browse Code 
+Jack 5 days ago  
+e2e9775f   prepare focus api Browse Code 
+Yuichiro Izumi 5 days ago  
+41a2620b   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50676 Browse Code 
+Nikhil Gulumkar 5 days ago  
+ad2964c7   1. No-Wrap ... Browse Code 
+Nikhil Gulumkar 5 days ago  
+533946f6   fix one compile error Browse Code 
+Ni Lei 5 days ago  
+2842d77f   remove getters/setters from dto by using lombok Browse Code 
+Kenji Furuta 5 days ago  
+708b8087   fix exception message Browse Code 
+Yuki Inoue 5 days ago  
+13d5a936   fix #48271 Browse Code 
+Li Chenyao 5 days ago  
+aae14819   refs #50162 Null handling for drop zone. Browse Code 
+Vishal Raj 5 days ago  
+78b07800   refs #50162 Option management in case of tags selection in side panel Browse Code 
+Vishal Raj 5 days ago  
+8416c95a   refs #50162 Changed how ess files are created. Browse Code 
+Vishal Raj 5 days ago  
+dbbee6c2   replase string with constant (postStatus) Browse Code 
+Kenji Furuta 5 days ago  
+b06e004d   refs #50162 Drop zone for public directory upload. Browse Code 
+Vishal Raj 5 days ago  
+f74d6e52   pre-commit Browse Code 
+Hiro Sato 5 days ago  
+d4c2627f   refs #50328 change variables to semantically understandable ones Browse Code 
+Gabriella Michelle 5 days ago  
+cd2e011e   Merge branch 'develop' of scm.hue.workslan:company/company-framework into develop Browse Code 
+Hiro Sato 5 days ago  
+543a01f3   Merge branch 'ticket-50599' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+f088eca8   fix closure Browse Code 
+Yusuke Sasaki 5 days ago  
+2c07de0d   fix setValueBugs Browse Code 
+IWANE Shuhei 5 days ago  
+f22a57ee   Merge branch 'fix-report-preview' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+a90540d7   Fixed element resize issue after zoom in and zoom out Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+9a738d29   Merge branch 'fix-validation' into 'develop' ... Browse Code 
+Hiro Sato 5 days ago  
+aea4bd85   fix-bug-advancePayment Browse Code 
+IWANE Shuhei 5 days ago  
+fc015c84   fix #48822 Browse Code 
+Li Chenyao 5 days ago  
+50707352   refs #50020 fix test cases Browse Code 
+jatin 5 days ago  
+9efe38f6   refs #48661 [Extra] Added 'Move-to Inbox' option for Spam mails Browse Code 
+Yongzhen Ng 5 days ago  
+302d86fa   ref ticket-50235 change the scope of timeline application feed Browse Code 
+Jianqing Xie 5 days ago  
+ 11 Jun, 2015
+
+40 commits
+
+efd1981e   refs #50641 Strike through and Underline, multi lines show different. Browse Code 
+Henry 5 days ago  
+0bf80c23   Merge branch 'ticket-50402' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+c5fe50c6   refs #50162 Null handling. Browse Code 
+Vishal Raj 5 days ago  
+9b032f5e   fix report-view-bug Browse Code 
+IWANE Shuhei 5 days ago  
+12d2daa3   Merge branch 'ticket-48221' into 'develop' ... Browse Code 
+WEI Dawei 5 days ago  
+e512b4b2   suggest panel fotter at screen right Browse Code 
+Akio Iwahori 5 days ago  
+b62a2c07   refs #50524 pass pre-commit Browse Code 
+Gong Li 5 days ago  
+47c22053   refs #50524 fix the bug with search of multiple accounts with the same name Browse Code 
+Gong Li 5 days ago  
+0db31aab   precommit Browse Code 
+Bharath Govinda Bhat 5 days ago  
+1f1e12dd   conflicts fixed Browse Code 
+Bharath Govinda Bhat 5 days ago  
+d5b100ed   refs #48661 registering filterAction event in mail-app Browse Code 
+Lokesh Rajwani 5 days ago  
+6460c089   Merge branch 'ticket-50593' into 'develop' ... Browse Code 
+Akhil Soni 5 days ago  
+4deba94a   Transperency property added for RECTANGLE Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+0bf121d8   Merge branch 'ticket-50240' into 'timeline-mobile-0.2.4' ... Browse Code 
+Yuji Koyama 5 days ago  
+6b05c91f   refs #48661 Finished with test case Browse Code 
+Yongzhen Ng 5 days ago  
+51f682b4   refs #48661 Did test case 'testGetUnreadMailsByCategory' and also remove entries… ... Browse Code 
+Yongzhen Ng 5 days ago  
+09f39b4c   Merge branch 'ticket-50560' into 'develop' ... Browse Code 
+Hirofumi Tateno 5 days ago  
+84c855f7   Merge branch 'develop' into ticket-46313-3 Browse Code 
+Hiroki　Tanioka 5 days ago  
+6d55f01a   Merge branch 'ticket-50204' into 'develop' ... Browse Code 
+Akhil Soni 5 days ago  
+21d18167   #49793 Browse Code 
+Yusuke Sasaki 5 days ago  
+de023c57   refs #50388 Browse Code 
+Shunsuke Kaneko 5 days ago  
+ec64179f   Modified some code with `try-with-resources` and logger.info with ... Browse Code 
+Hiroki　Tanioka 5 days ago  
+c69c5aff   Merge branch 'ticket-50108' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+ec161a43   fix test of person_name to follow current spec Browse Code 
+Shinta Hatatani 5 days ago  
+ad73b1b0   fix person_name_ja_normalize to contain ja_name analyzer in both of setting-def and java Browse Code 
+Shinta Hatatani 5 days ago  
+8a8fb08d   refs #48661 Temp commit for rebase Browse Code 
+Yongzhen Ng 5 days ago  
+c3569b5d   refs #48661 Halfway thru adding test case Browse Code 
+Yongzhen Ng 5 days ago  
+5c382822   refs #48661 Mail received will be updated to unread table if filter does not set it to read Browse Code 
+Yongzhen Ng 5 days ago  
+87f6902e   Transperency property added for LIST Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+b02aecf2   Merge branch 'ticket-50027' into 'develop' ... Browse Code 
+Junichi Saito 5 days ago  
+6065fc9a   refs #48661 Rebased code Browse Code 
+Yongzhen Ng 5 days ago  
+f9aa117f   Merge branch 'ticket-48876' into 'develop' ... Browse Code 
+Go Akazawa 5 days ago  
+b657e8a3   refs #48661 Implemented filtering of mails by 'All mails' and 'Unread mails' Browse Code 
+Yongzhen Ng 5 days ago  
+03551b4d   refs #48661 Test change Browse Code 
+Yongzhen Ng 5 days ago  
+a3dcfaec   refs #48661 Done backend, now trying to link frontend to backend Browse Code 
+Yongzhen Ng 5 days ago  
+182577e6   Resolving DragAndDrop problem Browse Code 
+Akhil Soni 5 days ago  
+6853d110   suggest master with history Browse Code 
+Akio Iwahori 5 days ago  
+91e0a7a9   refs #46857 Browse Code 
+Kenji Furuta 5 days ago  
+7b4861c6   Add mypage link Browse Code 
+Yuji Koyama 5 days ago  
+779b92dc   Drag and drop behaviour changes and not working properly after zoom in or zoom out. Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+ 11 Jun, 2015
+
+40 commits
+
+79950c20   Merge branch 'ticket-50396' into 'develop' ... Browse Code 
+Wu Hua 5 days ago  
+aae972cc   display modify Browse Code 
+Akio Iwahori 5 days ago  
+fe7e792a   Merge branch 'ticket-50565' into 'develop' ... Browse Code 
+Daisuke Akagawa 5 days ago  
+ab80d49a   display modify Browse Code 
+Akio Iwahori 5 days ago  
+2bd70857   Fix vertical aignment and report margins info Browse Code 
+Shailesh Ahuja 5 days ago  
+b46db807   master code display on suggest panel Browse Code 
+Akio Iwahori 5 days ago  
+d233a6c7   refs #50328 implement discard when changing mail account while having an un-saved new signature Browse Code 
+Gabriella Michelle 5 days ago  
+ce0bc166   fix test case Browse Code 
+Shinta Hatatani 5 days ago  
+794a0c08   add update timing option Browse Code 
+Yuichiro Izumi 5 days ago  
+663c1c21   Finish message will change by the result of post (normal/error) Browse Code 
+Kenji Furuta 5 days ago  
+fb0ac36d   refs #46857, implement feature attach file Browse Code 
+Kenji Furuta 5 days ago  
+29d776ee   refs #50396 Clean up mail-app and remove all duplicates Browse Code 
+Lokesh Rajwani 5 days ago  
+bdfe3795   refs #50565 Browse Code 
+Daisuke Akagawa 5 days ago  
+fb0a45db   refs #50593 Set lastModifiedDate when save/send Browse Code 
+Jiang Sheng 5 days ago  
+fe3eb92c   refs #50593 Add lastModifiedDate to MailDraftDto Browse Code 
+Jiang Sheng 5 days ago  
+f3468f19   fix menu static compile Browse Code 
+Yu Nakajima 5 days ago  
+3e6e4782   Merge branch 'ticket-50451' into 'develop' ... Browse Code 
+He Weng 5 days ago  
+c51ff279   refs #50020 fix bug in unread folder to trash interaction Browse Code 
+jatin 5 days ago  
+51426a5c   Merge branch 'BugFix_Reject_Aplication' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+67dd18bc   fix bug in junit test Browse Code 
+huang_yi 5 days ago  
+25bbede3   Merge branch 'ticket-50329' into 'develop' ... Browse Code 
+Masanori TAKAMI 5 days ago  
+aa6864ac   Merge branch 'ticket-48048-2' into 'develop' ... Browse Code 
+Masanori TAKAMI 5 days ago  
+197de10b   validate for same mypage Browse Code 
+Yuji Koyama 5 days ago  
+ac470a1d   modify partial update timing for dialog Browse Code 
+Yuichiro Izumi 5 days ago  
+6bf6a878   Merge branch 'ticket-50481' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+eb0e723e   Merge branch 'ticket-45512' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+a64e1a6c   Merge branch 'ticket-50483' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+1a549ac5   Merge branch 'ticket-47981' into 'develop' ... Browse Code 
+Yuichiro Izumi 5 days ago  
+b8f05bbc   Merge branch 'ticket-50560' into ticket-44978 Browse Code 
+Yuki Inoue 5 days ago  
+b7d10a1f   Merge branch 'ticket-47553' into 'develop' ... Browse Code 
+Akhil Soni 5 days ago  
+30b0e229   more properly handle ES Index Preparation Browse Code 
+Yuki Inoue 5 days ago  
+0819ed25   Merge branch 'develop' into ticket-44978 Browse Code 
+Yuki Inoue 5 days ago  
+371f7c5d   fix bug [50164 ,49539] Browse Code 
+IWANE Shuhei 5 days ago  
+f4d78d75   change http to https and remove port when sending log to ELB Browse Code 
+He Yu 5 days ago  
+378e09dc   Merge branch 'ticket-49972' into 'develop' ... Browse Code 
+Wu Hua 5 days ago  
+3ae243a9   refs #49972 Changed url's for user manual and feedback. Browse Code 
+Vishal Raj 5 days ago  
+72b6d550   BugFix_Reject_Aplication Browse Code 
+Shunsuke Kaneko 5 days ago  
+22723bf3   More logic keeping ElasticsearchIndexPreparation Browse Code 
+Yuki Inoue 5 days ago  
+fff6ba68   refs #50020 fix problem in move to trash and spam Browse Code 
+jatin 5 days ago  
+8638a24a   Merge branch 'ticket-47463' into 'develop' ... Browse Code 
+Wu Hua 5 days ago  
+ 11 Jun, 2015
+
+40 commits
+
+2bc70176   junit test for imageRelService Browse Code 
+huang_yi 5 days ago  
+e592aeec   fix request mapping. Browse Code 
+Yosuke Uzawa 5 days ago  
+0d1007a4   Merge branch 'ticket-50387-bugfix' into 'develop' ... Browse Code 
+Junichi Saito 5 days ago  
+b10bf996   BugFix_RejectApplication Browse Code 
+Shunsuke Kaneko 5 days ago  
+59de6050   Merge branch 'develop' into ticket-50402 Browse Code 
+Shailesh Ahuja 5 days ago  
+a7c89829   BugFix about Rejection doesn't work Browse Code 
+Shunsuke Kaneko 5 days ago  
+ff9690bc   Merge branch 'ticket-44978_2' into ticket-44978 ... Browse Code 
+Yuki Inoue 5 days ago  
+c2dde90c   Fixing UUID, transparency and line thickness jrxml transformation Browse Code 
+Shailesh Ahuja 5 days ago  
+160d6678   refs #48909 Corrects jsdoc paramater type for private method Browse Code 
+Zi Xian 5 days ago  
+6d066190   refs #48909 Changes html attributes to double-quotes Browse Code 
+Zi Xian 5 days ago  
+602bb8f0   refs #48909 Corrects parameter type for public method Browse Code 
+Zi Xian 5 days ago  
+d49a8237   refs #48909 Fixes grunt pre-commit errors and rebase Browse Code 
+Zi Xian 5 days ago  
+3743d590   refs #48909 Improves design of notification bar ... Browse Code 
+Zi Xian 5 days ago  
+7d5a395c   refs #48909 Adds styling class for bold and underline Browse Code 
+Zi Xian 5 days ago  
+98d458af   refs #48909 Removes log outputs Browse Code 
+Zi Xian 5 days ago  
+d4581e40   refs #48909 Makes notification bar hidden by default when initializing Browse Code 
+Zi Xian 5 days ago  
+6fbe2f77   refs #48909 Completes working version of the notification bar component Browse Code 
+Zi Xian 5 days ago  
+69b5bda5   refs #48909 Fixes pre-commit errors Browse Code 
+Zi Xian 5 days ago  
+f2b54ac9   refs #48909 Applies centering and fixing to the top Browse Code 
+Zi Xian 5 days ago  
+d704dc97   refs #48909 Implements closing of notification after 5 seconds Browse Code 
+Zi Xian 5 days ago  
+0cf517e3   refs #48909 Adds tight-wrap sizing and centering effect ... Browse Code 
+Zi Xian 5 days ago  
+03652e67   refs #48909 Adds coloring to notification bar ... Browse Code 
+Zi Xian 5 days ago  
+005d0d3a   refs #48909 Adds less files for notification bar component Browse Code 
+Zi Xian 5 days ago  
+18c61723   refs #48909 Fixes bug from previous commit ... Browse Code 
+Zi Xian 5 days ago  
+4809b7be   refs #48909 Touches up throwing of event to listeners ... Browse Code 
+Zi Xian 5 days ago  
+f87d5ddb   refs #48909 Implements close button for notification bar Browse Code 
+Zi Xian 5 days ago  
+796290dc   refs #48909 Implements throwing of event from notification bar with the label of… ... Browse Code 
+Zi Xian 5 days ago  
+71f0f3fd   refs #48909 Adds event listener for action buttons Browse Code 
+Zi Xian 5 days ago  
+1ff5ec68   refs #48909 Removes debug output from setActions method Browse Code 
+Zi Xian 5 days ago  
+1084735f   refs #48909 Implements adding variable number of action buttons Browse Code 
+Zi Xian 5 days ago  
+3178db94   refs #48909 Temporarily removes test call to set action buttons Browse Code 
+Zi Xian 5 days ago  
+feb481e4   refs #48909 Adds dummy button to be cloned Browse Code 
+Zi Xian 5 days ago  
+b106277b   refs #48909 Changes notification actions to button group Browse Code 
+Zi Xian 5 days ago  
+522a1a68   refs #48909 Adds dummy message initialization Browse Code 
+Zi Xian 5 days ago  
+3f0a0efe   refs #48909 Fixes imports in notification bar js Browse Code 
+Zi Xian 5 days ago  
+2c59158b   refs #48909 Adds tag handler and tests rendering of notification bar Browse Code 
+Zi Xian 5 days ago  
+0f4563fb   refs #48909 Modifies to use variable binding from handler Browse Code 
+Zi Xian 5 days ago  
+5f833f6d   refs #48909 Adds test placeholder(commented for new component) Browse Code 
+Zi Xian 5 days ago  
+df761380   refs #48909 Implements bare bones methods for notification bar Browse Code 
+Zi Xian 5 days ago  
+7aa733ea   refs #48909 Temporarily comments out the action elements in notification bar Browse Code 
+Zi Xian 5 days ago  
+ 11 Jun, 2015
+
+26 commits
+
+cc12ed4a   refs #48909 Adds JS file for notification bar component Browse Code 
+Zi Xian 5 days ago  
+642f9eba   refs #48909 Uses forneus components in notification bar component Browse Code 
+Zi Xian 5 days ago  
+55fb0bfe   refs #48909 Adds XML file for notification bar component Browse Code 
+Zi Xian 5 days ago  
+48a44988   define icon class names as static Browse Code 
+Yusuke Sasaki 5 days ago  
+ded8ba5d   refs #50328 temp commit - debug Browse Code 
+Gabriella Michelle 5 days ago  
+231d5700   refs #50328 fix bug: enable discard/save button when default label is clicked, i… ... Browse Code 
+Gabriella Michelle 5 days ago  
+b683da46   Merge branch 'develop' of scm.hue.workslan:company/company-framework into develop Browse Code 
+Hiro Sato 5 days ago  
+fed3b73d   refs #47463 Added text-overflow control to tag/folder dropdown menu from ops bar Browse Code 
+Yongzhen Ng 5 days ago  
+895761c2   Merge branch 'ess-five-conedit' into 'develop' ... Browse Code 
+Gao Shang 5 days ago  
+08a56e11   Merge branch 'fix-launch-cluster' into 'develop' ... Browse Code 
+Shoichiro Yoshida 5 days ago  
+21bd471b   beautification done by pre-commit Browse Code 
+Rohit Dnyandeo Tawde 5 days ago  
+7e6ab0fa   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50405 Browse Code 
+Bharath Govinda Bhat 5 days ago  
+77e45e2b   Implement page transition Browse Code 
+Yuji Koyama 5 days ago  
+80ba84e9   fix bugs[49590] Browse Code 
+IWANE Shuhei 5 days ago  
+eb58bb90   refs #50020 remove unecessary files Browse Code 
+jatin 5 days ago  
+941175b3   refs #50020 remove blank line Browse Code 
+jatin 5 days ago  
+77c57106   refs #50020 fix client side bug related to mark counter change Browse Code 
+jatin 5 days ago  
+7f9aa4a9   refs #50020 fix bug of attaching system category Browse Code 
+jatin 5 days ago  
+845a6980   Merge branch 'speed-measurement-log' into 'develop' ... Browse Code 
+Kota Tabei 5 days ago  
+f940f8cc   [ess] test cases & fix bugs ... Browse Code 
+Xingxu Wu 5 days ago  
+4f25be66   Fix sed separator. Browse Code 
+Shoichiro Yoshida 5 days ago  
+502fdd67   refs #50163 Corrected wrong caption for feedback and manual. Browse Code 
+Vishal Raj 5 days ago  
+0fb0636a   Merge branch 'ticket-50094' into 'develop' ... Browse Code 
+Takuya Azuma 5 days ago  
+951d25f0   fix bug Browse Code 
+Hirofumi Tateno 5 days ago  
+216645ce   suggest panel css for single column mode and word wrap Browse Code 
+Akio Iwahori 6 days ago  
+b132a8e2   fixed date format & needless room on load Browse Code 
+Hiro Sato 6 days ago  
+ 10 Jun, 2015
+
+14 commits
+
+da3e99ed   Delete the existing file on init/delete Browse Code 
+Yuki Inoue 6 days ago  
+a623bd5b   add data joit suggest Browse Code 
+Akio Iwahori 6 days ago  
+cf3b3f6d   Node close + alpha Browse Code 
+Yuki Inoue 6 days ago  
+26e0d9ec   add test of person_name_autolang Browse Code 
+Shinta Hatatani 6 days ago  
+ec6e107d   Merge branch 'ticket-50347' into 'develop' ... Browse Code 
+Hokuto Nimura 6 days ago  
+6eedabf4   fix autocomplete of place_address_ja_kanji in search=YES refs #50269 Browse Code 
+Shinta Hatatani 6 days ago  
+fa45d463   add test of person_name_ja_kanji Browse Code 
+Shinta Hatatani 6 days ago  
+69ebf06a   Merge branch 'ticket-50430' into 'develop' ... Browse Code 
+Hirofumi Tateno 6 days ago  
+3e51d21b   fix autocomplete of person_name_ja_kanji refs #50270 Browse Code 
+Shinta Hatatani 6 days ago  
+f8053015   add test of place_address_ja_kanji Browse Code 
+Shinta Hatatani 6 days ago  
+f43f92bf   fix autocomplete of place_address_ja_kanji refs #50269 Browse Code 
+Shinta Hatatani 6 days ago  
+7512b466   print fix Browse Code 
+SINGH HIMANSHU KUMAR 6 days ago  
+da01f47f   add test of words_ja_kanji refs #41054 Browse Code 
+Shinta Hatatani 6 days ago  
+3638ea5d   add AutocompleteTestHelper Browse Code 
+Shinta Hatatani 6 days ago  
+ 10 Jun, 2015
+
+40 commits
+
+70a8f530   precommit Browse Code 
+Bharath Govinda Bhat 6 days ago  
+0c40e2c5   ess pivot show src worksheet when editting range Browse Code 
+Xin　Huang 6 days ago  
+4b60e8ce   Merge branch 'internal-release-properties' into 'develop' ... Browse Code 
+Shoichiro Yoshida 6 days ago  
+4c9619be   Merge branch 'ticket-mobile-48696' into 'develop' ... Browse Code 
+UMEDA Yuki 6 days ago  
+9311b469   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50405 Browse Code 
+Bharath Govinda Bhat 6 days ago  
+f4f4d8e3   setproperty proper architecture Browse Code 
+Bharath Govinda Bhat 6 days ago  
+ce857a11   Make line background transperent and removed background-color property Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+2f1ec8d1   refs #47463 fixing tag drop down menu's elements Browse Code 
+Yongzhen Ng 6 days ago  
+05f95e36   fix bug in js (field name is wrong) Browse Code 
+Kenji Furuta 6 days ago  
+ecdcc054   Separate ESS for each service. Browse Code 
+Yosuke Uzawa 6 days ago  
+01ebf0a7   Try to pass smoke test. Browse Code 
+Shoichiro Yoshida 6 days ago  
+df0f74fb   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-47553 Browse Code 
+Akhil Soni 6 days ago  
+4fe05b15   Refactoring and Bug Fixing Browse Code 
+Akhil Soni 6 days ago  
+e52d75d7   Merge branch 'ticket-49972' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+1f501f51   Line edges were cutting after increasing thickness. Fixed Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+25811810   Merge branch 'ticket-50429' into 'develop' ... Browse Code 
+He Weng 6 days ago  
+3b04fb21   Merge branch 'ticket-50431-develop' into 'develop' ... Browse Code 
+Yosuke Uzawa 6 days ago  
+e1ad0822   refs #50193 ess switch to src worksheet when editting pivot range Browse Code 
+Xin　Huang 6 days ago  
+2973fc7d   Merge branch 'ticket-49362' into 'develop' ... Browse Code 
+Chen Evan 6 days ago  
+93fabe01   refs #49972 Formatting error. Browse Code 
+Vishal Raj 6 days ago  
+4419f0da   Copy to launch-cluster-from-branch script. Browse Code 
+Shoichiro Yoshida 6 days ago  
+1d3f6b76   Merge branch 'ticket-50108' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+7c531c24   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-48876 Browse Code 
+SINGH HIMANSHU KUMAR 6 days ago  
+c6f3ca30   print fix Browse Code 
+SINGH HIMANSHU KUMAR 6 days ago  
+23514434   refs #49972 Bug fixes(Content with tag not showing correctly + breadcrumb not ge… ... Browse Code 
+Vishal Raj 6 days ago  
+4958d5d1   fix emoton bug Browse Code 
+Wang　Boran 6 days ago  
+5e4f9056   Merge branch 'ticket-50389' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+b5c58b52   Merge branch 'ticket-49501' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+9e6a3196   refs #50431: ensure that path length is enough short for Windows environment. ... Browse Code 
+TODA, Kengo 6 days ago  
+d1f16aca   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-47553 Browse Code 
+Akhil Soni 6 days ago  
+63881ee3   Merge branch 'junit-gaos' into 'develop' ... Browse Code 
+WEI Dawei 6 days ago  
+6f76482c   refs #48110 fix autowrap width auto change Browse Code 
+Henry 6 days ago  
+90a732df   Merge branch 'ticket-50387-merge' into 'develop' ... Browse Code 
+Junichi Saito 6 days ago  
+82b47c18   Merging with develop Browse Code 
+Akhil Soni 6 days ago  
+9125860c   APPLY FIXCLOSURE AND JS FORMAT Browse Code 
+He Yu 6 days ago  
+4c93fdd3   Fix mistakes. Browse Code 
+Yosuke Uzawa 6 days ago  
+3e982bda   fix bug of error message logic Browse Code 
+Hirofumi Tateno 6 days ago  
+c635ad27   Developer can see service information. Browse Code 
+Yosuke Uzawa 6 days ago  
+ce26cabf   Merge remote-tracking branch 'origin/ticket-50035' into ticket-50389 Browse Code 
+Gong Li 6 days ago  
+78ba30e2   refs #50035 Forgot to add file Browse Code 
+mayank 6 days ago  
+ 10 Jun, 2015
+
+40 commits
+
+c6eac1f8   Merge remote-tracking branch 'origin/ticket-50035' into ticket-50389 Browse Code 
+Gong Li 6 days ago  
+ba63b465   refs #50035 New test cases added Browse Code 
+mayank 6 days ago  
+959a6d5c   Style of text field adjusted Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+f34be6ec   add script to inject aws key Browse Code 
+Xiao Han 6 days ago  
+2dc38e24   fix error in unit tests Browse Code 
+Gao Shang 6 days ago  
+e24d4432   refs #47463 Fixed 'Mark' dropdown checking checkboxes for tags that appear in mu… ... Browse Code 
+Yongzhen Ng 6 days ago  
+abb90384   Fix Menu static compiler logic Browse Code 
+Yu Nakajima 6 days ago  
+90f241d9   beautification done Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+36493cfe   Merge branch 'ticket-49418' into 'develop' ... Browse Code 
+Gao Shang 6 days ago  
+74298cc9   delete useless code Browse Code 
+Li Sai 6 days ago  
+c4e6bd99   fix count item bug Browse Code 
+Li Sai 6 days ago  
+58e57641   refs #50389 correct the name Browse Code 
+Gong Li 6 days ago  
+16e08f16   Merge branch 'ticket-49140' into 'develop' ... Browse Code 
+Wu Hua 6 days ago  
+f46aa639   change interface of SpreadsheetRangeService Browse Code 
+Gao Shang 6 days ago  
+591edc1d   Merge branch 'ticket-49509' into 'develop' ... Browse Code 
+Wu Hua 6 days ago  
+4a9bd9bc   send to log to ELB of dotting server Browse Code 
+He Yu 6 days ago  
+646a7796   refs #50035 Merge conflicts resolved #ref ticket-50389 Browse Code 
+mayank 6 days ago  
+30e6e3a4   fix bugs[49864,49582] Browse Code 
+IWANE Shuhei 6 days ago  
+48021842   Merge branch 'ticket-49423' into 'develop' ... Browse Code 
+Wu Hua 6 days ago  
+ebe7453b   Merge branch 'fix-component-bugs' into 'develop' ... Browse Code 
+Yuichiro Izumi 6 days ago  
+a044f54e   Merge branch 'ticket-49420' into 'develop' ... Browse Code 
+Wu Hua 6 days ago  
+80eef9ee   fix reset bug with latest code Browse Code 
+Wang　Boran 6 days ago  
+ffec8767   refs #50035 More test cases Browse Code 
+mayank 6 days ago  
+f00a2ae3   Fix zoom in / zoom out problem (Preview click was not detected after zoom). And … ... Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+62fe2ad1   Make modifible logback log level of speed-measurement. Browse Code 
+Shoichiro Yoshida 6 days ago  
+2cbf08b4   Merge branch 'bugfix-approvalflow' into 'develop' ... Browse Code 
+Takuya Azuma 6 days ago  
+7903f1a1   Merge remote-tracking branch 'origin/develop' into ticket-50389 Browse Code 
+Gong Li 6 days ago  
+b8c652e9   add unit test cases Browse Code 
+Gao Shang 6 days ago  
+d8aa7326   fix gjslint error Browse Code 
+Kenji Furuta 6 days ago  
+628925ad   refs #50387, fix bugs and improve WapFileUploader Browse Code 
+Kenji Furuta 6 days ago  
+aa5639af   refs #50389 rest of test cases Browse Code 
+Gong Li 6 days ago  
+e3d94da5   Merge branch 'ticket-50333' into 'ticket-49509' ... Browse Code 
+Binh Thanh 6 days ago  
+8da5b421   refs #50333 SendService test cases and relevant Mock Daos Browse Code 
+Aseem Anand 6 days ago  
+76834377   Merge branch 'ess-five-conedit' into 'develop' ... Browse Code 
+Gao Shang 6 days ago  
+0ff778c3   Merge branch 'ticket-50108' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+93985c29   Merge branch 'ticket-49900-3' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+1403a1a6   Merge branch 'ticket-48876' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+037dc808   refs #45512 the dash animation effect not work under ADVANCED mode. Browse Code 
+Wei Weiliang 6 days ago  
+36897d7b   Merge branch 'task-50036' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+27312b47   Merge branch 'ticket-50238-1' into 'develop' ... Browse Code 
+Go Akazawa 6 days ago  
+ 10 Jun, 2015
+
+40 commits
+
+eec756e5   remove extra string Browse Code 
+Wang　Boran 6 days ago  
+3f73c441   fix bugs[49576,49666] Browse Code 
+IWANE Shuhei 6 days ago  
+249b8f9e   merge develop branch Browse Code 
+Wang　Boran 6 days ago  
+d4e47e9c   Merge branch 'ticket-47681' into 'develop' ... Browse Code 
+Wu Hua 6 days ago  
+39cfbbb9   Merge branch 'ticket-48391' into 'develop' ... Browse Code 
+Wei Weiliang 6 days ago  
+80dfcd9f   precommit Browse Code 
+Bharath Govinda Bhat 6 days ago  
+b76d2f74   refs #50329 Browse Code 
+Daisuke Akagawa 6 days ago  
+c6d1399a   Merge branch 'ticket-45129_without_typerouting' into 'develop' ... Browse Code 
+Hirofumi Tateno 6 days ago  
+b9c25ff8   fix pom.xml Browse Code 
+Ryuta　Suetsugu 6 days ago  
+757c2daa   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-49900-3 Browse Code 
+Savankumar Gudaas 6 days ago  
+f4f40d34   Merge branch 'fix-history-view' into 'develop' ... Browse Code 
+Hiro Sato 6 days ago  
+087dfa69   bugfix Browse Code 
+Ryuta　Suetsugu 6 days ago  
+b4c11e88   merged with develop Browse Code 
+Bharath Govinda Bhat 6 days ago  
+4b0c6183   refs #50347 improve wapDateInputIT Browse Code 
+Hokuto Nimura 6 days ago  
+28ed78a8   No ESS -> No Print Browse Code 
+Nikhil Gulumkar 6 days ago  
+120f6e65   use kafka cluster ip address Browse Code 
+Xiao Han 6 days ago  
+d24eab97   stick on resize and bug fixes Browse Code 
+Bharath Govinda Bhat 6 days ago  
+ca1ffab1   fix eslint Browse Code 
+Wang　Boran 6 days ago  
+56d6d1da   refs #50035 Added test cases Browse Code 
+mayank 6 days ago  
+7633eef1   Merge branch 'develop' into ticket-44978 Browse Code 
+Yuki Inoue 6 days ago  
+34791553   refs #50035 More tests Browse Code 
+mayank 6 days ago  
+f0587df7   refs #50035 Test cases Browse Code 
+mayank 6 days ago  
+d7928e65   remove unnecessary comment Browse Code 
+Yuki Inoue 6 days ago  
+474ff062   preview design fix Browse Code 
+SINGH HIMANSHU KUMAR 6 days ago  
+69520cc6   fix reset bug Browse Code 
+Wang　Boran 6 days ago  
+90ed6bf8   JS errors solved Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+28a7f746   Beautification done Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+dbca1e75   partially revert typelayoutsettingname Browse Code 
+Yuki Inoue 6 days ago  
+aa4cbd97   revert correctanalyzerinfofactory Browse Code 
+Yuki Inoue 6 days ago  
+1ec4a2c7   bugfix Browse Code 
+Yuichiro Izumi 6 days ago  
+7f0d379a   fix bug of analyzer being switched Browse Code 
+Yuki Inoue 6 days ago  
+385bf5b7   pre commit Browse Code 
+Yuichiro Izumi 6 days ago  
+61b28346   Merge branch 'ticket-49261-2' into 'develop' ... Browse Code 
+Kunihiko Harada 6 days ago  
+6f4ae750   Merge branch 'ticket-45512' into 'develop' ... Browse Code 
+Yuichiro Izumi 6 days ago  
+8d5dd92f   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50108 Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+9de91165   Merge branch 'ticket-48951-2' into 'develop' ... Browse Code 
+Masanori TAKAMI 6 days ago  
+099e4224   Merge branch 'ticket-50161' into 'develop' ... Browse Code 
+Masanori TAKAMI 6 days ago  
+c307dbd4   Merge branch 'ticket-48795' into 'develop' ... Browse Code 
+Masanori TAKAMI 6 days ago  
+5c926a8f   No ESS -> Empty Page Browse Code 
+Nikhil Gulumkar 6 days ago  
+9509b12e   add border Browse Code 
+Wang　Boran 6 days ago  
+ 10 Jun, 2015
+
+40 commits
+
+8e87853d   add hue drive in context.xml Browse Code 
+Xiao Han 6 days ago  
+f9733ad7   bug fix dom unremoved Browse Code 
+Yuichiro Izumi 6 days ago  
+cf97a2ac   Merge branch 'ticket-49486' into 'develop' ... Browse Code 
+Wu Hua 6 days ago  
+88d867e1   Merge branch 'ticket-49867-2' into 'develop' ... Browse Code 
+Hiro Sato 6 days ago  
+0e4bc85e   conflict solved Browse Code 
+Sunit Kumar Singh 6 days ago  
+37db7ed9   image in pdf, final integration Browse Code 
+Sunit Kumar Singh 6 days ago  
+d0107129   Merge branch 'ticket-49991' into 'ticket-49509' ... Browse Code 
+Aseem Anand 6 days ago  
+42a3a975   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50108 Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+a35b0675   pre-commit result. Browse Code 
+Masashi Kutsuna 6 days ago  
+23515805   Merge branch 'ticket-49825' into 'develop' ... Browse Code 
+Yuichiro Izumi 6 days ago  
+a966b709   Merge branch 'ticket-44816' into 'develop' ... Browse Code 
+Jack 6 days ago  
+f96c5314   Merge branch 'ticket-47888' into 'develop' ... Browse Code 
+Hokuto Nimura 6 days ago  
+2d4eac09   Merge branch 'ticket-49795' into 'develop' ... Browse Code 
+Yuichiro Izumi 6 days ago  
+1835b3e1   Merge branch 'timeline-secretary-dialog-fix' into 'develop' ... Browse Code 
+Zheng Pujie 6 days ago  
+9fa32b4a   Merge branch 'fix-404-on-short-trans-app' into 'develop' ... Browse Code 
+Yuichiro Izumi 6 days ago  
+bf61d1a3   recovery history previous flag Browse Code 
+IWANE Shuhei 6 days ago  
+e171f4c3   refs #49991 Mail store service test Browse Code 
+Binh Thanh 6 days ago  
+13f0695a   delete index when finish task. Browse Code 
+tan_h 6 days ago  
+df5052fd   fixclosure. Browse Code 
+tan_h 6 days ago  
+9b12d250   fix js format. Browse Code 
+tan_h 6 days ago  
+993c8b08   Fix display of time setting. Browse Code 
+tan_h 6 days ago  
+c7324b22   Fix the closure problem and th:text ... Browse Code 
+Zhirong Zeng 6 days ago  
+2b9f60ce   fix time setting and refactor code. Browse Code 
+tan_h 6 days ago  
+d5ff8844   Add unit test case. Browse Code 
+tan_h 6 days ago  
+4896c1bd   Fix popover ui bug. Browse Code 
+tan_h 6 days ago  
+720eabf7   add counter to row suggest es data Browse Code 
+Kunihiko Harada 6 days ago  
+6c0945ad   added filter feature on ic card dialog. Browse Code 
+Masashi Kutsuna 6 days ago  
+30a0d30d   refs #47681 Adds test case for deleting template Browse Code 
+Zi Xian 6 days ago  
+b1422e9c   refs #47681 Fixes error caused by changed variable name Browse Code 
+Zi Xian 6 days ago  
+41591235   fix a bug of secretary dialog ... Browse Code 
+Jack 6 days ago  
+3bca51f7   Only sheet name Browse Code 
+Nikhil Gulumkar 6 days ago  
+04c79d7c   #47981 Browse Code 
+Yusuke Sasaki 6 days ago  
+c2662230   refs #48407 ess fix filter panel Browse Code 
+Xin　Huang 6 days ago  
+520b7f98   refs #47681 Implements template deletion in mock dao Browse Code 
+Zi Xian 6 days ago  
+beac2920   beautification done by pre-commit Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+a529261a   bugfix ... Browse Code 
+Ryuta　Suetsugu 6 days ago  
+7cdbe195   JS errors fixed Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+76d0176a   refs #47681 Fixes typo error Browse Code 
+Zi Xian 6 days ago  
+7c9c354f   refs #47681 Fixes minor bug with template selection caption when discarding changes or deleting Browse Code 
+Zi Xian 6 days ago  
+78221a34   refs #47681 Fixes bug of being able to enter addresses when mail-address-holder is disabled Browse Code 
+Zi Xian 6 days ago  
+ 10 Jun, 2015
+
+40 commits
+
+d19d318e   refs #47681 Adds flag to prevent unnecessary calls to setDefaultTemplate Browse Code 
+Zi Xian 6 days ago  
+94571043   refs #47681 Implements temporary fix for asynchronous problem and adds code to e… ... Browse Code 
+Zi Xian 6 days ago  
+a8ceea72   refs #47681 Fixes some issues with discard changes after rebasing Browse Code 
+Zi Xian 6 days ago  
+5622ee4a   refs #47681 Adds code to clear search input when clearing addresses Browse Code 
+Zi Xian 6 days ago  
+56301306   refs #47681 Fixes bug introduced when fixing rebase conflict Browse Code 
+Zi Xian 6 days ago  
+a1e3be03   Removes unnecessary code Browse Code 
+Zi Xian 6 days ago  
+7550968c   Runs grunt pre-commit Browse Code 
+Zi Xian 6 days ago  
+d5696bdc   Enables save and discard buttons when selecting sender and signature Browse Code 
+Zi Xian 6 days ago  
+dd308f2a   Adds event listeners to addresses and single select fields Browse Code 
+Zi Xian 6 days ago  
+a970c964   Fixes discard button not disabled when clicked Browse Code 
+Zi Xian 6 days ago  
+e8bfe012   Implements toggling of button enabled status in template form Browse Code 
+Zi Xian 6 days ago  
+4a74cd7a   Implements enabling template form when clicking ew button Browse Code 
+Zi Xian 6 days ago  
+1d1ac6c1   Implements auto-disabling of template form Browse Code 
+Zi Xian 6 days ago  
+737266ec   Implements method to disable template form Browse Code 
+Zi Xian 6 days ago  
+9745f0fe   Implements deletion of template on server side Browse Code 
+Zi Xian 6 days ago  
+5aa03e92   Adds empty methods on server side Browse Code 
+Zi Xian 6 days ago  
+8c8bcbae   Adds method to service to delete template Browse Code 
+Zi Xian 6 days ago  
+a2fa7609   Implements handler for request to delete template Browse Code 
+Zi Xian 6 days ago  
+b952055e   Completes event-handling implementation for template delete button Browse Code 
+Zi Xian 6 days ago  
+0e5ec3c6   refs #47681 Completes general event handling for template discard and delete buttons Browse Code 
+Zi Xian 6 days ago  
+9db7061c   Implements skeleton of discard and delete in mail-config js Browse Code 
+Jayaseelan 6 days ago  
+bb6d9934   Temp commit Browse Code 
+Jayaseelan 6 days ago  
+8deaecf7   Merge branch 'develop' of scm.hue.workslan:company/company-framework into ticket-50108 Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+8838c65d   fixed 404 error for component css Browse Code 
+Hiro Sato 6 days ago  
+26dcbc71   Change DOM for textfield and added verticle alignment to textfield Browse Code 
+Rohit Dnyandeo Tawde 6 days ago  
+9f2b7124   Merge branch 'ticket-49814' into 'develop' ... Browse Code 
+Hiro Sato 6 days ago  
+899fc3fa   refs #48951 Browse Code 
+Daisuke Akagawa 6 days ago  
+6db14619   Merge branch 'assembly-in-post-merge' into 'develop' ... Browse Code 
+Kohei Asano 6 days ago  
+40891b14   refs #49420 Compare the String using equal. Browse Code 
+Jiang Sheng 6 days ago  
+5ce34818   refs #49420 Fix bug when move from spam to trash Browse Code 
+Jiang Sheng 6 days ago  
+40862916   refs #49420 Front end implementation of counter update; implement mail-detail's delete Browse Code 
+Jiang Sheng 6 days ago  
+12ec3ee0   refs #49420 Correct the counter on server side Browse Code 
+Jiang Sheng 6 days ago  
+56851bf8   refs #49420 Fix bugs; change the counter behaviour. Browse Code 
+Jiang Sheng 6 days ago  
+f7cb9fbe   refs #49486 delete generated files in test Browse Code 
+Gong Li 6 days ago  
+1b2f94f1   Merge branch 'ticket-50086' into 'ticket-49509' ... Browse Code 
+Binh Thanh 6 days ago  
+021f2b47   [ess] add test cases ... Browse Code 
+Xingxu Wu 6 days ago  
+6489cfa8   refs #50086 Update for MR comments. Browse Code 
+Jiang Sheng 6 days ago  
+81c2ea95   [ess] fix bugs ... Browse Code 
+Xingxu Wu 6 days ago  
+307f1a8a   [ess] support delete/insert rows ... Browse Code 
+Xingxu Wu 6 days ago  
+ac589087   [ess]adapt concurrent editing to reduced version of cell model ... Browse Code 
+Xingxu Wu
+

@@ -1,0 +1,64 @@
+application:
+  spreadsheet:
+  - spreadsheet
+
+  approvalflow:
+  - approvalflow
+
+  expense:
+  - expense
+
+  timeline:
+  - timeline
+
+  report:
+  - report
+  - reportconvertor
+
+
+front:
+  web:
+  - spring
+  - forneus
+  - selenium
+  - websocket
+  - framework.web
+
+  magicimport:
+  - magic
+  - magicimport
+  - magicpaste
+  - magiclayout
+  - magicimportemployeelist
+
+  ess:
+  - ess
+
+
+biz:
+  kvs:
+  - cassandra
+  - elasticsearch
+  - hadoop
+
+  security:
+  - crypt
+  - security
+
+  tool:
+  - cache
+  - log
+  - mq
+
+  batch:
+  - batch
+
+  calculation:
+  - calculation
+
+  mail:
+  - mail
+
+  core:
+  - core
+

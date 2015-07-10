@@ -1,0 +1,247 @@
+digraph extract_package {
+  graph [rankdir=RL]
+  subgraph "cluster_company-spreadsheet" {
+    label = "company-spreadsheet"
+    subgraph "cluster_hue.metadata" {
+      label = "hue.metadata"
+      "hue.metadata.dao" [group = "hue.metadata.dao"]
+      "hue.metadata.dao.impl" [group = "hue.metadata.dao"]
+      "hue.metadata.dto" [group = "hue.metadata.dto"]
+      "hue.metadata.dto.key" [group = "hue.metadata.dto"]
+      "hue.metadata"
+    }
+    subgraph "cluster_hue.spreadsheet" {
+      label = "hue.spreadsheet"
+      "hue.spreadsheet.API" [group = "hue.spreadsheet.API"]
+      "hue.spreadsheet.business.mock" [group = "hue.spreadsheet.business"]
+      "hue.spreadsheet.cache" [group = "hue.spreadsheet.cache"]
+      "hue.spreadsheet" [style = "filled" ,fillcolor = "#FF9999"]
+      "hue.spreadsheet.config" [group = "hue.spreadsheet.config"]
+      "hue.spreadsheet.db.dao" [group = "hue.spreadsheet.db"]
+      "hue.spreadsheet.db.dao.impl" [style = "filled" ,fillcolor = "#9999FF" ,group = "hue.spreadsheet.db"]
+      "hue.spreadsheet.dto.cell" [style = "filled" ,fillcolor = "#FF9999" ,group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.chart" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto" [style = "filled" ,fillcolor = "#FF9999" ,group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.document" [style = "filled" ,fillcolor = "#FF9999" ,group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.filter" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.history" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.image" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.key" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.log" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.mock" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.pivot" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.protectrange" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.dto.user" [group = "hue.spreadsheet.dto"]
+      "hue.spreadsheet.elasticsearch" [group = "hue.spreadsheet.elasticsearch"]
+      "hue.spreadsheet.entity" [style = "filled" ,fillcolor = "#FF9999" ,group = "hue.spreadsheet.entity"]
+      "hue.spreadsheet.enumeration" [group = "hue.spreadsheet.enumeration"]
+      "hue.spreadsheet.exception" [group = "hue.spreadsheet.exception"]
+      "hue.spreadsheet.formula.calculator" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.core.basic" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.core.operand" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.core.operator" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.entity" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.exception" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.expresssion" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.formula.util" [group = "hue.spreadsheet.formula"]
+      "hue.spreadsheet.model" [style = "filled" ,fillcolor = "#9999FF" ,group = "hue.spreadsheet.model"]
+      "hue.spreadsheet.provider" [group = "hue.spreadsheet.provider"]
+      "hue.spreadsheet.range.contract" [group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.range.core" [group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.range.example" [group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.range.example.mock" [style = "filled" ,fillcolor = "#9999FF" ,group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.range.operation" [group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.range.operation.impl" [style = "filled" ,fillcolor = "#9999FF" ,group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.range.util" [group = "hue.spreadsheet.range"]
+      "hue.spreadsheet.service" [group = "hue.spreadsheet.service"]
+      "hue.spreadsheet.service.impl" [group = "hue.spreadsheet.service"]
+      "hue.spreadsheet.utils" [group = "hue.spreadsheet.utils"]
+      "hue.spreadsheet.vo" [group = "hue.spreadsheet.vo"]
+    }
+    "hue.executor"
+  }
+  "hue.metadata.dao" -> "hue.metadata.dto"
+  "hue.metadata.dao.impl" -> "hue.metadata.dao"
+  "hue.metadata.dao.impl" -> "hue.metadata.dto"
+  "hue.metadata.dao.impl" -> "hue.metadata.dto.key"
+  "hue.metadata.dto" -> "hue.metadata.dto.key"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet.API" -> "hue.spreadsheet"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.config"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.db.dao"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet.API" -> "hue.spreadsheet.service"
+  "hue.spreadsheet.business.mock" -> "hue.spreadsheet"
+  "hue.spreadsheet.business.mock" -> "hue.spreadsheet.dto.mock"
+  "hue.spreadsheet.business.mock" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.cache" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.cache" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet" -> "hue.spreadsheet.db.dao"
+  "hue.spreadsheet" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet" -> "hue.spreadsheet.dto.key"
+  "hue.spreadsheet" -> "hue.spreadsheet.exception"
+  "hue.spreadsheet" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet" -> "hue.spreadsheet.config"
+  "hue.spreadsheet" -> "hue.spreadsheet.db.dao.impl"
+  "hue.spreadsheet" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet" -> "hue.spreadsheet.provider"
+  "hue.spreadsheet" -> "hue.spreadsheet.service"
+  "hue.spreadsheet.db.dao" -> "hue.spreadsheet"
+  "hue.spreadsheet.db.dao" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.db.dao" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.db.dao" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.db.dao"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.config"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.db.dao.impl" -> "hue.spreadsheet.exception"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet.range.operation"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet.model"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet.formula.entity"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet"
+  "hue.spreadsheet.dto.cell" -> "hue.spreadsheet.dto.key"
+  "hue.spreadsheet.dto.chart" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto" -> "hue.spreadsheet.dto.key"
+  "hue.spreadsheet.dto" -> "hue.spreadsheet"
+  "hue.spreadsheet.dto" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.range.core"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.dto.pivot"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.dto.document" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet.dto.history" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.dto.history" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto.history" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.dto.history" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.dto.image" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto.mock" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto.pivot" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.dto.protectrange" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.dto.protectrange" -> "hue.spreadsheet.config"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.formula.expresssion"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.dto.user"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet.entity" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.formula.calculator" -> "hue.spreadsheet.formula.core.basic"
+  "hue.spreadsheet.formula.calculator" -> "hue.spreadsheet.formula.expresssion"
+  "hue.spreadsheet.formula.core.basic" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.formula.core.basic"
+  "hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.formula.core.operand" -> "hue.spreadsheet.formula.util"
+  "hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.core.basic"
+  "hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.core.operand"
+  "hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.formula.core.operator" -> "hue.spreadsheet.formula.calculator"
+  "hue.spreadsheet.formula.entity" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.core.basic"
+  "hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.core.operand"
+  "hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.core.operator"
+  "hue.spreadsheet.formula.expresssion" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.range.contract" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.range.contract" -> "hue.spreadsheet.provider"
+  "hue.spreadsheet.range.contract" -> "hue.spreadsheet.range.core"
+  "hue.spreadsheet.range.contract" -> "hue.spreadsheet.range.util"
+  "hue.spreadsheet.range.contract" -> "hue.spreadsheet.service"
+  "hue.spreadsheet.range.contract" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.range.core" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.range.example" -> "hue.spreadsheet.range.contract"
+  "hue.spreadsheet.range.example" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.range.example" -> "hue.spreadsheet.range.example.mock"
+  "hue.spreadsheet.range.example" -> "hue.spreadsheet.range.util"
+  "hue.spreadsheet.range.operation" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.range.operation.impl" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.range.operation.impl" -> "hue.spreadsheet.range.operation"
+  "hue.spreadsheet.range.util" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.range.util" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.range.util" -> "hue.spreadsheet.range.operation"
+  "hue.spreadsheet.range.util" -> "hue.spreadsheet.range.operation.impl"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.formula.entity"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.pivot"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.chart"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.filter"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.history"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.image"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.protectrange"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.dto.user"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.range.core"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.range.operation"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.elasticsearch"
+  "hue.spreadsheet.service" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.service"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.config"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.chart"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.utils"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.db.dao"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.key"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.enumeration"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.exception"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.vo"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.entity"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.calculator"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.core.operand"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.exception"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.formula.expresssion"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.pivot"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.filter"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.history"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.image"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.protectrange"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.dto.user"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.provider"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.range.core"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.range.operation"
+  "hue.spreadsheet.service.impl" -> "hue.spreadsheet.elasticsearch"
+  "hue.spreadsheet.service.impl" -> "hue.metadata.dao"
+  "hue.spreadsheet.service.impl" -> "hue.metadata.dto"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.entity"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.config"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.dto.key"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.provider"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.dto.pivot"
+  "hue.spreadsheet.utils" -> "hue.spreadsheet.elasticsearch"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.dto.document"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.dto.filter"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.dto.cell"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.dto.pivot"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.elasticsearch"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.config"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.dto"
+  "hue.spreadsheet.vo" -> "hue.spreadsheet.enumeration"
+}
