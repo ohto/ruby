@@ -1,0 +1,153 @@
+Instruction of vector processing for "SuperCon" (2015 year edition)
+MAKOTO Kikuchi (Cybermedia Center, Osaka University)
+
+1. Introduction
+Vector processing is to do the same calculation to each element of array in short.
+
+For this reason, an object of interest is loop processing for array.
+
+Scalar processor like PC
+calculates even these problems sequentially one element after another.
+
+On the other hand, vector processor calculates one element
+without waiting for other element's calculation to end.
+
+Put simply, it calculates each element almost simultaneously.
+
+The CPU of NEC SX-ACE can calculate up to 256 elements at about the same time.
+
+So,
+the part where it takes match time to compute in the program
+needs to be written
+as the effective loop iteration suited the vector processing
+in order to calculate at high speed.
+
+The basic of vector processing will be explained below,
+but fundamental policy for using vector processing successfully
+comes down to writing simple loop iteration without surplus elaboration.
+
+
+2. example of vectorization
+
+For example,
+a typical loop iteration for effective vector processing is as follows;
+
+
+Previous code  
+multiplies the elements of each array
+and stores its results to another array.
+
+And following code do
+same calculation (but depend on loop variable) to each element of array,
+and so forth.
+
+
+these kind of calculations are
+estimated automatically for the compiler
+at vector processing,
+and processed (almost) concurrently.
+
+This operation is called auto vectorization by compiler.
+A number of loop iteration time is named vector length.
+
+Vector length of these cases described before is 1000.
+
+the longer vector length,
+the more effective calculate
+(then shorter time required for each calculation)
+in general.
+
+Because 256 calculations are able to be executed concurrently by SX-ACE,
+the calculation efficiency becomes high until 256 of vector length,
+and maximum efficiency is kept more than 256.
+
+On the contrary,
+because the calculation time takes long
+at too short loop (less than 5 vector length),
+the code is not vectorized in this case.
+
+the program should be written 
+to be estimated easily for the compiler
+that the code is able to be vectorized
+in the case of writing by programming language C
+as explained below.
+
+In addition,
+the vectorization is do (when meet the conditions)
+not only for-loop but while and if-goto and such,
+but for-loop would be used in most cases.
+
+
+“assignment”
+and the operations named “summation”, “multiplication” besides
+ware used
+in the loop of the examples described before,
+but you may think that
+almost of operations (such as +, -, *, /, %) in addition to these
+are able to use.
+
+even if
+trinomial expression operator including condition judgement
+((A)? B:C)
+is able to be vectorized.
+
+Bit operations
+(such as logical summation (|), multiplication (&) for each bit)
+are also able to be vectorized mostly without problem,
+
+but it seems that
+bit shift operations (<< and >>)
+are not able to be vectorized
+in the case
+that the number of shift (right side of the operations) is valuable.
+
+Well,
+every kind of for-loop are not able to be vectorized of course.
+
+The loop which is possible to vectorize
+requires the independence of the calculation for each element.
+
+Independence is that the
+results of the calculations are not changed even if their orders are swapped.
+
+As a matter of fact,
+the calculations are tried to execute concurrently
+even if these do sequentially on the program,
+then these orders are different from the program in practice.
+
+Then,
+the loop process is required
+that the results of the calculations are not changed.
+
+It is founded at a glance
+that the examples described before are suitable.
+
+Because
+the calculation in accordance with i=0 (a[0] = b[0] * c[0])
+is not related completely
+for example the result of of the calculation of i=100
+(a[100] = b[100] * c[100]),
+
+any number of
+calculations which different variable of i
+are able to execute concurrently,
+
+then the results are same
+when these calculations are executed sequentially.
+
+This is the meaning of the independence.
+
+The details are explained later
+in “definition and reference relationship”.
+
+
+Then, how about the following code?
+
+
+
+
+
+11. Conclusion
+
+
+
