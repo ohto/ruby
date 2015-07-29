@@ -1,11 +1,14 @@
+require 'pp'
+
+
 class ReadCodeJava2
 public
   class ReadException < Exception; end
 
 
   @@LINE_COMMENT = /\s*\/\//
-  @@BLACKET = {
-    '(' => ')',
+  @@BRACKET = {
+    '\(' => '\)',
     '{' => '}',
     '<' => '>',     # for template type
     '/\*' => '\*/', # for comment
@@ -33,7 +36,6 @@ private
     imports = @data[:imports] = []
 
     while true
-      row, anotations = _get_anotations(row)
       pre, terminate, row = _gets_until(row, /\s*(;|{)/)
       pre.lstrip!
 
@@ -49,8 +51,9 @@ private
 
       when '{'
         if pre.match(/class/)
+          pre, anotations = _get_anotations(pre)
           @data[:class] = {
-            name: pre.lstrip,
+            name: pre,
             anotations: anotations,
           }
           return row
@@ -67,21 +70,23 @@ private
     fields    = @data[:fields]    = {}
 
     while true
-      row, anotations = _get_anotations(row)
       pre, terminate, row = _gets_until(row, /\s*(;|{|})/)
       pre.lstrip!
 
       case terminate
-      when ';' then fields[pre] = anotations
+      when ';'
+        pre, anotations = _get_anotations(pre)
+        fields[pre] = anotations
+
       when '{'
-        unless m = pre.match(/class/) # skip internal class
+        unless pre.match(/class/) # skip internal class
+          pre, anotations = _get_anotations(pre)
           functions[pre] = anotations
           row = _get_bracket(terminate + row, '{')[2]
         end
       when '}' then break
       end
     end
-    row
   end
 
 
@@ -102,9 +107,9 @@ private
   def _get_anotation(row)
     m = row.match(/\s*@(\w+)\s*(\()?/) or return row
     head, elm = m[1,2]
-    elm.empty? and return [m.post, head]
-    pre, bracket, post = _get_bracket(elm + m.post_patch, '(')
-    [post, head + bracket]
+    elm.nil? and return [m.post_match, head]
+    _, bracket, post = _get_bracket(elm + m.post_match, '\(')
+    [post.lstrip, head + bracket]
   end
 
 
@@ -113,22 +118,23 @@ private
   # return [pre, bracket, post]
   #
   def _get_bracket(row, bracket_s)
-    m = row.match(/\s*#{bracket_s}/) or return row
+    m = row.match(/\s*(#{bracket_s})/) or return row
 
     count = 1
     pbracket = /#{bracket_s}|#{@@BRACKET[bracket_s]}/
     pre = m.pre_match
     row = m.post_match
-    buf = [bracket_s]
+    buf = [bracket_s = m[1]]
 
     while true
       while m = row.match(pbracket)
         buf.push m.pre_match
         buf.push elm = m[0]
+        row = m.post_match
 
         if elm == bracket_s then count += 1
         elsif (count -= 1) <= 0
-          return [pre, buf.join, m.post_match]
+          return [pre, buf.join, row]
         end
       end
 
@@ -162,7 +168,8 @@ private
   def _gets_until(row, c)
     buf = []
     until m = row.match(c)
-      buf.push(row = _gets_without_comment)
+      buf.push(row)
+      row = _gets_without_comment
     end
     [buf.push(m.pre_match).join(' '), m[1], m.post_match]
   end
@@ -197,5 +204,12 @@ private
     row.force_encoding('UTF-8')
     row.encode!('UTF-8', 'UTF-8')
   end
+end
+
+
+if $0 == __FILE__
+  fn = ARGV[0]
+  obj = ReadCodeJava2.new
+pp  obj.extract(fn)
 end
 
