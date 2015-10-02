@@ -1,0 +1,25 @@
+<project>
+  <dd>
+    <!--comment-->
+  </dd>
+  <dependencies>
+    <!--order [id, version]-->
+    <dependency io="a">
+      <id>
+        b
+      </id>
+      <version>
+        vb
+      </version>
+    </dependency>
+    <dependency io="b">
+      <version>
+        va
+      </version>
+      <id>
+        a
+      </id>
+      <oid/>
+    </dependency>
+  </dependencies>
+</project>

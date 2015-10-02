@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <dd> <!-- comment -->
+  </dd>
+  <dependencies> <!-- order [id, version] -->
+    <dependency io='a'>
+      <id>b</id>
+      <version>vb</version>
+    </dependency>
+
+    <dependency io='b'>
+      <version>va</version>
+      <id>a</id>
+      <oid/>
+    </dependency>
+  </dependencies>
+</project>
+

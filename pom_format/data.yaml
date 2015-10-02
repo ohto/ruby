@@ -1,0 +1,365 @@
+project:
+  modelVersion: modelVersion
+
+  groupId:    groupId
+  artifactId: artifactId
+  version:    version
+  packaging:  packaging
+
+
+#
+# dependencies
+#
+  parent:
+    groupId:      groupId
+    artifactId:   artifactId
+    version:      version
+    relativePath: relativePath
+
+  dependencies: &dependencies
+    dependency:
+    - groupId:    groupId_2
+      artifactId: artifactId
+      version:    version
+      type:       type
+      scope:      scope
+      systemPath: systemPath
+      optional:   optional
+      exclusions:
+        exclusion:
+        - groupId:    groupId_2
+          artifactId: artifactId_2
+        - groupId:    groupId_1
+          artifactId: artifactId_1
+
+    - groupId:    groupId_1
+      artifactId: artifactId
+      version:    version
+      type:       type
+      scope:      scope
+      systemPath: systemPath
+      optional:   optional
+      exclusions:
+        exclusion:
+        - groupId:    groupId_1
+          artifactId: artifactId_2
+        - groupId:    groupId_1
+          artifactId: artifactId_1
+
+  dependencyManagement: *dependencies
+
+  modules:
+    module: 
+    - b
+    - a
+
+  properties:
+    b: b
+    a: a
+
+
+#
+# build settings
+#
+  build:
+    defaultGoal: defaultGoal
+    directory:   directory
+    finalName:   finalName
+    filters:
+      filter:
+      - b
+      - a
+
+    resources: &resources
+       resource:
+         targetPath: targetPath
+         filtering:  filtering
+         directory:  directory
+         includes:
+           include:
+           - b
+           - a
+         excludes:
+           exclude:
+           - b
+           - a
+    testResources: *resources
+
+
+    plugins: &plugins
+      plugin:
+        groupId:    groupId
+        artifactId: artifactId
+        version:    version
+        extensions: extensions
+        inherited:  inherited
+        configuration:
+          classifier: classifier
+        dependencies: *dependencies
+
+        executions:
+          execution:
+          - id: id_2
+            goals:
+              goal:
+              - b
+              - a
+            phase: phase
+            inherited: inherited
+            configuration:
+              tasks:
+                echo: echo
+
+          - id: id_1
+            goals:
+              goal:
+              - b
+              - a
+            phase: phase
+            inherited: inherited
+            configuration:
+              tasks:
+                echo: echo
+
+    pluginManagement: *plugins
+
+    sourceDirectory:       sourceDirectory
+    scriptSourceDirectory: scriptSourceDirectory
+    testOutputDirectory:   testOutputDirectory
+    outputDirectory:       outputDirectory
+    testSourceDirectory:   testSourceDirectory
+
+#
+# reporting
+#
+  reporting:
+    b: b
+    a: a
+
+
+#
+# project information
+#
+  name:          name
+  description:   description
+  url:           url
+  inceptionYear: inceptionYear
+  licenses:
+    license:
+    - name:         name_2
+      url:          url
+      distribution: distribution
+      comments:     comments
+
+    - name:         name_1
+      url:          url
+      distribution: distribution
+      comments:     comments
+
+  organization:
+    name: name
+    url:  url
+
+  developers:
+    developer: &developer
+      - id:              id_2
+        name:            name
+        email:           email
+        url:             url
+        organization:    organization
+        organizationUrl: organizationUrl
+        roles:
+          role:
+          - b
+          - a
+        timezone: timezone
+        properties:
+          b: b
+          a: a
+
+      - id:              id_1
+        name:            name
+        email:           email
+        url:             url
+        organization:    organization
+        organizationUrl: organizationUrl
+        roles:
+          role:
+          - b
+          - a
+        timezone: timezone
+        properties:
+          b: b
+          a: a
+
+  contributors:
+    contributor: *developer
+
+
+#
+# environment settings
+#
+  issueManagement:
+    system: system
+    url:    url
+
+  ciManagement:
+    system: system
+    url:    url
+    notifiers:
+      notifier:
+      - type:          type_2
+        sendOnError:   sendOnError
+        sendOnFailure: sendOnFailure
+        sendOnSuccess: sendOnSuccess
+        sendOnWarning: sendOnWarning
+        configuration: configuration
+
+      - type:          type_1
+        sendOnError:   sendOnError
+        sendOnFailure: sendOnFailure
+        sendOnSuccess: sendOnSuccess
+        sendOnWarning: sendOnWarning
+        configuration: configuration
+
+  mailingLists:
+    mailingList:
+    - name:        name_2
+      subscribe:   subscribe
+      unsubscribe: unsubscribe
+      post:        post
+      archive:     archive
+      otherArchives:
+        otherArchive:
+        - b
+        - a
+
+    - name:        name_1
+      subscribe:   subscribe
+      unsubscribe: unsubscribe
+      post:        post
+      archive:     archive
+      otherArchives:
+        otherArchive:
+        - b
+        - a
+
+  scm:
+    connection:          connection
+    developerConnection: developerConnection
+    tag: tag
+    url: url
+
+  prerequisites:
+    b: b
+    a: a
+
+  repositories:
+    repository: &repository
+      - id:     id_2
+        name:   name
+        url:    url
+        layout: layout
+        releases: &releases
+          enabled:        enabled
+          updatePolicy:   updatePolicy
+          checksumPolicy: checksumPolicy
+        snapshots: *releases
+
+      - id:     id_1
+        name:   name
+        url:    url
+        layout: layout
+        releases:  *releases
+        snapshots: *releases
+
+  pluginRepositories:
+    pluginRepository: *repository
+
+  distributionManagement: &distributionManagement
+    downloadUrl: downloadUrl
+    status:      status
+    repository: &dm_repository
+      id:     id
+      name:   name
+      url:    url
+      layout: layout
+      uniqueVersion: uniqueVersion
+    snapshotRepository: *dm_repository
+
+    site:
+      id:       id
+      name:     name
+      url:      url
+    relocation: relocation
+
+  profiles:
+    profile:
+    - id: id_2
+      activation:
+        activeByDefault: activeByDefault
+        jdk: jdk
+      os:
+        name:    name
+        family:  family
+        arch:    arch
+        version: version
+      property:
+        b: b
+        a: a
+      file:
+        b: b
+        a: a
+      build: *plugins
+      modules:
+        module:
+        - b
+        - a
+      repositories:
+        repository: *repository
+
+      pluginRepositories:
+        pluginRepository: *repository
+
+      dependencies: *dependencies
+      dependencyManagement: *dependencies
+      reporting:
+        b: b
+        a: a
+      distributionManagement: *distributionManagement
+
+    - id: id_1
+      activation:
+        activeByDefault: activeByDefault
+        jdk: jdk
+      os:
+        name:    name
+        family:  family
+        arch:    arch
+        version: version
+      property:
+        b: b
+        a: a
+      file:
+        b: b
+        a: a
+      build: *plugins
+      modules:
+        module:
+        - b
+        - a
+      repositories:
+        repository: *repository
+
+      pluginRepositories:
+        pluginRepository: *repository
+
+      dependencies: *dependencies
+      dependencyManagement: *dependencies
+      reporting:
+        b: b
+        a: a
+      distributionManagement: *distributionManagement
+
+
+
